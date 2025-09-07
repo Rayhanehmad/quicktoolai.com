@@ -17,10 +17,10 @@ export function Footer() {
               <div className="w-8 h-8 gradient-bg rounded-lg flex items-center justify-center">
                 <Clock className="w-5 h-5 text-white" />
               </div>
-              <h4 className="text-lg font-bold">Time & Tools Hub</h4>
+              <h4 className="text-lg font-bold">Free Online Clock Hub</h4>
             </div>
             <p className="text-muted-foreground text-sm">
-              Essential productivity tools for time management, sleep optimization, and website monitoring.
+              Free online clock with world timezones, Pomodoro timer, bedtime calculator, and website uptime checker.
             </p>
           </div>
           
@@ -33,7 +33,7 @@ export function Footer() {
                   className="hover:text-foreground transition-colors"
                   data-testid="footer-link-clock"
                 >
-                  Online Clock
+                  World Clock Online
                 </button>
               </li>
               <li>
@@ -42,7 +42,7 @@ export function Footer() {
                   className="hover:text-foreground transition-colors"
                   data-testid="footer-link-timer"
                 >
-                  Timer & Stopwatch
+                  Pomodoro Timer Online
                 </button>
               </li>
               <li>
@@ -51,7 +51,7 @@ export function Footer() {
                   className="hover:text-foreground transition-colors"
                   data-testid="footer-link-sleep"
                 >
-                  Sleep Calculator
+                  Bedtime Calculator
                 </button>
               </li>
               <li>
@@ -60,7 +60,7 @@ export function Footer() {
                   className="hover:text-foreground transition-colors"
                   data-testid="footer-link-status"
                 >
-                  Website Status
+                  Website Uptime Checker
                 </button>
               </li>
             </ul>

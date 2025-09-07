@@ -50,14 +50,14 @@ export function ClockTimerSection() {
     <section id="clock" className="py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h3 className="text-3xl font-bold mb-4">Online Clock & Timer</h3>
-          <p className="text-muted-foreground">Live digital clock with timer, stopwatch, and Pomodoro functionality</p>
+          <h3 className="text-3xl font-bold mb-4">Free Online Clock & Pomodoro Timer</h3>
+          <p className="text-muted-foreground">World clock with multiple timezones, free timer online, stopwatch, and Pomodoro timer with 25-minute work sessions</p>
         </div>
         
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Live Clock */}
           <div className="glass-card neomorphic rounded-2xl p-8 text-center">
-            <h4 className="text-xl font-semibold mb-6">Live Clock</h4>
+            <h4 className="text-xl font-semibold mb-6">World Clock Online</h4>
             <div className="mb-6">
               <div className="text-5xl md:text-6xl font-mono font-bold text-primary mb-2" data-testid="text-live-time">
                 {getCurrentTime()}

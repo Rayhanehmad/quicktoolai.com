@@ -3,8 +3,8 @@ import { Facebook, Twitter } from "lucide-react";
 
 export function SocialShareSection() {
   const shareUrl = encodeURIComponent(window.location.href);
-  const shareTitle = encodeURIComponent('Time & Tools Hub - Free Productivity Tools');
-  const shareDescription = encodeURIComponent('Check out these amazing free productivity tools: online clock, timer, sleep calculator, and website status checker!');
+  const shareTitle = encodeURIComponent('Free Online Clock & Pomodoro Timer | Bedtime Calculator');
+  const shareDescription = encodeURIComponent('Free world clock, Pomodoro timer online, bedtime calculator for sleep cycles, and website uptime checker - all in one place!');
 
   const shareOnTwitter = () => {
     const twitterUrl = `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareTitle}`;
@@ -24,8 +24,8 @@ export function SocialShareSection() {
   return (
     <section className="py-16 px-4 bg-muted/30">
       <div className="max-w-4xl mx-auto text-center">
-        <h3 className="text-2xl font-bold mb-4">Share Time & Tools Hub</h3>
-        <p className="text-muted-foreground mb-8">Help others discover these useful productivity tools</p>
+        <h3 className="text-2xl font-bold mb-4">Share Free Online Clock Tools</h3>
+        <p className="text-muted-foreground mb-8">Help others discover these free online clock and productivity tools</p>
         
         <div className="flex justify-center space-x-4">
           <Button

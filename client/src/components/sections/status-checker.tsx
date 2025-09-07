@@ -44,8 +44,8 @@ export function StatusCheckerSection() {
     <section id="status" className="py-16 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h3 className="text-3xl font-bold mb-4">Website Status Checker</h3>
-          <p className="text-muted-foreground">Check if any website is online or offline</p>
+          <h3 className="text-3xl font-bold mb-4">Website Uptime Checker & Site Status Monitor</h3>
+          <p className="text-muted-foreground">Free website uptime checker to monitor if any site is online or offline with response time tracking</p>
         </div>
 
         <div className="glass-card neomorphic rounded-2xl p-8 max-w-2xl mx-auto">

@@ -57,8 +57,8 @@ export function SleepCalculatorSection() {
     <section id="sleep" className="py-16 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h3 className="text-3xl font-bold mb-4">Sleep Cycle Calculator</h3>
-          <p className="text-muted-foreground">Calculate optimal bedtimes based on 90-minute sleep cycles</p>
+          <h3 className="text-3xl font-bold mb-4">Bedtime Calculator & Sleep Schedule</h3>
+          <p className="text-muted-foreground">Free bedtime calculator to find optimal sleep schedule based on 90-minute sleep cycles for better rest</p>
         </div>
 
         <div className="glass-card neomorphic rounded-2xl p-8 max-w-2xl mx-auto">
