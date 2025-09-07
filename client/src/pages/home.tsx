@@ -20,7 +20,17 @@ export default function Home() {
 
       <Navigation />
       <HeroSection />
-      <ClockTimerSection />
+      
+      {/* Three Tools in Button Format */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6">
+            <ClockTimerSection />
+            <SleepCalculatorSection />
+            <StatusCheckerSection />
+          </div>
+        </div>
+      </section>
       
       {/* AdSense Middle */}
       <div className="py-8 px-4">
@@ -30,9 +40,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      <SleepCalculatorSection />
-      <StatusCheckerSection />
       <SocialShareSection />
       
       {/* AdSense Bottom */}

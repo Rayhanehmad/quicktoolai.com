@@ -45,8 +45,8 @@ export function SleepCalculatorSection() {
           hour12: true 
         }),
         totalSleep: totalMinutes > 0 
-          ? `${totalHours} hours ${totalMinutes} minutes`
-          : `${totalHours} hours`
+          ? `${totalHours}h ${totalMinutes}m`
+          : `${totalHours}h`
       });
     }
 
@@ -54,83 +54,67 @@ export function SleepCalculatorSection() {
   };
 
   return (
-    <section id="sleep" className="py-16 px-4">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <h3 className="text-3xl font-bold mb-4">Bedtime Calculator & Sleep Schedule</h3>
-          <p className="text-muted-foreground">Free bedtime calculator to find optimal sleep schedule based on 90-minute sleep cycles for better rest</p>
-        </div>
-
-        <div className="glass-card neomorphic rounded-2xl p-8 max-w-2xl mx-auto">
-          <div className="text-center mb-8">
-            <label className="block text-lg font-semibold mb-4">When do you want to wake up?</label>
-            <Input
-              type="time"
-              value={wakeUpTime}
-              onChange={(e) => setWakeUpTime(e.target.value)}
-              className="text-2xl px-4 py-3 text-center font-mono max-w-xs mx-auto"
-              data-testid="input-wake-time"
-            />
-          </div>
-
-          <Button
-            onClick={calculateSleepTimes}
-            className="w-full gradient-bg text-white py-3 px-6 text-lg font-semibold hover:opacity-90 transition-opacity mb-8"
-            data-testid="button-calculate-sleep"
-          >
-            Calculate Best Sleep Times
-          </Button>
-
-          {/* Sleep Recommendations */}
-          <div className="space-y-4" data-testid="sleep-recommendations">
-            {recommendations.length === 0 ? (
-              <div className="text-center text-muted-foreground">
-                <p>Enter your desired wake-up time to get personalized sleep recommendations</p>
-              </div>
-            ) : (
-              recommendations.map((rec, index) => (
-                <div
-                  key={index}
-                  className={`p-4 rounded-lg border-2 ${
-                    index === 0 
-                      ? 'border-primary bg-primary/10' 
-                      : 'border-border bg-muted/30'
-                  }`}
-                  data-testid={`recommendation-${index}`}
-                >
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <div className="font-semibold text-lg" data-testid={`bedtime-${index}`}>
-                        {rec.bedtime}
-                      </div>
-                      <div className="text-sm text-muted-foreground" data-testid={`sleep-details-${index}`}>
-                        {rec.cycles} sleep cycles • {rec.totalSleep}
-                      </div>
-                    </div>
-                    {index === 0 && (
-                      <div className="text-primary font-semibold text-sm">Recommended</div>
-                    )}
-                  </div>
-                </div>
-              ))
-            )}
-          </div>
-
-          {/* Sleep Tips */}
-          <div className="mt-8 p-4 bg-muted/50 rounded-lg">
-            <h5 className="font-semibold mb-2 flex items-center">
-              <Info className="w-5 h-5 mr-2 text-accent" />
-              Sleep Tips
-            </h5>
-            <ul className="text-sm text-muted-foreground space-y-1">
-              <li>• Each sleep cycle lasts about 90 minutes</li>
-              <li>• Waking up between cycles helps you feel more refreshed</li>
-              <li>• Most adults need 5-6 complete sleep cycles (7.5-9 hours)</li>
-              <li>• Allow 15 minutes to fall asleep</li>
-            </ul>
-          </div>
-        </div>
+    <div id="sleep" className="glass-card neomorphic rounded-2xl p-6 text-center h-full">
+      <h3 className="text-xl font-bold mb-4 text-primary">Bedtime Calculator</h3>
+      
+      <div className="mb-6">
+        <label className="block text-sm font-semibold mb-3">Wake up time:</label>
+        <Input
+          type="time"
+          value={wakeUpTime}
+          onChange={(e) => setWakeUpTime(e.target.value)}
+          className="text-lg px-3 py-2 text-center font-mono max-w-xs mx-auto"
+          data-testid="input-wake-time"
+        />
       </div>
-    </section>
+
+      <Button
+        onClick={calculateSleepTimes}
+        className="w-full gradient-bg text-white py-2 px-4 font-semibold hover:opacity-90 transition-opacity mb-6"
+        data-testid="button-calculate-sleep"
+      >
+        Calculate Bedtimes
+      </Button>
+
+      {/* Sleep Recommendations */}
+      <div className="space-y-2" data-testid="sleep-recommendations">
+        {recommendations.length === 0 ? (
+          <div className="text-center text-muted-foreground text-sm">
+            <p>Set your wake time to get sleep recommendations</p>
+          </div>
+        ) : (
+          recommendations.slice(0, 2).map((rec, index) => (
+            <div
+              key={index}
+              className={`p-3 rounded-lg border ${
+                index === 0 
+                  ? 'border-primary bg-primary/10' 
+                  : 'border-border bg-muted/30'
+              }`}
+              data-testid={`recommendation-${index}`}
+            >
+              <div className="font-semibold text-sm" data-testid={`bedtime-${index}`}>
+                Go to bed at {rec.bedtime}
+              </div>
+              <div className="text-xs text-muted-foreground" data-testid={`sleep-details-${index}`}>
+                {rec.cycles} cycles • {rec.totalSleep}
+                {index === 0 && ' (Best)'}
+              </div>
+            </div>
+          ))
+        )}
+      </div>
+
+      {/* Sleep Tip */}
+      <div className="mt-4 p-3 bg-muted/50 rounded-lg">
+        <div className="flex items-center justify-center mb-1">
+          <Info className="w-4 h-4 mr-1 text-accent" />
+          <span className="text-xs font-semibold">Tip</span>
+        </div>
+        <p className="text-xs text-muted-foreground">
+          90-minute sleep cycles help you wake up refreshed
+        </p>
+      </div>
+    </div>
   );
 }
