@@ -24,39 +24,67 @@ export function Navigation() {
               <Clock className="w-5 h-5 text-white" />
             </div>
             <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Free Online Clock Hub
+              Free Online Clock & Tools
             </h1>
           </div>
           
-          {/* Desktop Navigation - Key Tools */}
-          <div className="hidden lg:flex space-x-6">
+          {/* Desktop Navigation - All Tools */}
+          <div className="hidden xl:flex space-x-4">
             <button 
               onClick={() => scrollToSection('clock')}
-              className="text-foreground hover:text-primary transition-colors text-sm"
+              className="text-foreground hover:text-primary transition-colors text-xs"
               data-testid="nav-clock"
             >
               Clock & Timer
             </button>
             <button 
+              onClick={() => scrollToSection('sleep')}
+              className="text-foreground hover:text-primary transition-colors text-xs"
+              data-testid="nav-sleep"
+            >
+              Sleep Calc
+            </button>
+            <button 
+              onClick={() => scrollToSection('status')}
+              className="text-foreground hover:text-primary transition-colors text-xs"
+              data-testid="nav-status"
+            >
+              Website Check
+            </button>
+            <button 
               onClick={() => scrollToSection('age-calc')}
-              className="text-foreground hover:text-primary transition-colors text-sm"
+              className="text-foreground hover:text-primary transition-colors text-xs"
               data-testid="nav-age"
             >
-              Age Calculator
+              Age Calc
             </button>
             <button 
               onClick={() => scrollToSection('bmi-calc')}
-              className="text-foreground hover:text-primary transition-colors text-sm"
+              className="text-foreground hover:text-primary transition-colors text-xs"
               data-testid="nav-bmi"
             >
-              BMI Calculator
+              BMI Calc
+            </button>
+            <button 
+              onClick={() => scrollToSection('ip-lookup')}
+              className="text-foreground hover:text-primary transition-colors text-xs"
+              data-testid="nav-ip"
+            >
+              IP Lookup
             </button>
             <button 
               onClick={() => scrollToSection('qr-generator')}
-              className="text-foreground hover:text-primary transition-colors text-sm"
+              className="text-foreground hover:text-primary transition-colors text-xs"
               data-testid="nav-qr"
             >
               QR Generator
+            </button>
+            <button 
+              onClick={() => scrollToSection('notepad')}
+              className="text-foreground hover:text-primary transition-colors text-xs"
+              data-testid="nav-notepad"
+            >
+              Notepad
             </button>
           </div>
           
@@ -79,7 +107,7 @@ export function Navigation() {
             <Button
               variant="ghost"
               size="sm"
-              className="md:hidden"
+              className="xl:hidden"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               data-testid="button-mobile-menu"
             >
@@ -94,7 +122,7 @@ export function Navigation() {
         
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-border animate-slide-up">
+          <div className="xl:hidden py-4 border-t border-border animate-slide-up">
             <div className="grid grid-cols-2 gap-2">
               <button 
                 onClick={() => scrollToSection('clock')}
