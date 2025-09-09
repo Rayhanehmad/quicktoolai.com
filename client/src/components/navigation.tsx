@@ -28,64 +28,71 @@ export function Navigation() {
             </h1>
           </div>
           
-          {/* Desktop Navigation - All Tools */}
-          <div className="hidden xl:flex space-x-4">
-            <button 
+          {/* Desktop Navigation - All Tools as Text Links */}
+          <div className="hidden lg:flex flex-wrap items-center gap-x-4 gap-y-1 text-xs">
+            <a 
               onClick={() => scrollToSection('clock')}
-              className="text-foreground hover:text-primary transition-colors text-xs"
+              className="text-foreground hover:text-primary hover:underline cursor-pointer transition-colors"
               data-testid="nav-clock"
             >
               Clock & Timer
-            </button>
-            <button 
+            </a>
+            <span className="text-muted-foreground">•</span>
+            <a 
               onClick={() => scrollToSection('sleep')}
-              className="text-foreground hover:text-primary transition-colors text-xs"
+              className="text-foreground hover:text-primary hover:underline cursor-pointer transition-colors"
               data-testid="nav-sleep"
             >
-              Sleep Calc
-            </button>
-            <button 
+              Sleep Calculator
+            </a>
+            <span className="text-muted-foreground">•</span>
+            <a 
               onClick={() => scrollToSection('status')}
-              className="text-foreground hover:text-primary transition-colors text-xs"
+              className="text-foreground hover:text-primary hover:underline cursor-pointer transition-colors"
               data-testid="nav-status"
             >
-              Website Check
-            </button>
-            <button 
+              Website Checker
+            </a>
+            <span className="text-muted-foreground">•</span>
+            <a 
               onClick={() => scrollToSection('age-calc')}
-              className="text-foreground hover:text-primary transition-colors text-xs"
+              className="text-foreground hover:text-primary hover:underline cursor-pointer transition-colors"
               data-testid="nav-age"
             >
-              Age Calc
-            </button>
-            <button 
+              Age Calculator
+            </a>
+            <span className="text-muted-foreground">•</span>
+            <a 
               onClick={() => scrollToSection('bmi-calc')}
-              className="text-foreground hover:text-primary transition-colors text-xs"
+              className="text-foreground hover:text-primary hover:underline cursor-pointer transition-colors"
               data-testid="nav-bmi"
             >
-              BMI Calc
-            </button>
-            <button 
+              BMI Calculator
+            </a>
+            <span className="text-muted-foreground">•</span>
+            <a 
               onClick={() => scrollToSection('ip-lookup')}
-              className="text-foreground hover:text-primary transition-colors text-xs"
+              className="text-foreground hover:text-primary hover:underline cursor-pointer transition-colors"
               data-testid="nav-ip"
             >
               IP Lookup
-            </button>
-            <button 
+            </a>
+            <span className="text-muted-foreground">•</span>
+            <a 
               onClick={() => scrollToSection('qr-generator')}
-              className="text-foreground hover:text-primary transition-colors text-xs"
+              className="text-foreground hover:text-primary hover:underline cursor-pointer transition-colors"
               data-testid="nav-qr"
             >
               QR Generator
-            </button>
-            <button 
+            </a>
+            <span className="text-muted-foreground">•</span>
+            <a 
               onClick={() => scrollToSection('notepad')}
-              className="text-foreground hover:text-primary transition-colors text-xs"
+              className="text-foreground hover:text-primary hover:underline cursor-pointer transition-colors"
               data-testid="nav-notepad"
             >
-              Notepad
-            </button>
+              Online Notepad
+            </a>
           </div>
           
           <div className="flex items-center space-x-4">
@@ -107,7 +114,7 @@ export function Navigation() {
             <Button
               variant="ghost"
               size="sm"
-              className="xl:hidden"
+              className="lg:hidden"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               data-testid="button-mobile-menu"
             >
@@ -122,7 +129,7 @@ export function Navigation() {
         
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="xl:hidden py-4 border-t border-border animate-slide-up">
+          <div className="lg:hidden py-4 border-t border-border animate-slide-up">
             <div className="grid grid-cols-2 gap-2">
               <button 
                 onClick={() => scrollToSection('clock')}
