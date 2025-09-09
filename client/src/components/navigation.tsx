@@ -28,28 +28,35 @@ export function Navigation() {
             </h1>
           </div>
           
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          {/* Desktop Navigation - Key Tools */}
+          <div className="hidden lg:flex space-x-6">
             <button 
               onClick={() => scrollToSection('clock')}
-              className="text-foreground hover:text-primary transition-colors"
+              className="text-foreground hover:text-primary transition-colors text-sm"
               data-testid="nav-clock"
             >
-              World Clock & Timer
+              Clock & Timer
             </button>
             <button 
-              onClick={() => scrollToSection('sleep')}
-              className="text-foreground hover:text-primary transition-colors"
-              data-testid="nav-sleep"
+              onClick={() => scrollToSection('age-calc')}
+              className="text-foreground hover:text-primary transition-colors text-sm"
+              data-testid="nav-age"
             >
-              Bedtime Calculator
+              Age Calculator
             </button>
             <button 
-              onClick={() => scrollToSection('status')}
-              className="text-foreground hover:text-primary transition-colors"
-              data-testid="nav-status"
+              onClick={() => scrollToSection('bmi-calc')}
+              className="text-foreground hover:text-primary transition-colors text-sm"
+              data-testid="nav-bmi"
             >
-              Website Uptime
+              BMI Calculator
+            </button>
+            <button 
+              onClick={() => scrollToSection('qr-generator')}
+              className="text-foreground hover:text-primary transition-colors text-sm"
+              data-testid="nav-qr"
+            >
+              QR Generator
             </button>
           </div>
           
@@ -87,28 +94,63 @@ export function Navigation() {
         
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border animate-slide-up">
-            <div className="flex flex-col space-y-2">
+          <div className="lg:hidden py-4 border-t border-border animate-slide-up">
+            <div className="grid grid-cols-2 gap-2">
               <button 
                 onClick={() => scrollToSection('clock')}
-                className="text-left px-4 py-2 text-foreground hover:text-primary hover:bg-muted/50 rounded-lg transition-colors"
+                className="text-left px-3 py-2 text-foreground hover:text-primary hover:bg-muted/50 rounded-lg transition-colors text-sm"
                 data-testid="nav-mobile-clock"
               >
-                World Clock & Timer
+                Clock & Timer
               </button>
               <button 
                 onClick={() => scrollToSection('sleep')}
-                className="text-left px-4 py-2 text-foreground hover:text-primary hover:bg-muted/50 rounded-lg transition-colors"
+                className="text-left px-3 py-2 text-foreground hover:text-primary hover:bg-muted/50 rounded-lg transition-colors text-sm"
                 data-testid="nav-mobile-sleep"
               >
-                Bedtime Calculator
+                Sleep Calculator
               </button>
               <button 
                 onClick={() => scrollToSection('status')}
-                className="text-left px-4 py-2 text-foreground hover:text-primary hover:bg-muted/50 rounded-lg transition-colors"
+                className="text-left px-3 py-2 text-foreground hover:text-primary hover:bg-muted/50 rounded-lg transition-colors text-sm"
                 data-testid="nav-mobile-status"
               >
-                Website Uptime
+                Website Checker
+              </button>
+              <button 
+                onClick={() => scrollToSection('age-calc')}
+                className="text-left px-3 py-2 text-foreground hover:text-primary hover:bg-muted/50 rounded-lg transition-colors text-sm"
+                data-testid="nav-mobile-age"
+              >
+                Age Calculator
+              </button>
+              <button 
+                onClick={() => scrollToSection('bmi-calc')}
+                className="text-left px-3 py-2 text-foreground hover:text-primary hover:bg-muted/50 rounded-lg transition-colors text-sm"
+                data-testid="nav-mobile-bmi"
+              >
+                BMI Calculator
+              </button>
+              <button 
+                onClick={() => scrollToSection('ip-lookup')}
+                className="text-left px-3 py-2 text-foreground hover:text-primary hover:bg-muted/50 rounded-lg transition-colors text-sm"
+                data-testid="nav-mobile-ip"
+              >
+                IP Lookup
+              </button>
+              <button 
+                onClick={() => scrollToSection('qr-generator')}
+                className="text-left px-3 py-2 text-foreground hover:text-primary hover:bg-muted/50 rounded-lg transition-colors text-sm"
+                data-testid="nav-mobile-qr"
+              >
+                QR Generator
+              </button>
+              <button 
+                onClick={() => scrollToSection('notepad')}
+                className="text-left px-3 py-2 text-foreground hover:text-primary hover:bg-muted/50 rounded-lg transition-colors text-sm"
+                data-testid="nav-mobile-notepad"
+              >
+                Online Notepad
               </button>
             </div>
           </div>

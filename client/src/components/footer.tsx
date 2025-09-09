@@ -26,7 +26,7 @@ export function Footer() {
           
           <div>
             <h5 className="font-semibold mb-4">Tools</h5>
-            <ul className="space-y-2 text-sm text-muted-foreground">
+            <ul className="space-y-1 text-sm text-muted-foreground">
               <li>
                 <button 
                   onClick={() => scrollToSection('clock')}
@@ -61,6 +61,51 @@ export function Footer() {
                   data-testid="footer-link-status"
                 >
                   Website Uptime Checker
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('age-calc')}
+                  className="hover:text-foreground transition-colors"
+                  data-testid="footer-link-age"
+                >
+                  Age Calculator
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('bmi-calc')}
+                  className="hover:text-foreground transition-colors"
+                  data-testid="footer-link-bmi"
+                >
+                  BMI Calculator
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('ip-lookup')}
+                  className="hover:text-foreground transition-colors"
+                  data-testid="footer-link-ip"
+                >
+                  IP Address Lookup
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('qr-generator')}
+                  className="hover:text-foreground transition-colors"
+                  data-testid="footer-link-qr"
+                >
+                  QR Code Generator
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('notepad')}
+                  className="hover:text-foreground transition-colors"
+                  data-testid="footer-link-notepad"
+                >
+                  Online Notepad
                 </button>
               </li>
             </ul>

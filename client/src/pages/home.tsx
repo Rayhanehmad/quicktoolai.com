@@ -3,6 +3,11 @@ import { HeroSection } from "@/components/sections/hero";
 import { ClockTimerSection } from "@/components/sections/clock-timer";
 import { SleepCalculatorSection } from "@/components/sections/sleep-calculator";
 import { StatusCheckerSection } from "@/components/sections/status-checker";
+import { AgeCalculatorSection } from "@/components/sections/age-calculator";
+import { BMICalculatorSection } from "@/components/sections/bmi-calculator";
+import { IPLookupSection } from "@/components/sections/ip-lookup";
+import { QRGeneratorSection } from "@/components/sections/qr-generator";
+import { NotepadSection } from "@/components/sections/notepad";
 import { SocialShareSection } from "@/components/sections/social-share";
 import { Footer } from "@/components/footer";
 
@@ -21,13 +26,18 @@ export default function Home() {
       <Navigation />
       <HeroSection />
       
-      {/* Three Tools in Button Format */}
+      {/* All Tools in Button Format */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             <ClockTimerSection />
             <SleepCalculatorSection />
             <StatusCheckerSection />
+            <AgeCalculatorSection />
+            <BMICalculatorSection />
+            <IPLookupSection />
+            <QRGeneratorSection />
+            <NotepadSection />
           </div>
         </div>
       </section>
