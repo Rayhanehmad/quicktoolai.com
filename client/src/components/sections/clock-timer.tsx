@@ -13,11 +13,94 @@ export function ClockTimerSection() {
   const [timerInputs, setTimerInputs] = useState({ hours: 0, minutes: 5, seconds: 0 });
 
   const timezones = [
-    { value: 'local', label: 'Local' },
-    { value: 'UTC', label: 'UTC' },
-    { value: 'America/New_York', label: 'NY' },
-    { value: 'Europe/London', label: 'London' },
-    { value: 'Asia/Tokyo', label: 'Tokyo' },
+    { value: 'local', label: 'Local Time' },
+    { value: 'UTC', label: 'UTC (Universal)' },
+    
+    // North America
+    { value: 'America/New_York', label: 'New York (EST)' },
+    { value: 'America/Chicago', label: 'Chicago (CST)' },
+    { value: 'America/Denver', label: 'Denver (MST)' },
+    { value: 'America/Los_Angeles', label: 'Los Angeles (PST)' },
+    { value: 'America/Vancouver', label: 'Vancouver' },
+    { value: 'America/Toronto', label: 'Toronto' },
+    { value: 'America/Mexico_City', label: 'Mexico City' },
+    
+    // South America
+    { value: 'America/Sao_Paulo', label: 'São Paulo' },
+    { value: 'America/Buenos_Aires', label: 'Buenos Aires' },
+    { value: 'America/Lima', label: 'Lima' },
+    { value: 'America/Bogota', label: 'Bogotá' },
+    { value: 'America/Caracas', label: 'Caracas' },
+    
+    // Europe
+    { value: 'Europe/London', label: 'London (GMT)' },
+    { value: 'Europe/Paris', label: 'Paris (CET)' },
+    { value: 'Europe/Berlin', label: 'Berlin' },
+    { value: 'Europe/Rome', label: 'Rome' },
+    { value: 'Europe/Madrid', label: 'Madrid' },
+    { value: 'Europe/Amsterdam', label: 'Amsterdam' },
+    { value: 'Europe/Brussels', label: 'Brussels' },
+    { value: 'Europe/Vienna', label: 'Vienna' },
+    { value: 'Europe/Moscow', label: 'Moscow' },
+    { value: 'Europe/Stockholm', label: 'Stockholm' },
+    { value: 'Europe/Athens', label: 'Athens' },
+    { value: 'Europe/Istanbul', label: 'Istanbul' },
+    
+    // Asia
+    { value: 'Asia/Tokyo', label: 'Tokyo (JST)' },
+    { value: 'Asia/Shanghai', label: 'Shanghai (CST)' },
+    { value: 'Asia/Hong_Kong', label: 'Hong Kong' },
+    { value: 'Asia/Singapore', label: 'Singapore' },
+    { value: 'Asia/Seoul', label: 'Seoul' },
+    { value: 'Asia/Bangkok', label: 'Bangkok' },
+    { value: 'Asia/Jakarta', label: 'Jakarta' },
+    { value: 'Asia/Manila', label: 'Manila' },
+    { value: 'Asia/Kuala_Lumpur', label: 'Kuala Lumpur' },
+    { value: 'Asia/Dubai', label: 'Dubai' },
+    { value: 'Asia/Mumbai', label: 'Mumbai (IST)' },
+    { value: 'Asia/Delhi', label: 'Delhi' },
+    { value: 'Asia/Kolkata', label: 'Kolkata' },
+    { value: 'Asia/Dhaka', label: 'Dhaka' },
+    { value: 'Asia/Karachi', label: 'Karachi' },
+    { value: 'Asia/Kabul', label: 'Kabul' },
+    { value: 'Asia/Tehran', label: 'Tehran' },
+    { value: 'Asia/Baghdad', label: 'Baghdad' },
+    { value: 'Asia/Riyadh', label: 'Riyadh' },
+    { value: 'Asia/Jerusalem', label: 'Jerusalem' },
+    
+    // Africa
+    { value: 'Africa/Cairo', label: 'Cairo' },
+    { value: 'Africa/Lagos', label: 'Lagos' },
+    { value: 'Africa/Nairobi', label: 'Nairobi' },
+    { value: 'Africa/Cape_Town', label: 'Cape Town' },
+    { value: 'Africa/Johannesburg', label: 'Johannesburg' },
+    { value: 'Africa/Casablanca', label: 'Casablanca' },
+    { value: 'Africa/Algiers', label: 'Algiers' },
+    { value: 'Africa/Tunis', label: 'Tunis' },
+    
+    // Oceania
+    { value: 'Australia/Sydney', label: 'Sydney (AEST)' },
+    { value: 'Australia/Melbourne', label: 'Melbourne' },
+    { value: 'Australia/Brisbane', label: 'Brisbane' },
+    { value: 'Australia/Perth', label: 'Perth' },
+    { value: 'Australia/Adelaide', label: 'Adelaide' },
+    { value: 'Pacific/Auckland', label: 'Auckland' },
+    { value: 'Pacific/Fiji', label: 'Fiji' },
+    { value: 'Pacific/Honolulu', label: 'Honolulu (HST)' },
+    
+    // Additional Major Cities
+    { value: 'America/Montreal', label: 'Montreal' },
+    { value: 'America/Phoenix', label: 'Phoenix' },
+    { value: 'America/Anchorage', label: 'Anchorage' },
+    { value: 'Europe/Zurich', label: 'Zurich' },
+    { value: 'Europe/Oslo', label: 'Oslo' },
+    { value: 'Europe/Copenhagen', label: 'Copenhagen' },
+    { value: 'Europe/Helsinki', label: 'Helsinki' },
+    { value: 'Asia/Taipei', label: 'Taipei' },
+    { value: 'Asia/Colombo', label: 'Colombo' },
+    { value: 'Asia/Almaty', label: 'Almaty' },
+    { value: 'Asia/Tashkent', label: 'Tashkent' },
+    { value: 'Pacific/Guam', label: 'Guam' },
   ];
 
   const handleTimerInputChange = (field: 'hours' | 'minutes' | 'seconds', value: string) => {
