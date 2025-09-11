@@ -121,7 +121,8 @@ export function ClockTimerSection() {
 
   return (
     <div id="clock" className="glass-card neomorphic rounded-2xl p-6 text-center h-full">
-      <h3 className="text-xl font-bold mb-4 text-primary">World Clock & Timer</h3>
+      <h3 className="text-xl font-bold mb-4 text-primary">Free Online Clock & Pomodoro Timer Online</h3>
+      <p className="text-xs text-muted-foreground mb-4">World clock with 70+ timezones, productivity timer, and Pomodoro technique</p>
       
       {/* Live Clock */}
       <div className="mb-6">

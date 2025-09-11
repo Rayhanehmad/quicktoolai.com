@@ -51,7 +51,8 @@ export function NotepadSection() {
 
   return (
     <div id="notepad" className="glass-card neomorphic rounded-2xl p-6 text-center h-full">
-      <h3 className="text-xl font-bold mb-4 text-primary">Online Notepad</h3>
+      <h3 className="text-xl font-bold mb-4 text-primary">Online Notepad Free</h3>
+      <p className="text-xs text-muted-foreground mb-4">Simple online text editor with auto-save - write notes, drafts, and documents</p>
       
       <div className="mb-4">
         <Textarea

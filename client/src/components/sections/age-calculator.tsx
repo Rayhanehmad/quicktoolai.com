@@ -61,7 +61,8 @@ export function AgeCalculatorSection() {
 
   return (
     <div id="age-calc" className="glass-card neomorphic rounded-2xl p-6 text-center h-full">
-      <h3 className="text-xl font-bold mb-4 text-primary">Age Calculator</h3>
+      <h3 className="text-xl font-bold mb-4 text-primary">Age Calculator Online</h3>
+      <p className="text-xs text-muted-foreground mb-4">Calculate your exact age in years, months, days with next birthday countdown</p>
       
       <div className="mb-6">
         <label className="block text-sm font-semibold mb-3">Your birth date:</label>

@@ -50,7 +50,8 @@ export function IPLookupSection() {
 
   return (
     <div id="ip-lookup" className="glass-card neomorphic rounded-2xl p-6 text-center h-full">
-      <h3 className="text-xl font-bold mb-4 text-primary">IP Address Lookup</h3>
+      <h3 className="text-xl font-bold mb-4 text-primary">IP Address Lookup Tool</h3>
+      <p className="text-xs text-muted-foreground mb-4">Find your public IP address and location information instantly</p>
       
       <Button
         onClick={fetchIPInfo}

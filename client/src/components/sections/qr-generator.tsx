@@ -37,7 +37,8 @@ export function QRGeneratorSection() {
 
   return (
     <div id="qr-generator" className="glass-card neomorphic rounded-2xl p-6 text-center h-full">
-      <h3 className="text-xl font-bold mb-4 text-primary">QR Code Generator</h3>
+      <h3 className="text-xl font-bold mb-4 text-primary">QR Code Generator Free</h3>
+      <p className="text-xs text-muted-foreground mb-4">Generate QR codes for URLs, text, or any content - download instantly</p>
       
       <div className="mb-4">
         <label className="block text-sm font-semibold mb-2">Enter text or URL:</label>

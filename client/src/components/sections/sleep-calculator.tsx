@@ -55,7 +55,8 @@ export function SleepCalculatorSection() {
 
   return (
     <div id="sleep" className="glass-card neomorphic rounded-2xl p-6 text-center h-full">
-      <h3 className="text-xl font-bold mb-4 text-primary">Bedtime Calculator</h3>
+      <h3 className="text-xl font-bold mb-4 text-primary">Bedtime Calculator for Sleep Cycles</h3>
+      <p className="text-xs text-muted-foreground mb-4">Calculate optimal bedtime based on 90-minute sleep cycles for better rest</p>
       
       <div className="mb-6">
         <label className="block text-sm font-semibold mb-3">Wake up time:</label>

@@ -42,7 +42,8 @@ export function StatusCheckerSection() {
 
   return (
     <div id="status" className="glass-card neomorphic rounded-2xl p-6 text-center h-full">
-      <h3 className="text-xl font-bold mb-4 text-primary">Website Uptime Checker</h3>
+      <h3 className="text-xl font-bold mb-4 text-primary">Website Status Checker & Uptime Monitor</h3>
+      <p className="text-xs text-muted-foreground mb-4">Check if any website is up or down instantly - free site monitoring tool</p>
       
       <div className="mb-6">
         <label className="block text-sm font-semibold mb-3">Check Website Status:</label>

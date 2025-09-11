@@ -65,7 +65,8 @@ export function BMICalculatorSection() {
 
   return (
     <div id="bmi-calc" className="glass-card neomorphic rounded-2xl p-6 text-center h-full">
-      <h3 className="text-xl font-bold mb-4 text-primary">BMI Calculator</h3>
+      <h3 className="text-xl font-bold mb-4 text-primary">BMI Calculator Online</h3>
+      <p className="text-xs text-muted-foreground mb-4">Calculate Body Mass Index with metric or imperial units - health assessment tool</p>
       
       <div className="mb-4">
         <Select value={unit} onValueChange={setUnit}>
