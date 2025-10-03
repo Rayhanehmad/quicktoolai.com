@@ -2,9 +2,19 @@
 
 This is a productivity tools web application called "Time & Tools Hub" that provides essential online utilities including an online clock with multiple timezone support, timer/stopwatch functionality, Pomodoro timer, sleep cycle calculator, and website status checker. The application is built as a modern full-stack web app with a React frontend and Express backend, designed to be fast, mobile-friendly, and SEO-optimized.
 
+## Recent Changes (October 3, 2025)
+- **Major UI/UX Redesign**: Enhanced all 8 tools with professional calculator.net-style interface
+- **Visual Enhancements**: Added gradient background sections (from-primary/10 to-accent/10) to all input areas
+- **Consistent Styling**: Standardized button heights (h-12), improved spacing, and professional typography
+- **Enhanced Results Display**: Upgraded result visualizations across all tools with better hierarchy and emphasis
+- **Sleep Calculator**: Added detailed bedtime recommendations with visual "Best" badge and sleep cycle explanations
+- **World Clock**: Maintained 70+ timezone coverage with improved visual layout
+- **Professional Polish**: Applied glass-card neomorphic design consistently across all tool sections
+
 # User Preferences
 
 Preferred communication style: Simple, everyday language.
+Design preference: Professional, detailed UI similar to calculator.net with clean layout and enhanced visual hierarchy
 
 # System Architecture
 
