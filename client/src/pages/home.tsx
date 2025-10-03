@@ -26,12 +26,19 @@ export default function Home() {
       <Navigation />
       <HeroSection />
       
-      {/* All Tools in Button Format */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      {/* Popular Tools Section */}
+      <section className="py-12 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">Popular Tools & Calculators</h2>
+          
+          {/* Featured Tools - Larger Cards */}
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
             <ClockTimerSection />
             <SleepCalculatorSection />
+          </div>
+          
+          {/* Regular Tools */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <StatusCheckerSection />
             <AgeCalculatorSection />
             <BMICalculatorSection />

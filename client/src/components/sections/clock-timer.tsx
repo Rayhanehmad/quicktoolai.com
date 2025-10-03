@@ -120,20 +120,27 @@ export function ClockTimerSection() {
   };
 
   return (
-    <div id="clock" className="glass-card neomorphic rounded-2xl p-6 text-center h-full">
-      <h3 className="text-xl font-bold mb-4 text-primary">Free Online Clock & Pomodoro Timer Online</h3>
-      <p className="text-xs text-muted-foreground mb-4">World clock with 70+ timezones, productivity timer, and Pomodoro technique</p>
-      
-      {/* Live Clock */}
+    <div id="clock" className="glass-card neomorphic rounded-2xl p-8 h-full">
       <div className="mb-6">
-        <div className="text-2xl font-mono font-bold text-foreground mb-2" data-testid="text-live-time">
-          {getCurrentTime()}
+        <h3 className="text-2xl font-bold mb-2 text-primary">Free Online Clock & Pomodoro Timer Online</h3>
+        <p className="text-sm text-muted-foreground">World clock with 70+ timezones, productivity timer, and Pomodoro technique</p>
+      </div>
+      
+      {/* Live Clock - Enhanced */}
+      <div className="mb-8 p-6 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl border border-primary/20">
+        <div className="text-center mb-4">
+          <div className="text-5xl font-mono font-bold text-foreground mb-2" data-testid="text-live-time">
+            {getCurrentTime()}
+          </div>
+          <div className="text-sm text-muted-foreground">
+            {timezone === 'local' ? 'Local Time' : timezone.split('/')[1]?.replace(/_/g, ' ')}
+          </div>
         </div>
         <Select value={timezone} onValueChange={setTimezone}>
-          <SelectTrigger className="w-full" data-testid="select-timezone">
-            <SelectValue />
+          <SelectTrigger className="w-full bg-background" data-testid="select-timezone">
+            <SelectValue placeholder="Select timezone" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="max-h-[300px]">
             {timezones.map((tz) => (
               <SelectItem key={tz.value} value={tz.value}>
                 {tz.label}
@@ -143,13 +150,14 @@ export function ClockTimerSection() {
         </Select>
       </div>
 
-      {/* Timer Mode Toggle */}
-      <div className="flex justify-center mb-4">
-        <div className="flex bg-muted rounded-lg p-1 text-xs">
+      {/* Timer Mode Toggle - Enhanced */}
+      <div className="flex justify-center mb-6">
+        <div className="flex bg-muted/50 rounded-xl p-1 gap-1">
           <Button
             variant={timer.mode === 'timer' ? 'default' : 'ghost'}
             size="sm"
             onClick={() => timer.switchMode('timer')}
+            className="text-xs px-4"
             data-testid="button-timer-mode"
           >
             Timer
@@ -158,6 +166,7 @@ export function ClockTimerSection() {
             variant={timer.mode === 'stopwatch' ? 'default' : 'ghost'}
             size="sm"
             onClick={() => timer.switchMode('stopwatch')}
+            className="text-xs px-4"
             data-testid="button-stopwatch-mode"
           >
             Stopwatch
@@ -166,6 +175,7 @@ export function ClockTimerSection() {
             variant={timer.mode === 'pomodoro' ? 'default' : 'ghost'}
             size="sm"
             onClick={() => timer.switchMode('pomodoro')}
+            className="text-xs px-4"
             data-testid="button-pomodoro-mode"
           >
             Pomodoro
@@ -173,9 +183,14 @@ export function ClockTimerSection() {
         </div>
       </div>
 
-      {/* Timer Display */}
-      <div className="text-2xl font-mono font-bold text-foreground mb-4" data-testid="text-timer-display">
-        {timer.formatTime(timer.time)}
+      {/* Timer Display - Enhanced */}
+      <div className="text-center mb-6 p-8 bg-muted/30 rounded-xl">
+        <div className="text-6xl font-mono font-bold text-foreground mb-2" data-testid="text-timer-display">
+          {timer.formatTime(timer.time)}
+        </div>
+        <div className="text-sm text-muted-foreground capitalize">
+          {timer.mode === 'pomodoro' ? `${timer.isBreak ? 'Break' : 'Focus'} Time` : timer.mode}
+        </div>
       </div>
       
       {/* Timer Input (only for timer mode) */}
