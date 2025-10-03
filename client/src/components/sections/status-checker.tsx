@@ -41,27 +41,28 @@ export function StatusCheckerSection() {
   };
 
   return (
-    <div id="status" className="glass-card neomorphic rounded-2xl p-6 text-center h-full">
-      <h3 className="text-xl font-bold mb-4 text-primary">Website Status Checker & Uptime Monitor</h3>
-      <p className="text-xs text-muted-foreground mb-4">Check if any website is up or down instantly - free site monitoring tool</p>
+    <div id="status" className="glass-card neomorphic rounded-2xl p-6 h-full">
+      <div className="mb-6 text-center">
+        <h3 className="text-xl font-bold mb-2 text-primary">Website Status Checker & Uptime Monitor</h3>
+        <p className="text-xs text-muted-foreground">Check if any website is up or down instantly - free site monitoring tool</p>
+      </div>
       
-      <div className="mb-6">
-        <label className="block text-sm font-semibold mb-3">Check Website Status:</label>
-        <div className="flex space-x-2">
+      <div className="mb-6 p-4 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl border border-primary/20">
+        <label className="block text-sm font-semibold mb-3 text-center">Enter Website URL:</label>
+        <div className="flex gap-2">
           <Input
             type="url"
-            placeholder="example.com"
+            placeholder="https://example.com"
             value={url}
             onChange={(e) => setUrl(e.target.value)}
             onKeyPress={handleKeyPress}
-            className="flex-1 text-sm"
+            className="flex-1"
             data-testid="input-website-url"
           />
           <Button
             onClick={handleCheck}
             disabled={checkWebsiteMutation.isPending || !url.trim()}
-            className="gradient-bg text-white hover:opacity-90 transition-opacity"
-            size="sm"
+            className="gradient-bg text-white hover:opacity-90 transition-opacity px-6"
             data-testid="button-check-status"
           >
             {checkWebsiteMutation.isPending ? 'Checking...' : 'Check'}

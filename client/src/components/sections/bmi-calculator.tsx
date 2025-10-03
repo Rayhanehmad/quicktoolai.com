@@ -64,13 +64,15 @@ export function BMICalculatorSection() {
   };
 
   return (
-    <div id="bmi-calc" className="glass-card neomorphic rounded-2xl p-6 text-center h-full">
-      <h3 className="text-xl font-bold mb-4 text-primary">BMI Calculator Online</h3>
-      <p className="text-xs text-muted-foreground mb-4">Calculate Body Mass Index with metric or imperial units - health assessment tool</p>
+    <div id="bmi-calc" className="glass-card neomorphic rounded-2xl p-6 h-full">
+      <div className="mb-6 text-center">
+        <h3 className="text-xl font-bold mb-2 text-primary">BMI Calculator Online</h3>
+        <p className="text-xs text-muted-foreground">Calculate Body Mass Index with metric or imperial units - health assessment tool</p>
+      </div>
       
-      <div className="mb-4">
+      <div className="mb-6 p-4 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl border border-primary/20">
         <Select value={unit} onValueChange={setUnit}>
-          <SelectTrigger className="w-full mb-3" data-testid="select-unit">
+          <SelectTrigger className="w-full mb-4 bg-background h-11" data-testid="select-unit">
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
@@ -79,7 +81,7 @@ export function BMICalculatorSection() {
           </SelectContent>
         </Select>
 
-        <div className="space-y-3">
+        <div className="space-y-4">
           <div>
             <label className="block text-sm font-semibold mb-2">
               Height ({unit === 'metric' ? 'cm' : 'inches'}):
@@ -89,7 +91,7 @@ export function BMICalculatorSection() {
               placeholder={unit === 'metric' ? '170' : '68'}
               value={height}
               onChange={(e) => setHeight(e.target.value)}
-              className="text-center"
+              className="text-center h-11"
               data-testid="input-height"
             />
           </div>
@@ -103,7 +105,7 @@ export function BMICalculatorSection() {
               placeholder={unit === 'metric' ? '70' : '154'}
               value={weight}
               onChange={(e) => setWeight(e.target.value)}
-              className="text-center"
+              className="text-center h-11"
               data-testid="input-weight"
             />
           </div>
@@ -112,7 +114,7 @@ export function BMICalculatorSection() {
 
       <Button
         onClick={calculateBMI}
-        className="w-full gradient-bg text-white py-2 px-4 font-semibold hover:opacity-90 transition-opacity mb-6"
+        className="w-full gradient-bg text-white py-3 px-6 font-semibold hover:opacity-90 transition-opacity mb-6 h-12"
         disabled={!height || !weight}
         data-testid="button-calculate-bmi"
       >

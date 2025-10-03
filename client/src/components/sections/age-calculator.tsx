@@ -60,24 +60,26 @@ export function AgeCalculatorSection() {
   };
 
   return (
-    <div id="age-calc" className="glass-card neomorphic rounded-2xl p-6 text-center h-full">
-      <h3 className="text-xl font-bold mb-4 text-primary">Age Calculator Online</h3>
-      <p className="text-xs text-muted-foreground mb-4">Calculate your exact age in years, months, days with next birthday countdown</p>
+    <div id="age-calc" className="glass-card neomorphic rounded-2xl p-6 h-full">
+      <div className="mb-6 text-center">
+        <h3 className="text-xl font-bold mb-2 text-primary">Age Calculator Online</h3>
+        <p className="text-xs text-muted-foreground">Calculate your exact age in years, months, days with next birthday countdown</p>
+      </div>
       
-      <div className="mb-6">
-        <label className="block text-sm font-semibold mb-3">Your birth date:</label>
+      <div className="mb-6 p-4 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl border border-primary/20">
+        <label className="block text-sm font-semibold mb-3 text-center">Select Your Birth Date:</label>
         <Input
           type="date"
           value={birthDate}
           onChange={(e) => setBirthDate(e.target.value)}
-          className="text-lg px-3 py-2 text-center max-w-xs mx-auto"
+          className="text-lg px-3 py-2 text-center max-w-xs mx-auto h-12"
           data-testid="input-birth-date"
         />
       </div>
 
       <Button
         onClick={calculateAge}
-        className="w-full gradient-bg text-white py-2 px-4 font-semibold hover:opacity-90 transition-opacity mb-6"
+        className="w-full gradient-bg text-white py-3 px-6 font-semibold hover:opacity-90 transition-opacity mb-6 h-12"
         disabled={!birthDate}
         data-testid="button-calculate-age"
       >

@@ -49,13 +49,15 @@ export function IPLookupSection() {
   }, []);
 
   return (
-    <div id="ip-lookup" className="glass-card neomorphic rounded-2xl p-6 text-center h-full">
-      <h3 className="text-xl font-bold mb-4 text-primary">IP Address Lookup Tool</h3>
-      <p className="text-xs text-muted-foreground mb-4">Find your public IP address and location information instantly</p>
+    <div id="ip-lookup" className="glass-card neomorphic rounded-2xl p-6 h-full">
+      <div className="mb-6 text-center">
+        <h3 className="text-xl font-bold mb-2 text-primary">IP Address Lookup Tool</h3>
+        <p className="text-xs text-muted-foreground">Find your public IP address and location information instantly</p>
+      </div>
       
       <Button
         onClick={fetchIPInfo}
-        className="w-full gradient-bg text-white py-2 px-4 font-semibold hover:opacity-90 transition-opacity mb-6"
+        className="w-full gradient-bg text-white py-3 px-6 font-semibold hover:opacity-90 transition-opacity mb-6 h-12"
         disabled={isLoading}
         data-testid="button-refresh-ip"
       >

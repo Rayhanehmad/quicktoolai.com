@@ -36,12 +36,14 @@ export function QRGeneratorSection() {
   };
 
   return (
-    <div id="qr-generator" className="glass-card neomorphic rounded-2xl p-6 text-center h-full">
-      <h3 className="text-xl font-bold mb-4 text-primary">QR Code Generator Free</h3>
-      <p className="text-xs text-muted-foreground mb-4">Generate QR codes for URLs, text, or any content - download instantly</p>
+    <div id="qr-generator" className="glass-card neomorphic rounded-2xl p-6 h-full">
+      <div className="mb-6 text-center">
+        <h3 className="text-xl font-bold mb-2 text-primary">QR Code Generator Free</h3>
+        <p className="text-xs text-muted-foreground">Generate QR codes for URLs, text, or any content - download instantly</p>
+      </div>
       
-      <div className="mb-4">
-        <label className="block text-sm font-semibold mb-2">Enter text or URL:</label>
+      <div className="mb-6 p-4 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl border border-primary/20">
+        <label className="block text-sm font-semibold mb-3 text-center">Enter text or URL:</label>
         <Textarea
           placeholder="https://example.com or any text..."
           value={inputText}
@@ -54,7 +56,7 @@ export function QRGeneratorSection() {
 
       <Button
         onClick={generateQRCode}
-        className="w-full gradient-bg text-white py-2 px-4 font-semibold hover:opacity-90 transition-opacity mb-6"
+        className="w-full gradient-bg text-white py-3 px-6 font-semibold hover:opacity-90 transition-opacity mb-6 h-12"
         disabled={!inputText.trim()}
         data-testid="button-generate-qr"
       >

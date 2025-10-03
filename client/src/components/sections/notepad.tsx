@@ -50,24 +50,26 @@ export function NotepadSection() {
   const charCount = noteText.length;
 
   return (
-    <div id="notepad" className="glass-card neomorphic rounded-2xl p-6 text-center h-full">
-      <h3 className="text-xl font-bold mb-4 text-primary">Online Notepad Free</h3>
-      <p className="text-xs text-muted-foreground mb-4">Simple online text editor with auto-save - write notes, drafts, and documents</p>
+    <div id="notepad" className="glass-card neomorphic rounded-2xl p-6 h-full">
+      <div className="mb-6 text-center">
+        <h3 className="text-xl font-bold mb-2 text-primary">Online Notepad Free</h3>
+        <p className="text-xs text-muted-foreground">Simple online text editor with auto-save - write notes, drafts, and documents</p>
+      </div>
       
-      <div className="mb-4">
+      <div className="mb-4 p-4 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl border border-primary/20">
         <Textarea
           placeholder="Start typing your notes here..."
           value={noteText}
           onChange={(e) => setNoteText(e.target.value)}
-          className="text-sm resize-none h-32 text-left"
+          className="text-sm resize-none h-32 text-left bg-background"
           data-testid="textarea-notepad"
         />
       </div>
 
       {/* Stats */}
-      <div className="flex justify-between text-xs text-muted-foreground mb-4">
-        <span data-testid="word-count">Words: {wordCount}</span>
-        <span data-testid="char-count">Characters: {charCount}</span>
+      <div className="flex justify-between text-xs text-muted-foreground mb-4 px-2">
+        <span data-testid="word-count">📝 {wordCount} words</span>
+        <span data-testid="char-count">🔤 {charCount} characters</span>
       </div>
 
       {/* Action Buttons */}
