@@ -4,12 +4,27 @@ This is a comprehensive productivity tools web application called "Time & Tools 
 
 ## Recent Changes (October 4, 2025)
 
-### Latest: Advanced Features & Monetization Ready (Today)
+### Latest: Individual SEO-Friendly Pages (Now)
+- **Major Architecture Change**: Converted from single-page layout to individual pages for each tool
+- **Individual Routes**: All 30 tools now have dedicated SEO-friendly URLs (e.g., /percentage, /currency, /bmi-calc)
+- **SEO Optimization**: Each tool page has unique meta tags, Open Graph tags, and canonical URLs
+- **Tool Page Layout**: Reusable ToolPageLayout component with breadcrumbs and consistent structure
+- **Enhanced Navigation**: Updated to use proper links instead of smooth scrolling
+  - Search bar with live filtering navigates to tool pages
+  - Category dropdown links to individual tools
+  - Home button visible when not on homepage
+- **Home Page Redesign**: Landing page with category overview and tool cards linking to individual pages
+- **Better UX**: Faster page loads (only one tool per page), shareable direct links, improved SEO indexing
+- **Helmet Integration**: React Helmet Async for dynamic meta tag management across all pages
+
+### Earlier: Advanced Features & Monetization Ready
 - **Google Analytics 4**: Full GA4 integration with page view and custom event tracking
 - **Cookie Consent**: GDPR-compliant banner with Accept All, Necessary Only, and customization dialog
 - **Share Results**: Social media sharing (Twitter, Facebook, LinkedIn, Email) + copy link functionality
 - **PWA Support**: Progressive Web App with service worker, offline support, and install prompt
 - **Favorites System**: Context-based bookmarking with panel for quick access to favorite tools
+- **Currency Converter**: Live exchange rates for 150+ currencies via Fawazahmed0 API
+- **Unit Converter**: 9 categories with 62 units (length, weight, temperature, area, volume, speed, time, energy, data)
 - **Bug Fixes**: Fixed percentage calculator validation and favorites state synchronization
 - **AdSense Ready**: All features are user-triggered and non-intrusive for ad placement compatibility
 
@@ -47,7 +62,11 @@ Design preference: Professional, detailed UI similar to calculator.net with clea
 
 ## Frontend Architecture
 - **Framework**: React 18 with TypeScript for type safety and modern development practices
-- **Routing**: Wouter for lightweight client-side routing (single page app with smooth scroll navigation)
+- **Routing**: Wouter for lightweight client-side routing with individual pages for each tool
+  - Home page (/) displays tool directory
+  - Each tool has dedicated route (e.g., /percentage, /currency, /bmi-calc)
+  - 30+ routes defined in App.tsx for all tools
+- **SEO**: React Helmet Async for dynamic meta tags, Open Graph, and canonical URLs per page
 - **UI Framework**: Shadcn/ui components built on Radix UI primitives for accessible, customizable components
 - **Styling**: Tailwind CSS with custom CSS variables for theming and responsive design
 - **State Management**: TanStack Query (React Query) for server state, React Context API for favorites system
@@ -60,8 +79,10 @@ Design preference: Professional, detailed UI similar to calculator.net with clea
 ## Navigation System
 - **Desktop**: Search bar with live tool filtering + Category dropdown menu
 - **Mobile**: Hamburger menu with integrated search
-- **Functionality**: Smooth scroll to tool sections using element IDs
-- **Tool Registry**: Centralized tool list with metadata (id, name, category)
+- **Functionality**: Link-based navigation to individual tool pages (no smooth scrolling)
+- **Tool Registry**: Centralized tool list with metadata (id, name, category, path)
+- **Home Button**: Visible when not on homepage, links back to tool directory
+- **Breadcrumbs**: On all tool pages showing Home > Category > Tool Name
 
 ## Backend Architecture
 - **Runtime**: Node.js with Express.js framework for RESTful API endpoints
