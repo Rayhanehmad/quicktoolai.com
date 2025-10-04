@@ -16,7 +16,7 @@ export function HeroSection() {
         {/* Quick Stats */}
         <div className="flex justify-center gap-8 mb-8 flex-wrap">
           <div className="text-center">
-            <div className="text-3xl font-bold text-primary">8</div>
+            <div className="text-3xl font-bold text-primary">30</div>
             <div className="text-sm text-muted-foreground">Free Tools</div>
           </div>
           <div className="text-center">
