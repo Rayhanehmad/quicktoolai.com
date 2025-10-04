@@ -89,7 +89,7 @@ export function Navigation() {
               <Clock className="w-5 h-5 text-white" />
             </div>
             <h1 className="text-lg md:text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              30 Free Online Tools
+              Free Online Tools
             </h1>
           </div>
           
