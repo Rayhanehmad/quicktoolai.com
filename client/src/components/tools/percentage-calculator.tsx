@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Percent } from "lucide-react";
+import { ShareResults } from "@/components/share-results";
 
 export function PercentageCalculator() {
   const [value, setValue] = useState('');
@@ -59,12 +60,21 @@ export function PercentageCalculator() {
       </Button>
 
       {result !== null && (
-        <div className="p-4 rounded-lg bg-primary/10 border border-primary animate-slide-up" data-testid="result">
-          <div className="text-2xl font-bold text-primary text-center">
-            {result.toFixed(2)}
+        <div className="space-y-3 animate-slide-up">
+          <div className="p-4 rounded-lg bg-primary/10 border border-primary" data-testid="result">
+            <div className="text-2xl font-bold text-primary text-center">
+              {result.toFixed(2)}
+            </div>
+            <div className="text-xs text-center text-muted-foreground mt-1">
+              {percentage}% of {value} = {result.toFixed(2)}
+            </div>
           </div>
-          <div className="text-xs text-center text-muted-foreground mt-1">
-            {percentage}% of {value} = {result.toFixed(2)}
+          <div className="flex justify-center">
+            <ShareResults
+              toolName="Percentage Calculator"
+              result={result.toFixed(2)}
+              description={`${percentage}% of ${value}`}
+            />
           </div>
         </div>
       )}
