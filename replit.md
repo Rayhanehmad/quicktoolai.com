@@ -1,15 +1,31 @@
 # Overview
 
-This is a productivity tools web application called "Time & Tools Hub" that provides essential online utilities including an online clock with multiple timezone support, timer/stopwatch functionality, Pomodoro timer, sleep cycle calculator, and website status checker. The application is built as a modern full-stack web app with a React frontend and Express backend, designed to be fast, mobile-friendly, and SEO-optimized.
+This is a comprehensive productivity tools web application called "Time & Tools Hub" featuring 30 essential online calculators and tools. The application provides a professional, calculator.net-style interface with strong SEO optimization, dark/light mode toggle, and a detailed user-friendly design built to compete with major calculator websites.
 
-## Recent Changes (October 3, 2025)
-- **Major UI/UX Redesign**: Enhanced all 8 tools with professional calculator.net-style interface
-- **Visual Enhancements**: Added gradient background sections (from-primary/10 to-accent/10) to all input areas
-- **Consistent Styling**: Standardized button heights (h-12), improved spacing, and professional typography
-- **Enhanced Results Display**: Upgraded result visualizations across all tools with better hierarchy and emphasis
-- **Sleep Calculator**: Added detailed bedtime recommendations with visual "Best" badge and sleep cycle explanations
-- **World Clock**: Maintained 70+ timezone coverage with improved visual layout
-- **Professional Polish**: Applied glass-card neomorphic design consistently across all tool sections
+## Recent Changes (October 4, 2025)
+- **Expanded to 30 Tools**: Grew from 8 to 30 fully functional calculators and tools
+- **Category Organization**: Tools organized into 8 categories for better UX
+  - Financial (7): Percentage, Loan, Mortgage, Interest, Discount, Tip, Profit
+  - Converters (2): Currency, Unit
+  - Health & Fitness (5): BMI, BMR, Body Fat, Calorie, Pregnancy
+  - Math & Science (5): Scientific, Fraction, Ratio, Average, Random Number
+  - Measurement (4): Area, Volume, Speed, Energy
+  - Time & Date (6): World Clock, Age, Date, Time, Countdown, Sleep
+  - Utilities (4): Website Checker, IP Lookup, QR Generator, Notepad
+  - Academic & Fun (2): GPA, Love Calculator
+- **Enhanced Navigation**: Added search bar with live filtering and category dropdown menu
+- **Professional UI**: Maintained calculator.net-style design across all 30 tools with glass cards and gradient backgrounds
+- **Component Structure**: Organized tools in `/client/src/components/tools/` directory
+
+## Tool Components List
+1. **Financial**: percentage-calculator.tsx, loan-calculator.tsx, mortgage-calculator.tsx, discount-calculator.tsx, tip-calculator.tsx, simple-tools.tsx (Interest, Profit)
+2. **Converters**: unit-converter.tsx, remaining-tools.tsx (Currency)
+3. **Health**: bmr-calculator.tsx, remaining-tools.tsx (Body Fat, Calorie, Pregnancy)
+4. **Math**: scientific-calculator.tsx, fraction-calculator.tsx, average-calculator.tsx, random-number.tsx, simple-tools.tsx (Love)
+5. **Measurement**: area-calculator.tsx, simple-tools.tsx (Speed, Volume), remaining-tools.tsx (Energy)
+6. **Time**: countdown-timer.tsx, date-calculator.tsx, remaining-tools.tsx (Time Calc)
+7. **Utilities**: Existing sections (status, IP, QR, notepad)
+8. **Academic**: gpa-calculator.tsx
 
 # User Preferences
 
@@ -20,12 +36,18 @@ Design preference: Professional, detailed UI similar to calculator.net with clea
 
 ## Frontend Architecture
 - **Framework**: React 18 with TypeScript for type safety and modern development practices
-- **Routing**: Wouter for lightweight client-side routing
+- **Routing**: Wouter for lightweight client-side routing (single page app with smooth scroll navigation)
 - **UI Framework**: Shadcn/ui components built on Radix UI primitives for accessible, customizable components
 - **Styling**: Tailwind CSS with custom CSS variables for theming and responsive design
 - **State Management**: TanStack Query (React Query) for server state management and caching
 - **Build Tool**: Vite for fast development and optimized production builds
 - **Theme Support**: Custom theme provider supporting light/dark/system themes with persistent storage
+
+## Navigation System
+- **Desktop**: Search bar with live tool filtering + Category dropdown menu
+- **Mobile**: Hamburger menu with integrated search
+- **Functionality**: Smooth scroll to tool sections using element IDs
+- **Tool Registry**: Centralized tool list with metadata (id, name, category)
 
 ## Backend Architecture
 - **Runtime**: Node.js with Express.js framework for RESTful API endpoints
@@ -57,3 +79,12 @@ Design preference: Professional, detailed UI similar to calculator.net with clea
 - **Development Tools**: Replit-specific plugins for development environment integration
 - **Website Checking**: Native fetch API for HTTP requests to check website status
 - **SEO Optimization**: Comprehensive meta tags, Open Graph, Twitter Cards, and JSON-LD structured data
+
+## Design System
+- **Glass Card UI**: neomorphic design with backdrop blur and subtle shadows
+- **Gradient Backgrounds**: Input sections use `from-primary/10 to-accent/10` gradients
+- **Button Styling**: Consistent `h-12` height with `gradient-bg` for primary actions
+- **Input Height**: Standard `h-11` for all input fields
+- **Animations**: `animate-slide-up` for result displays
+- **Color System**: CSS custom properties for theme colors in light/dark modes
+- **Typography**: Professional hierarchy with bold headings and clear labels
