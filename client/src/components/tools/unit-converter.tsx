@@ -62,7 +62,7 @@ export function UnitConverter() {
                        Object.keys(units.temperature);
 
   return (
-    <div id="unit-converter" className="glass-card neomorphic rounded-2xl p-6 h-full">
+    <div id="unit" className="glass-card neomorphic rounded-2xl p-6 h-full">
       <div className="mb-6 text-center">
         <h3 className="text-xl font-bold mb-2 text-primary">Unit Converter</h3>
         <p className="text-xs text-muted-foreground">Convert between different units of measurement</p>
