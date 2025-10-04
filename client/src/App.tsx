@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Switch, Route } from "wouter";
+import { HelmetProvider } from "react-helmet-async";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -136,19 +137,21 @@ function App() {
   }, []);
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <ThemeProvider defaultTheme="system" storageKey="timetools-theme">
-        <FavoritesProvider>
-          <TooltipProvider>
-            <Toaster />
-            {analyticsConsent && gaId && <GoogleAnalytics measurementId={gaId} />}
-            <CookieConsent />
-            <PWAInstall />
-            <Router />
-          </TooltipProvider>
-        </FavoritesProvider>
-      </ThemeProvider>
-    </QueryClientProvider>
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <ThemeProvider defaultTheme="system" storageKey="timetools-theme">
+          <FavoritesProvider>
+            <TooltipProvider>
+              <Toaster />
+              {analyticsConsent && gaId && <GoogleAnalytics measurementId={gaId} />}
+              <CookieConsent />
+              <PWAInstall />
+              <Router />
+            </TooltipProvider>
+          </FavoritesProvider>
+        </ThemeProvider>
+      </QueryClientProvider>
+    </HelmetProvider>
   );
 }
 
