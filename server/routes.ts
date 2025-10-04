@@ -94,6 +94,65 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // AI Chat endpoint
+  app.post("/api/ai/chat", async (req, res) => {
+    try {
+      const { message, history } = req.body;
+
+      if (!message || typeof message !== 'string') {
+        return res.status(400).json({ message: "Message is required" });
+      }
+
+      // Check if API key is configured
+      if (!process.env.OPENAI_API_KEY) {
+        return res.status(503).json({ 
+          message: "AI service is not configured. Please add your OpenAI API key." 
+        });
+      }
+
+      const { chatWithAI } = await import("./ai");
+      const response = await chatWithAI(message, history || []);
+      
+      res.json({ response });
+    } catch (error) {
+      console.error('AI Chat error:', error);
+      res.status(500).json({ 
+        message: error instanceof Error ? error.message : "Failed to process AI request" 
+      });
+    }
+  });
+
+  // AI Text Analysis endpoint
+  app.post("/api/ai/analyze", async (req, res) => {
+    try {
+      const { text, analysisType } = req.body;
+
+      if (!text || typeof text !== 'string') {
+        return res.status(400).json({ message: "Text is required" });
+      }
+
+      if (!['summary', 'sentiment', 'keywords'].includes(analysisType)) {
+        return res.status(400).json({ message: "Invalid analysis type" });
+      }
+
+      if (!process.env.OPENAI_API_KEY) {
+        return res.status(503).json({ 
+          message: "AI service is not configured. Please add your OpenAI API key." 
+        });
+      }
+
+      const { analyzeText } = await import("./ai");
+      const result = await analyzeText(text, analysisType);
+      
+      res.json(result);
+    } catch (error) {
+      console.error('AI Analysis error:', error);
+      res.status(500).json({ 
+        message: error instanceof Error ? error.message : "Failed to analyze text" 
+      });
+    }
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }

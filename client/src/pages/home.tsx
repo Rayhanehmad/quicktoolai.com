@@ -10,6 +10,7 @@ import { QRGeneratorSection } from "@/components/sections/qr-generator";
 import { NotepadSection } from "@/components/sections/notepad";
 import { SocialShareSection } from "@/components/sections/social-share";
 import { Footer } from "@/components/footer";
+import { AIChatbot } from "@/components/ai-chatbot";
 
 // Financial Calculators
 import { PercentageCalculator } from "@/components/tools/percentage-calculator";
@@ -146,6 +147,9 @@ export default function Home() {
 
       <SocialShareSection />
       <Footer />
+      
+      {/* AI Chatbot - Floating */}
+      <AIChatbot />
     </div>
   );
 }
