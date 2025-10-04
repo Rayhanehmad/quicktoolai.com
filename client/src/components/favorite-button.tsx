@@ -1,4 +1,4 @@
-import { useFavorites } from '@/hooks/use-favorites';
+import { useFavorites } from '@/contexts/favorites-context';
 import { Button } from '@/components/ui/button';
 import { Star } from 'lucide-react';
 

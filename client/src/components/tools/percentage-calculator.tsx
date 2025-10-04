@@ -18,6 +18,9 @@ export function PercentageCalculator() {
     }
   };
 
+  const isValid = value !== '' && percentage !== '' && 
+                  !isNaN(parseFloat(value)) && !isNaN(parseFloat(percentage));
+
   return (
     <div id="percentage" className="glass-card neomorphic rounded-2xl p-6 h-full">
       <div className="mb-6">
@@ -56,7 +59,7 @@ export function PercentageCalculator() {
       <Button
         onClick={calculate}
         className="w-full gradient-bg text-white py-3 px-6 font-semibold hover:opacity-90 transition-opacity mb-6 h-12"
-        disabled={!value || !percentage}
+        disabled={!isValid}
         data-testid="button-calculate"
       >
         <Percent className="w-4 h-4 mr-2" />

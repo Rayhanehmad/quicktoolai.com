@@ -8,6 +8,7 @@ import { ThemeProvider } from "@/components/ui/theme-provider";
 import { GoogleAnalytics } from "@/components/google-analytics";
 import { CookieConsent, isAnalyticsEnabled } from "@/components/cookie-consent";
 import { PWAInstall } from "@/components/pwa-install";
+import { FavoritesProvider } from "@/contexts/favorites-context";
 import { registerServiceWorker } from "@/lib/pwa-register";
 import Home from "@/pages/home";
 import NotFound from "@/pages/not-found";
@@ -34,13 +35,15 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider defaultTheme="system" storageKey="timetools-theme">
-        <TooltipProvider>
-          <Toaster />
-          {analyticsConsent && gaId && <GoogleAnalytics measurementId={gaId} />}
-          <CookieConsent />
-          <PWAInstall />
-          <Router />
-        </TooltipProvider>
+        <FavoritesProvider>
+          <TooltipProvider>
+            <Toaster />
+            {analyticsConsent && gaId && <GoogleAnalytics measurementId={gaId} />}
+            <CookieConsent />
+            <PWAInstall />
+            <Router />
+          </TooltipProvider>
+        </FavoritesProvider>
       </ThemeProvider>
     </QueryClientProvider>
   );
