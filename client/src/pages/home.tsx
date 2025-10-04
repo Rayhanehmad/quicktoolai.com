@@ -21,6 +21,7 @@ import { MortgageCalculator } from "@/components/tools/mortgage-calculator";
 
 // Converters
 import { UnitConverter } from "@/components/tools/unit-converter";
+import { CurrencyConverter } from "@/components/tools/currency-converter";
 
 // Health & Fitness
 import { BMRCalculator } from "@/components/tools/bmr-calculator";
@@ -37,7 +38,7 @@ import { ScientificCalculator } from "@/components/tools/scientific-calculator";
 
 // Simple Tools
 import { LoveCalculator, InterestCalculator, ProfitCalculator, SpeedCalculator, VolumeCalculator } from "@/components/tools/simple-tools";
-import { CurrencyConverter, BodyFatCalculator, CalorieCalculator, PregnancyCalculator, RatioCalculator, EnergyCalculator, TimeCalculator } from "@/components/tools/remaining-tools";
+import { BodyFatCalculator, CalorieCalculator, PregnancyCalculator, RatioCalculator, EnergyCalculator, TimeCalculator } from "@/components/tools/remaining-tools";
 
 export default function Home() {
   return (
