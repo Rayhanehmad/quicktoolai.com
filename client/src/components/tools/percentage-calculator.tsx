@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Percent } from "lucide-react";
 import { ShareResults } from "@/components/share-results";
+import { FavoriteButton } from "@/components/favorite-button";
 
 export function PercentageCalculator() {
   const [value, setValue] = useState('');
@@ -19,9 +20,12 @@ export function PercentageCalculator() {
 
   return (
     <div id="percentage" className="glass-card neomorphic rounded-2xl p-6 h-full">
-      <div className="mb-6 text-center">
-        <h3 className="text-xl font-bold mb-2 text-primary">Percentage Calculator</h3>
-        <p className="text-xs text-muted-foreground">Calculate percentage of any number quickly</p>
+      <div className="mb-6">
+        <div className="flex items-center justify-between mb-2">
+          <h3 className="text-xl font-bold text-primary">Percentage Calculator</h3>
+          <FavoriteButton toolId="percentage" />
+        </div>
+        <p className="text-xs text-muted-foreground text-center">Calculate percentage of any number quickly</p>
       </div>
       
       <div className="mb-6 p-4 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl border border-primary/20 space-y-4">

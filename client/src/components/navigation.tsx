@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useTheme } from "@/components/ui/theme-provider";
 import { Clock, Sun, Moon, Menu, X, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import { FavoritesPanel } from "@/components/favorites-panel";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -143,6 +144,9 @@ export function Navigation() {
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
+
+            {/* Favorites Panel */}
+            <FavoritesPanel />
           </div>
           
           <div className="flex items-center space-x-4">
