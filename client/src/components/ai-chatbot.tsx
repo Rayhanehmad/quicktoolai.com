@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Bot, Send, Sparkles, X, MessageSquare } from "lucide-react";
+import { Bot, Send, Sparkles, X, MessageSquare, Calculator, Search, FileText, TrendingUp } from "lucide-react";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 
@@ -10,12 +10,20 @@ interface Message {
   content: string;
 }
 
+const quickActions = [
+  { icon: Calculator, label: 'Math Help', prompt: 'Help me solve a math problem step by step' },
+  { icon: Search, label: 'Find Tool', prompt: 'Which tool should I use for' },
+  { icon: FileText, label: 'Summarize', prompt: 'Summarize this text:' },
+  { icon: TrendingUp, label: 'Analyze Data', prompt: 'Analyze these numbers:' },
+];
+
 export function AIChatbot() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'assistant', content: 'Hi! I\'m your AI assistant. I can help you with calculations, data analysis, text summarization, and answer questions about using these tools. How can I help you today?' }
+    { role: 'assistant', content: 'Hi! 👋 I\'m your AI assistant powered by GPT-5. I can:\n\n🧮 Solve math problems step-by-step\n🔍 Find the right calculator for your needs\n📝 Summarize & analyze text\n📊 Provide data insights\n\nTry the quick actions below or ask me anything!' }
   ]);
   const [input, setInput] = useState('');
+  const [showQuickActions, setShowQuickActions] = useState(true);
 
   const chatMutation = useMutation({
     mutationFn: async (message: string) => {
@@ -27,13 +35,19 @@ export function AIChatbot() {
     },
   });
 
-  const handleSend = () => {
-    if (!input.trim()) return;
+  const handleSend = (messageOverride?: string) => {
+    const messageToSend = messageOverride || input.trim();
+    if (!messageToSend) return;
     
-    const userMessage = input.trim();
-    setMessages(prev => [...prev, { role: 'user', content: userMessage }]);
+    setMessages(prev => [...prev, { role: 'user', content: messageToSend }]);
     setInput('');
-    chatMutation.mutate(userMessage);
+    setShowQuickActions(false);
+    chatMutation.mutate(messageToSend);
+  };
+
+  const handleQuickAction = (prompt: string) => {
+    setInput(prompt + ' ');
+    setShowQuickActions(false);
   };
 
   return (
@@ -93,6 +107,27 @@ export function AIChatbot() {
             )}
           </div>
 
+          {/* Quick Actions */}
+          {showQuickActions && messages.length <= 1 && (
+            <div className="px-4 pb-2">
+              <p className="text-xs font-semibold mb-2 text-muted-foreground">Quick Actions:</p>
+              <div className="grid grid-cols-2 gap-2">
+                {quickActions.map((action, idx) => (
+                  <Button
+                    key={idx}
+                    onClick={() => handleQuickAction(action.prompt)}
+                    variant="outline"
+                    size="sm"
+                    className="h-auto py-2 flex flex-col items-center gap-1 hover:bg-primary/10"
+                  >
+                    <action.icon className="w-4 h-4" />
+                    <span className="text-xs">{action.label}</span>
+                  </Button>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Input */}
           <div className="p-4 border-t border-border">
             <div className="flex gap-2">
@@ -106,7 +141,7 @@ export function AIChatbot() {
                 data-testid="input-chat"
               />
               <Button 
-                onClick={handleSend} 
+                onClick={() => handleSend()} 
                 className="gradient-bg text-white h-11 w-11 p-0"
                 disabled={chatMutation.isPending || !input.trim()}
                 data-testid="button-send"
@@ -115,7 +150,7 @@ export function AIChatbot() {
               </Button>
             </div>
             <p className="text-xs text-muted-foreground mt-2 text-center">
-              AI can analyze data, help with calculations, and answer questions
+              Powered by GPT-5 • Calculator Helper • Smart Analysis
             </p>
           </div>
         </div>
