@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
+import { AdSensePlaceholder } from "@/components/adsense-placeholder";
 import { Mail, MessageSquare, MapPin, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -58,6 +59,9 @@ export default function ContactPage() {
         <Navigation />
         
         <main className="max-w-6xl mx-auto px-4 py-12">
+          {/* Top Ad */}
+          <AdSensePlaceholder slot="contact-top" format="rectangle" />
+          
           <div className="mb-12 text-center">
             <div className="flex items-center justify-center gap-3 mb-4">
               <MessageSquare className="w-10 h-10 text-primary" />
@@ -253,6 +257,9 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
+          
+          {/* Bottom Ad */}
+          <AdSensePlaceholder slot="contact-bottom" format="responsive" />
         </main>
 
         <Footer />

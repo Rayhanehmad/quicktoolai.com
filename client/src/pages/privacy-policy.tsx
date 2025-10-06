@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
+import { AdSensePlaceholder } from "@/components/adsense-placeholder";
 import { Shield, Lock, Eye, Database, Cookie, UserCheck } from "lucide-react";
 
 export default function PrivacyPolicyPage() {
@@ -16,6 +17,9 @@ export default function PrivacyPolicyPage() {
         <Navigation />
         
         <main className="max-w-4xl mx-auto px-4 py-12">
+          {/* Top Ad */}
+          <AdSensePlaceholder slot="privacy-top" format="rectangle" />
+          
           <div className="mb-8">
             <div className="flex items-center gap-3 mb-4">
               <Shield className="w-10 h-10 text-primary" />
@@ -214,6 +218,9 @@ export default function PrivacyPolicyPage() {
               </ul>
             </section>
           </div>
+          
+          {/* Bottom Ad */}
+          <AdSensePlaceholder slot="privacy-bottom" format="responsive" />
         </main>
 
         <Footer />

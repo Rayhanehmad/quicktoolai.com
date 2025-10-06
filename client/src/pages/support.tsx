@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
+import { AdSensePlaceholder } from "@/components/adsense-placeholder";
 import { LifeBuoy, HelpCircle, BookOpen, Video, MessageCircle, CheckCircle } from "lucide-react";
 import { Link } from "wouter";
 
@@ -73,6 +74,9 @@ export default function SupportPage() {
         <Navigation />
         
         <main className="max-w-6xl mx-auto px-4 py-12">
+          {/* Top Ad */}
+          <AdSensePlaceholder slot="support-top" format="rectangle" />
+          
           {/* Header */}
           <div className="mb-12 text-center">
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -193,6 +197,9 @@ export default function SupportPage() {
               </div>
             </div>
           </div>
+          
+          {/* Bottom Ad */}
+          <AdSensePlaceholder slot="support-bottom" format="responsive" />
         </main>
 
         <Footer />

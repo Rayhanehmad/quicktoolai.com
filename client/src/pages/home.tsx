@@ -5,6 +5,7 @@ import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { AIChatbot } from "@/components/ai-chatbot";
 import { Button } from "@/components/ui/button";
+import { AdSensePlaceholder } from "@/components/adsense-placeholder";
 import { Calculator, TrendingUp, Repeat, Heart, Ruler, Clock, Wrench, GraduationCap, ArrowRight } from "lucide-react";
 
 const tools = [
@@ -90,21 +91,21 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Time & Tools Hub - 30 Free Online Calculators & Tools</title>
-        <meta name="description" content="Access 30 free online calculators and productivity tools including percentage calculator, loan calculator, currency converter, BMI calculator, and more. Fast, accurate, and easy to use." />
-        <meta name="keywords" content="online calculator, percentage calculator, loan calculator, currency converter, BMI calculator, unit converter, free tools, productivity tools" />
+        <title>AI FinHealth Hub - Smart Financial & Health Calculators | Free AI Tools</title>
+        <meta name="description" content="AI-powered financial planning and health tracking tools. Smart calculators for loans, mortgages, BMI, calorie tracking, and more. Free AI-assisted calculations for better financial and health decisions." />
+        <meta name="keywords" content="AI calculator, financial planning tools, health metrics calculator, smart finance tools, AI health tracker, BMI calculator, loan calculator, mortgage planner, AI financial advisor, health analytics" />
         
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={window.location.origin} />
-        <meta property="og:title" content="Time & Tools Hub - 30 Free Online Calculators & Tools" />
-        <meta property="og:description" content="Access 30 free online calculators and productivity tools for finance, health, math, conversions, and more." />
-        <meta property="og:site_name" content="Time & Tools Hub" />
+        <meta property="og:title" content="AI FinHealth Hub - Smart Financial & Health Calculators" />
+        <meta property="og:description" content="AI-powered tools for financial planning and health tracking. Make smarter decisions with intelligent calculators for finance, health, and wellness." />
+        <meta property="og:site_name" content="AI FinHealth Hub" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Time & Tools Hub - 30 Free Online Calculators & Tools" />
-        <meta name="twitter:description" content="Access 30 free online calculators and productivity tools for finance, health, math, conversions, and more." />
+        <meta name="twitter:title" content="AI FinHealth Hub - Smart Financial & Health Calculators" />
+        <meta name="twitter:description" content="AI-powered tools for financial planning and health tracking. Make smarter decisions with intelligent calculators." />
         
         {/* Canonical URL */}
         <link rel="canonical" href={window.location.origin} />
@@ -116,15 +117,21 @@ export default function Home() {
         {/* Hero Section */}
         <section className="py-16 px-4 bg-gradient-to-b from-primary/5 to-background">
           <div className="max-w-7xl mx-auto text-center">
+            <div className="inline-block px-4 py-2 mb-4 rounded-full bg-primary/10 text-primary text-sm font-semibold">
+              AI + Finance + Health
+            </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              30 Essential Online Tools
+              Smart Financial & Health Calculators
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Free calculators and productivity tools for finance, health, math, conversions, and more. 
-              Fast, accurate, and easy to use.
+              AI-powered tools for intelligent financial planning, health tracking, and data-driven decisions. 
+              Make smarter choices with automated calculations and personalized insights.
             </p>
           </div>
         </section>
+
+        {/* Top Banner Ad */}
+        <AdSensePlaceholder slot="home-top-banner" format="horizontal" />
 
         {/* Categories Overview */}
         <section className="py-12 px-4 bg-muted/30">
@@ -150,6 +157,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Rectangle Ad */}
+        <AdSensePlaceholder slot="home-mid-rectangle" format="rectangle" />
 
         {/* All Tools Grid */}
         <section id="tools-grid" className="py-12 px-4">
@@ -189,6 +199,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Bottom Responsive Ad */}
+        <AdSensePlaceholder slot="home-bottom-responsive" format="responsive" />
 
         <Footer />
         <AIChatbot />

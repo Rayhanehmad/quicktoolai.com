@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
+import { AdSensePlaceholder } from "@/components/adsense-placeholder";
 import { FileText, AlertTriangle, Scale, ShieldCheck } from "lucide-react";
 
 export default function TermsOfServicePage() {
@@ -16,6 +17,9 @@ export default function TermsOfServicePage() {
         <Navigation />
         
         <main className="max-w-4xl mx-auto px-4 py-12">
+          {/* Top Ad */}
+          <AdSensePlaceholder slot="terms-top" format="rectangle" />
+          
           <div className="mb-8">
             <div className="flex items-center gap-3 mb-4">
               <FileText className="w-10 h-10 text-primary" />
@@ -223,6 +227,9 @@ export default function TermsOfServicePage() {
               </ul>
             </section>
           </div>
+          
+          {/* Bottom Ad */}
+          <AdSensePlaceholder slot="terms-bottom" format="responsive" />
         </main>
 
         <Footer />
