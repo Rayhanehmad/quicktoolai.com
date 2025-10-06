@@ -1,9 +1,12 @@
 import { Clock } from "lucide-react";
 import { Link } from "wouter";
+import { ToolsBanner } from "@/components/tools-banner";
 
 export function Footer() {
   return (
-    <footer className="bg-muted/50 py-12 px-4">
+    <>
+      <ToolsBanner position="bottom" />
+      <footer className="bg-muted/50 py-12 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
@@ -105,5 +108,6 @@ export function Footer() {
         </div>
       </div>
     </footer>
+    </>
   );
 }

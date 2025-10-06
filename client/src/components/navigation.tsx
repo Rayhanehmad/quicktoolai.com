@@ -5,6 +5,7 @@ import { useTheme } from "@/components/ui/theme-provider";
 import { Clock, Sun, Moon, Menu, X, Search, Home } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { FavoritesPanel } from "@/components/favorites-panel";
+import { ToolsBanner } from "@/components/tools-banner";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -75,8 +76,9 @@ export function Navigation() {
   const categories = Array.from(new Set(allTools.map(t => t.category)));
 
   return (
-    <nav className="sticky top-0 z-50 backdrop-blur-md bg-background/80 border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <>
+      <nav className="sticky top-0 z-50 backdrop-blur-md bg-background/80 border-b border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" data-testid="link-home-logo">
             <div className="flex items-center space-x-2 cursor-pointer">
@@ -275,6 +277,8 @@ export function Navigation() {
           </div>
         )}
       </div>
-    </nav>
+      </nav>
+      <ToolsBanner position="top" />
+    </>
   );
 }
