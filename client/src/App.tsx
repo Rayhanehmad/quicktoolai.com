@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Switch, Route } from "wouter";
+import { Switch, Route, useLocation } from "wouter";
 import { HelmetProvider } from "react-helmet-async";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
@@ -72,10 +72,22 @@ import ContactPage from "@/pages/contact";
 import SupportPage from "@/pages/support";
 import AboutPage from "@/pages/about";
 
+function ScrollToTop() {
+  const [location] = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  return null;
+}
+
 function Router() {
   return (
-    <Switch>
-      <Route path="/" component={Home} />
+    <>
+      <ScrollToTop />
+      <Switch>
+        <Route path="/" component={Home} />
       
       {/* Financial Tools */}
       <Route path="/percentage" component={PercentageCalculatorPage} />
@@ -136,7 +148,8 @@ function Router() {
       <Route path="/about" component={AboutPage} />
       
       <Route component={NotFound} />
-    </Switch>
+      </Switch>
+    </>
   );
 }
 
