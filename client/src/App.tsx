@@ -65,6 +65,12 @@ import NotepadPage from "@/pages/tools/notepad";
 import GPACalculatorPage from "@/pages/tools/gpa-calculator";
 import LoveCalculatorPage from "@/pages/tools/love-calculator";
 
+// Info Pages
+import PrivacyPolicyPage from "@/pages/privacy-policy";
+import TermsOfServicePage from "@/pages/terms-of-service";
+import ContactPage from "@/pages/contact";
+import SupportPage from "@/pages/support";
+
 function Router() {
   return (
     <Switch>
@@ -120,6 +126,12 @@ function Router() {
       {/* Academic & Fun */}
       <Route path="/gpa" component={GPACalculatorPage} />
       <Route path="/love" component={LoveCalculatorPage} />
+      
+      {/* Info Pages */}
+      <Route path="/privacy-policy" component={PrivacyPolicyPage} />
+      <Route path="/terms-of-service" component={TermsOfServicePage} />
+      <Route path="/contact" component={ContactPage} />
+      <Route path="/support" component={SupportPage} />
       
       <Route component={NotFound} />
     </Switch>

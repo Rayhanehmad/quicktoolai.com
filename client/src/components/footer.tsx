@@ -275,10 +275,34 @@ export function Footer() {
           <div>
             <h5 className="font-semibold mb-4">About</h5>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Contact</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Support</a></li>
+              <li>
+                <Link href="/privacy-policy">
+                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-privacy">
+                    Privacy Policy
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms-of-service">
+                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-terms">
+                    Terms of Service
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact">
+                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-contact">
+                    Contact
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/support">
+                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-support">
+                    Support
+                  </a>
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

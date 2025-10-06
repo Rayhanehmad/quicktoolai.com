@@ -65,9 +65,6 @@ export function ToolsBanner({ position = 'top' }: ToolsBannerProps) {
       data-testid={`tools-banner-${position}`}
     >
       <div className="flex items-center gap-2 min-w-max">
-        <span className="text-xs font-semibold text-muted-foreground mr-2 whitespace-nowrap">
-          Quick Tools:
-        </span>
         {allTools.map((tool, index) => (
           <div key={tool.id} className="flex items-center gap-2">
             <Link href={tool.path}>
