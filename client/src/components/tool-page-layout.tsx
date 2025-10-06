@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
-import { Home, ChevronRight, BookOpen, Calculator as CalcIcon, HelpCircle } from "lucide-react";
+import { Home, ChevronRight, BookOpen, Calculator as CalcIcon, HelpCircle, Lightbulb, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SEO_CONTENT } from "@/../../shared/seo-content";
 
@@ -165,7 +165,7 @@ export function ToolPageLayout({ toolId, title, description, category, children 
           </div>
 
           {/* SEO Info Sections */}
-          {seoContent && (seoContent.formula || seoContent.example || seoContent.faqs) && (
+          {seoContent && (seoContent.formula || seoContent.example || seoContent.howItWorks || seoContent.useCases || seoContent.faqs) && (
             <div className="max-w-4xl mx-auto space-y-6 mb-12">
               {/* Formula Section */}
               {seoContent.formula && (
@@ -189,6 +189,36 @@ export function ToolPageLayout({ toolId, title, description, category, children 
                   </div>
                   <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-4 border border-primary/20">
                     <p className="text-sm">{seoContent.example}</p>
+                  </div>
+                </div>
+              )}
+
+              {/* How It Works Section */}
+              {seoContent.howItWorks && (
+                <div className="glass-card neomorphic rounded-xl p-6" data-testid="section-how-it-works">
+                  <div className="flex items-center gap-2 mb-4">
+                    <Lightbulb className="w-5 h-5 text-primary" />
+                    <h2 className="text-xl font-bold">How It Works</h2>
+                  </div>
+                  <div className="prose prose-sm max-w-none dark:prose-invert">
+                    <p className="text-muted-foreground whitespace-pre-line leading-relaxed">
+                      {seoContent.howItWorks}
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {/* Use Cases Section */}
+              {seoContent.useCases && (
+                <div className="glass-card neomorphic rounded-xl p-6" data-testid="section-use-cases">
+                  <div className="flex items-center gap-2 mb-4">
+                    <Target className="w-5 h-5 text-primary" />
+                    <h2 className="text-xl font-bold">Use Cases</h2>
+                  </div>
+                  <div className="prose prose-sm max-w-none dark:prose-invert">
+                    <p className="text-muted-foreground whitespace-pre-line leading-relaxed">
+                      {seoContent.useCases}
+                    </p>
                   </div>
                 </div>
               )}
