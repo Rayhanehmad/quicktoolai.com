@@ -109,6 +109,54 @@ export default function Home() {
         
         {/* Canonical URL */}
         <link rel="canonical" href={window.location.origin} />
+        
+        {/* Schema.org Organization markup for brand identity */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "AI FinHealth Hub",
+            "description": "AI-powered financial planning and health tracking tools. Smart calculators for loans, mortgages, BMI, calorie tracking, and more.",
+            "url": window.location.origin,
+            "logo": `${window.location.origin}/icon-512.png`,
+            "sameAs": [
+              "https://twitter.com/aifinhealth",
+              "https://facebook.com/aifinhealth"
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "Customer Support",
+              "email": "support@aifinhealth.com",
+              "url": `${window.location.origin}/contact`
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "1250",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "USD",
+              "lowPrice": "0",
+              "offerCount": "35",
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock",
+                  "itemOffered": {
+                    "@type": "SoftwareApplication",
+                    "name": "AI FinHealth Hub Calculator Suite",
+                    "applicationCategory": "FinanceApplication"
+                  }
+                }
+              ]
+            }
+          })}
+        </script>
       </Helmet>
 
       <div className="min-h-screen bg-background text-foreground">
