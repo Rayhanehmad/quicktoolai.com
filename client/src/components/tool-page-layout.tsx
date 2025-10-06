@@ -14,7 +14,8 @@ interface ToolPageLayoutProps {
 }
 
 export function ToolPageLayout({ toolId, title, description, category, children }: ToolPageLayoutProps) {
-  const pageUrl = `${window.location.origin}/${toolId}`;
+  const baseUrl = import.meta.env.VITE_CANONICAL_URL || 'https://aifinhealth.com';
+  const pageUrl = `${baseUrl}/${toolId}`;
   const seoContent = SEO_CONTENT[toolId];
   
   const metaTitle = seoContent?.title || `${title} - AI-Powered Calculator | AI FinHealth Hub`;
@@ -47,18 +48,11 @@ export function ToolPageLayout({ toolId, title, description, category, children 
       "price": "0",
       "priceCurrency": "USD"
     },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "ratingCount": "1250",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
     "url": pageUrl,
     "provider": {
       "@type": "Organization",
       "name": "AI FinHealth Hub",
-      "url": window.location.origin
+      "url": baseUrl
     }
   };
   
@@ -71,13 +65,13 @@ export function ToolPageLayout({ toolId, title, description, category, children 
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": window.location.origin
+        "item": baseUrl
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": category,
-        "item": `${window.location.origin}/#${category.toLowerCase()}`
+        "item": `${baseUrl}/#${category.toLowerCase()}`
       },
       {
         "@type": "ListItem",

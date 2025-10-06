@@ -70,10 +70,10 @@ const allTools: Record<string, RelatedTool> = {
 const categoryMapping: Record<string, string[]> = {
   'Financial': ['percentage', 'loan', 'mortgage', 'interest', 'discount', 'tip', 'profit'],
   'Converters': ['currency', 'unit'],
-  'Health': ['bmi-calc', 'bmr', 'bodyfat', 'calorie', 'pregnancy'],
+  'Health': ['bmi-calc', 'bmr', 'bodyfat', 'calorie', 'pregnancy', 'sleep'],
   'Math': ['scientific', 'fraction', 'ratio', 'average', 'random'],
   'Measurement': ['area', 'volume', 'speed', 'energy'],
-  'Time': ['clock', 'age-calc', 'date', 'time-calc', 'countdown', 'sleep'],
+  'Time': ['clock', 'age-calc', 'date', 'time-calc', 'countdown'],
   'Utilities': ['status', 'ip-lookup', 'qr-generator', 'notepad'],
   'Academic': ['gpa'],
   'Fun': ['love'],

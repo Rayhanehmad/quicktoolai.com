@@ -117,8 +117,8 @@ export default function Home() {
             "@type": "Organization",
             "name": "AI FinHealth Hub",
             "description": "AI-powered financial planning and health tracking tools. Smart calculators for loans, mortgages, BMI, calorie tracking, and more.",
-            "url": window.location.origin,
-            "logo": `${window.location.origin}/icon-512.png`,
+            "url": import.meta.env.VITE_CANONICAL_URL || "https://aifinhealth.com",
+            "logo": `${import.meta.env.VITE_CANONICAL_URL || "https://aifinhealth.com"}/icon-512.png`,
             "sameAs": [
               "https://twitter.com/aifinhealth",
               "https://facebook.com/aifinhealth"
@@ -127,14 +127,7 @@ export default function Home() {
               "@type": "ContactPoint",
               "contactType": "Customer Support",
               "email": "support@aifinhealth.com",
-              "url": `${window.location.origin}/contact`
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "reviewCount": "1250",
-              "bestRating": "5",
-              "worstRating": "1"
+              "url": `${import.meta.env.VITE_CANONICAL_URL || "https://aifinhealth.com"}/contact`
             },
             "offers": {
               "@type": "AggregateOffer",
