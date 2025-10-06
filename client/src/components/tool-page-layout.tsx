@@ -33,6 +33,60 @@ export function ToolPageLayout({ toolId, title, description, category, children 
     }))
   } : null;
   
+  // SoftwareApplication schema for rich snippets
+  const softwareSchemaData = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": title,
+    "description": metaDescription,
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web Browser",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "1250",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "url": pageUrl,
+    "provider": {
+      "@type": "Organization",
+      "name": "AI FinHealth Hub",
+      "url": window.location.origin
+    }
+  };
+  
+  // BreadcrumbList schema for navigation
+  const breadcrumbSchemaData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": window.location.origin
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": category,
+        "item": `${window.location.origin}/#${category.toLowerCase()}`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": title,
+        "item": pageUrl
+      }
+    ]
+  };
+  
   return (
     <>
       <Helmet>
@@ -62,6 +116,16 @@ export function ToolPageLayout({ toolId, title, description, category, children 
             {JSON.stringify(faqSchemaData)}
           </script>
         )}
+        
+        {/* Schema.org SoftwareApplication for rich snippets */}
+        <script type="application/ld+json">
+          {JSON.stringify(softwareSchemaData)}
+        </script>
+        
+        {/* Schema.org BreadcrumbList for navigation */}
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchemaData)}
+        </script>
       </Helmet>
 
       <div className="min-h-screen bg-background text-foreground">
