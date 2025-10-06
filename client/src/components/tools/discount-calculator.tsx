@@ -32,7 +32,7 @@ export function DiscountCalculator() {
       
       <div className="mb-6 p-4 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl border border-primary/20 space-y-4">
         <div>
-          <label className="block text-sm font-semibold mb-2">Original Price ($):</label>
+          <label className="block text-sm font-semibold mb-2">Original Price:</label>
           <Input
             type="number"
             value={originalPrice}
@@ -70,13 +70,13 @@ export function DiscountCalculator() {
         <div className="space-y-3 animate-slide-up" data-testid="result">
           <div className="p-4 rounded-lg bg-primary/10 border border-primary">
             <div className="text-2xl font-bold text-primary text-center" data-testid="final-price">
-              ${result.finalPrice.toFixed(2)}
+              {result.finalPrice.toFixed(2)}
             </div>
             <div className="text-xs text-center text-muted-foreground">Final Price</div>
           </div>
           <div className="p-3 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded text-center">
             <div className="text-sm font-semibold text-green-700 dark:text-green-400" data-testid="savings">
-              You save ${result.savings.toFixed(2)}
+              You save {result.savings.toFixed(2)}
             </div>
             <div className="text-xs text-green-600 dark:text-green-500">Total Savings</div>
           </div>

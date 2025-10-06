@@ -35,12 +35,12 @@ export function MortgageCalculator() {
       
       <div className="mb-6 p-4 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl border border-primary/20 space-y-4">
         <div>
-          <label className="block text-sm font-semibold mb-2">Home Price ($):</label>
+          <label className="block text-sm font-semibold mb-2">Home Price:</label>
           <Input type="number" value={homePrice} onChange={(e) => setHomePrice(e.target.value)} 
             placeholder="300000" className="text-center h-11" data-testid="input-price" />
         </div>
         <div>
-          <label className="block text-sm font-semibold mb-2">Down Payment ($):</label>
+          <label className="block text-sm font-semibold mb-2">Down Payment:</label>
           <Input type="number" value={downPayment} onChange={(e) => setDownPayment(e.target.value)} 
             placeholder="60000" className="text-center h-11" data-testid="input-down" />
         </div>
@@ -64,16 +64,16 @@ export function MortgageCalculator() {
       {result && (
         <div className="space-y-3 animate-slide-up" data-testid="result">
           <div className="p-4 rounded-lg bg-primary/10 border border-primary">
-            <div className="text-2xl font-bold text-primary text-center" data-testid="monthly">${result.monthly.toFixed(2)}/mo</div>
+            <div className="text-2xl font-bold text-primary text-center" data-testid="monthly">{result.monthly.toFixed(2)}/mo</div>
             <div className="text-xs text-center text-muted-foreground">Monthly Payment</div>
           </div>
           <div className="grid grid-cols-2 gap-2">
             <div className="p-3 bg-muted/30 rounded text-center">
-              <div className="text-sm font-semibold" data-testid="total">${result.total.toFixed(0)}</div>
+              <div className="text-sm font-semibold" data-testid="total">{result.total.toFixed(0)}</div>
               <div className="text-xs text-muted-foreground">Total Cost</div>
             </div>
             <div className="p-3 bg-muted/30 rounded text-center">
-              <div className="text-sm font-semibold" data-testid="interest">${result.interest.toFixed(0)}</div>
+              <div className="text-sm font-semibold" data-testid="interest">{result.interest.toFixed(0)}</div>
               <div className="text-xs text-muted-foreground">Total Interest</div>
             </div>
           </div>

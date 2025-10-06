@@ -62,7 +62,7 @@ export function InterestCalculator() {
         <p className="text-xs text-muted-foreground">Calculate simple interest</p>
       </div>
       <div className="mb-6 p-4 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl border border-primary/20 space-y-4">
-        <Input type="number" value={principal} onChange={(e) => setPrincipal(e.target.value)} placeholder="Principal ($)" className="text-center h-11" />
+        <Input type="number" value={principal} onChange={(e) => setPrincipal(e.target.value)} placeholder="Principal" className="text-center h-11" />
         <Input type="number" value={rate} onChange={(e) => setRate(e.target.value)} placeholder="Rate (% per year)" className="text-center h-11" />
         <Input type="number" value={time} onChange={(e) => setTime(e.target.value)} placeholder="Time (years)" className="text-center h-11" />
       </div>
@@ -71,7 +71,7 @@ export function InterestCalculator() {
       </Button>
       {result !== null && (
         <div className="p-4 rounded-lg bg-primary/10 border border-primary animate-slide-up">
-          <div className="text-3xl font-bold text-primary text-center">${result.toFixed(2)}</div>
+          <div className="text-3xl font-bold text-primary text-center">{result.toFixed(2)}</div>
           <div className="text-xs text-center text-muted-foreground mt-1">Total Interest</div>
         </div>
       )}
@@ -101,14 +101,14 @@ export function ProfitCalculator() {
         <p className="text-xs text-muted-foreground">Calculate profit and profit margin</p>
       </div>
       <div className="mb-6 p-4 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl border border-primary/20 space-y-4">
-        <Input type="number" value={cost} onChange={(e) => setCost(e.target.value)} placeholder="Cost ($)" className="text-center h-11" />
-        <Input type="number" value={revenue} onChange={(e) => setRevenue(e.target.value)} placeholder="Revenue ($)" className="text-center h-11" />
+        <Input type="number" value={cost} onChange={(e) => setCost(e.target.value)} placeholder="Cost" className="text-center h-11" />
+        <Input type="number" value={revenue} onChange={(e) => setRevenue(e.target.value)} placeholder="Revenue" className="text-center h-11" />
       </div>
       <Button onClick={calculate} className="w-full gradient-bg text-white py-3 px-6 font-semibold hover:opacity-90 transition-opacity mb-6 h-12" disabled={!cost || !revenue}>Calculate</Button>
       {result && (
         <div className="space-y-2 animate-slide-up">
           <div className="p-4 rounded-lg bg-primary/10 border border-primary">
-            <div className="text-2xl font-bold text-primary text-center">${result.profit.toFixed(2)}</div>
+            <div className="text-2xl font-bold text-primary text-center">{result.profit.toFixed(2)}</div>
             <div className="text-xs text-center text-muted-foreground">Profit</div>
           </div>
           <div className="p-3 bg-muted/30 rounded text-center">
