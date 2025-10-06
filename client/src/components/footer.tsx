@@ -1,13 +1,7 @@
 import { Clock } from "lucide-react";
+import { Link } from "wouter";
 
 export function Footer() {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <footer className="bg-muted/50 py-12 px-4">
       <div className="max-w-6xl mx-auto">
@@ -28,85 +22,67 @@ export function Footer() {
             <h5 className="font-semibold mb-4">Tools</h5>
             <ul className="space-y-1 text-sm text-muted-foreground">
               <li>
-                <button 
-                  onClick={() => scrollToSection('clock')}
-                  className="hover:text-foreground transition-colors"
-                  data-testid="footer-link-clock"
-                >
-                  World Clock Online
-                </button>
+                <Link href="/clock">
+                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-clock">
+                    World Clock Online
+                  </a>
+                </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection('clock')}
-                  className="hover:text-foreground transition-colors"
-                  data-testid="footer-link-timer"
-                >
-                  Pomodoro Timer Online
-                </button>
+                <Link href="/clock">
+                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-timer">
+                    Pomodoro Timer Online
+                  </a>
+                </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection('sleep')}
-                  className="hover:text-foreground transition-colors"
-                  data-testid="footer-link-sleep"
-                >
-                  Bedtime Calculator
-                </button>
+                <Link href="/sleep">
+                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-sleep">
+                    Bedtime Calculator
+                  </a>
+                </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection('status')}
-                  className="hover:text-foreground transition-colors"
-                  data-testid="footer-link-status"
-                >
-                  Website Uptime Checker
-                </button>
+                <Link href="/status">
+                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-status">
+                    Website Uptime Checker
+                  </a>
+                </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection('age-calc')}
-                  className="hover:text-foreground transition-colors"
-                  data-testid="footer-link-age"
-                >
-                  Age Calculator
-                </button>
+                <Link href="/age-calc">
+                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-age">
+                    Age Calculator
+                  </a>
+                </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection('bmi-calc')}
-                  className="hover:text-foreground transition-colors"
-                  data-testid="footer-link-bmi"
-                >
-                  BMI Calculator
-                </button>
+                <Link href="/bmi-calc">
+                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-bmi">
+                    BMI Calculator
+                  </a>
+                </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection('ip-lookup')}
-                  className="hover:text-foreground transition-colors"
-                  data-testid="footer-link-ip"
-                >
-                  IP Address Lookup
-                </button>
+                <Link href="/ip-lookup">
+                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-ip">
+                    IP Address Lookup
+                  </a>
+                </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection('qr-generator')}
-                  className="hover:text-foreground transition-colors"
-                  data-testid="footer-link-qr"
-                >
-                  QR Code Generator
-                </button>
+                <Link href="/qr-generator">
+                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-qr">
+                    QR Code Generator
+                  </a>
+                </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection('notepad')}
-                  className="hover:text-foreground transition-colors"
-                  data-testid="footer-link-notepad"
-                >
-                  Online Notepad
-                </button>
+                <Link href="/notepad">
+                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-notepad">
+                    Online Notepad
+                  </a>
+                </Link>
               </li>
             </ul>
           </div>
