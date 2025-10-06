@@ -71,12 +71,12 @@ export function ToolsBanner({ position = 'top' }: ToolsBannerProps) {
         {allTools.map((tool, index) => (
           <div key={tool.id} className="flex items-center gap-2">
             <Link href={tool.path}>
-              <a 
+              <span 
                 className="text-xs font-medium text-foreground hover:text-primary transition-colors px-3 py-1.5 rounded-md hover:bg-primary/10 whitespace-nowrap cursor-pointer"
                 data-testid={`banner-link-${tool.id}`}
               >
                 {tool.name}
-              </a>
+              </span>
             </Link>
             {index < allTools.length - 1 && (
               <ChevronRight className="w-3 h-3 text-muted-foreground/50" />
