@@ -206,6 +206,11 @@ export function Footer() {
             <h5 className="font-semibold mb-4">About</h5>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
+                <Link href="/about" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-about">
+                  About Us
+                </Link>
+              </li>
+              <li>
                 <Link href="/privacy-policy" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-privacy">
                   Privacy Policy
                 </Link>

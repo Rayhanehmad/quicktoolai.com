@@ -70,6 +70,7 @@ import PrivacyPolicyPage from "@/pages/privacy-policy";
 import TermsOfServicePage from "@/pages/terms-of-service";
 import ContactPage from "@/pages/contact";
 import SupportPage from "@/pages/support";
+import AboutPage from "@/pages/about";
 
 function Router() {
   return (
@@ -132,6 +133,7 @@ function Router() {
       <Route path="/terms-of-service" component={TermsOfServicePage} />
       <Route path="/contact" component={ContactPage} />
       <Route path="/support" component={SupportPage} />
+      <Route path="/about" component={AboutPage} />
       
       <Route component={NotFound} />
     </Switch>
