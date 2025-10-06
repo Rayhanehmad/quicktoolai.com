@@ -145,10 +145,13 @@ export default function SupportPage() {
                 { name: 'Date Calculator', path: '/date' },
                 { name: 'GPA Calculator', path: '/gpa' },
               ].map((tool, index) => (
-                <Link key={index} href={tool.path}>
-                  <a className="glass-card p-4 text-center hover:bg-primary/5 transition-colors cursor-pointer" data-testid={`link-tool-${index}`}>
-                    <p className="font-medium text-sm">{tool.name}</p>
-                  </a>
+                <Link 
+                  key={index} 
+                  href={tool.path}
+                  className="glass-card p-4 text-center hover:bg-primary/5 transition-colors cursor-pointer block" 
+                  data-testid={`link-tool-${index}`}
+                >
+                  <p className="font-medium text-sm">{tool.name}</p>
                 </Link>
               ))}
             </div>
@@ -162,14 +165,13 @@ export default function SupportPage() {
               Can't find what you're looking for? Our support team is here to help. 
               Send us a message and we'll get back to you as soon as possible.
             </p>
-            <Link href="/contact">
-              <a 
-                className="inline-flex items-center gap-2 px-6 py-3 gradient-bg text-white rounded-lg font-medium hover:opacity-90 transition-opacity cursor-pointer"
-                data-testid="button-contact-support"
-              >
-                <MessageCircle className="w-4 h-4" />
-                Contact Support
-              </a>
+            <Link 
+              href="/contact"
+              className="inline-flex items-center gap-2 px-6 py-3 gradient-bg text-white rounded-lg font-medium hover:opacity-90 transition-opacity cursor-pointer"
+              data-testid="button-contact-support"
+            >
+              <MessageCircle className="w-4 h-4" />
+              Contact Support
             </Link>
           </div>
 
