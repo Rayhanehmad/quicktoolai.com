@@ -276,31 +276,23 @@ export function Footer() {
             <h5 className="font-semibold mb-4">About</h5>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <Link href="/privacy-policy">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-privacy">
-                    Privacy Policy
-                  </a>
+                <Link href="/privacy-policy" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-privacy">
+                  Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/terms-of-service">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-terms">
-                    Terms of Service
-                  </a>
+                <Link href="/terms-of-service" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-terms">
+                  Terms of Service
                 </Link>
               </li>
               <li>
-                <Link href="/contact">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-contact">
-                    Contact
-                  </a>
+                <Link href="/contact" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-contact">
+                  Contact
                 </Link>
               </li>
               <li>
-                <Link href="/support">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-support">
-                    Support
-                  </a>
+                <Link href="/support" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-support">
+                  Support
                 </Link>
               </li>
             </ul>
