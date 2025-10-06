@@ -1,7 +1,8 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
-import { Home, ChevronRight } from "lucide-react";
+import { Home, ChevronRight, BookOpen, Calculator as CalcIcon, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SEO_CONTENT } from "@/../../shared/seo-content";
 
 interface ToolPageLayoutProps {
   toolId: string;
@@ -13,25 +14,31 @@ interface ToolPageLayoutProps {
 
 export function ToolPageLayout({ toolId, title, description, category, children }: ToolPageLayoutProps) {
   const pageUrl = `${window.location.origin}/${toolId}`;
+  const seoContent = SEO_CONTENT[toolId];
+  
+  const metaTitle = seoContent?.title || `${title} - Free Online Calculator | Time & Tools Hub`;
+  const metaDescription = seoContent?.metaDescription || description;
+  const keywords = seoContent?.keywords;
   
   return (
     <>
       <Helmet>
-        <title>{title} - Free Online Calculator | Time & Tools Hub</title>
-        <meta name="description" content={description} />
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDescription} />
+        {keywords && <meta name="keywords" content={keywords} />}
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={pageUrl} />
-        <meta property="og:title" content={`${title} - Free Online Calculator`} />
-        <meta property="og:description" content={description} />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
         <meta property="og:site_name" content="Time & Tools Hub" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={pageUrl} />
-        <meta name="twitter:title" content={`${title} - Free Online Calculator`} />
-        <meta name="twitter:description" content={description} />
+        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:description" content={metaDescription} />
         
         {/* Canonical URL */}
         <link rel="canonical" href={pageUrl} />
@@ -64,14 +71,69 @@ export function ToolPageLayout({ toolId, title, description, category, children 
               {title}
             </h1>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              {description}
+              {seoContent?.introduction || description}
             </p>
           </div>
 
           {/* Tool Content */}
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto mb-12">
             {children}
           </div>
+
+          {/* SEO Info Sections */}
+          {seoContent && (seoContent.formula || seoContent.example || seoContent.faqs) && (
+            <div className="max-w-4xl mx-auto space-y-6 mb-12">
+              {/* Formula Section */}
+              {seoContent.formula && (
+                <div className="glass-card neomorphic rounded-xl p-6" data-testid="section-formula">
+                  <div className="flex items-center gap-2 mb-4">
+                    <CalcIcon className="w-5 h-5 text-primary" />
+                    <h2 className="text-xl font-bold">Formula</h2>
+                  </div>
+                  <div className="bg-muted/50 rounded-lg p-4 font-mono text-sm whitespace-pre-line">
+                    {seoContent.formula}
+                  </div>
+                </div>
+              )}
+
+              {/* Example Section */}
+              {seoContent.example && (
+                <div className="glass-card neomorphic rounded-xl p-6" data-testid="section-example">
+                  <div className="flex items-center gap-2 mb-4">
+                    <BookOpen className="w-5 h-5 text-primary" />
+                    <h2 className="text-xl font-bold">Example</h2>
+                  </div>
+                  <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-4 border border-primary/20">
+                    <p className="text-sm">{seoContent.example}</p>
+                  </div>
+                </div>
+              )}
+
+              {/* FAQs Section */}
+              {seoContent.faqs && seoContent.faqs.length > 0 && (
+                <div className="glass-card neomorphic rounded-xl p-6" data-testid="section-faqs">
+                  <div className="flex items-center gap-2 mb-4">
+                    <HelpCircle className="w-5 h-5 text-primary" />
+                    <h2 className="text-xl font-bold">Frequently Asked Questions</h2>
+                  </div>
+                  <div className="space-y-3">
+                    {seoContent.faqs.map((faq, index) => (
+                      <div
+                        key={index}
+                        className="bg-muted/30 rounded-lg p-4 border border-border hover:border-primary/50 transition-colors"
+                        data-testid={`faq-${index}`}
+                      >
+                        <p className="text-sm font-medium flex items-start gap-2">
+                          <span className="text-primary mt-0.5">Q:</span>
+                          <span>{faq}</span>
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
 
           {/* Back to Home Button */}
           <div className="mt-12 text-center">
