@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Stopwatch – Start/Stop/Lap</title>
+  <meta name="description" content="Start, stop, reset, and record lap times with a simple stopwatch.">
+  <meta name="keywords" content="stopwatch,–,start/stop/lap">
+  <link rel="canonical" href="https://yourdomain.com/stopwatch.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-blue-600 text-white p-6">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-2xl font-bold">Stopwatch – Start/Stop/Lap</h1>
+      <p class="mt-2">Useful for timing workouts and tasks.</p>
+    </div>
+  </header>
+  <main class="max-w-4xl mx-auto p-6">
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-semibold mb-4">Tool</h2>
+      <!-- Tool UI -->
+<div id="tool-ui">
+<div class="mb-4">
+<button id="btnStart" class="bg-green-600 text-white px-4 py-2 rounded">Start</button> <button id="btnStop" class="bg-red-600 text-white px-4 py-2 rounded">Stop</button> <button id="btnLap" class="bg-gray-600 text-white px-4 py-2 rounded">Lap</button>
+</div>
+<div id="out" class="mt-4 font-semibold"></div>
+</div>
+<section class="bg-white p-6 rounded-lg shadow mt-6"><h2 class="text-xl font-semibold">Frequently Asked Questions</h2><div class="mt-4"><p class="font-semibold">Q: Does it save laps?</p><p>A: Laps persist only during the session; add localStorage to keep between reloads.</p></div><div class="mt-4"><p class="font-semibold">Q: Is it precise?</p><p>A: JS timer accuracy is millisecond-level but may be affected by browser scheduling.</p></div><div class="mt-4"><p class="font-semibold">Q: Can I export laps?</p><p>A: You can copy lap times to clipboard or implement CSV export.</p></div></section>
+
+    <script>
+
+let startTime,elapsed=0,lapTimes=[]; function swStart(){startTime=Date.now()-elapsed; swTimer=setInterval(()=>{elapsed=Date.now()-startTime; out.textContent=(elapsed/1000).toFixed(2)+'s';},50);} function swStop(){clearInterval(swTimer);} function swLap(){lapTimes.push((elapsed/1000).toFixed(2)); out.textContent='Laps: '+lapTimes.join(', ');}
+
+    </script>
+    <script type='application/ld+json'>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does it save laps?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Laps persist only during the session; add localStorage to keep between reloads."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it precise?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JS timer accuracy is millisecond-level but may be affected by browser scheduling."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I export laps?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can copy lap times to clipboard or implement CSV export."
+      }
+    }
+  ]
+}
+    </script>
+  </main>
+  <footer class='text-center p-6 text-sm text-gray-500'>© 2025 AI Tools Hub</footer>
+</body>
+</html>

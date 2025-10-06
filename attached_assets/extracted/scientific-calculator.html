@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Scientific Calculator – Trig, Log, Power</title>
+  <meta name="description" content="Basic scientific functions: sin, cos, tan, log, exponent, power.">
+  <meta name="keywords" content="scientific,calculator,–,trig,,log,,power">
+  <link rel="canonical" href="https://yourdomain.com/scientific-calculator.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-blue-600 text-white p-6">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-2xl font-bold">Scientific Calculator – Trig, Log, Power</h1>
+      <p class="mt-2">Enter an expression or use provided buttons for functions.</p>
+    </div>
+  </header>
+  <main class="max-w-4xl mx-auto p-6">
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-semibold mb-4">Tool</h2>
+      <!-- Tool UI -->
+<div id="tool-ui">
+<div class="mb-4">
+<label class="block mb-2">Expression (use Math.* functions)<input id="expr" class="border p-2 rounded w-full"></label>
+<button id="btn" class="bg-blue-600 text-white px-4 py-2 rounded">Eval</button>
+</div>
+<div id="out" class="mt-4 font-semibold"></div>
+</div>
+<section class="bg-white p-6 rounded-lg shadow mt-6"><h2 class="text-xl font-semibold">Frequently Asked Questions</h2><div class="mt-4"><p class="font-semibold">Q: Is eval safe?</p><p>A: Eval executes user input—ensure no untrusted code; for production use a math parser library.</p></div><div class="mt-4"><p class="font-semibold">Q: Does it support trig?</p><p>A: Yes—use Math.sin(), Math.cos(), Math.tan() with radians.</p></div><div class="mt-4"><p class="font-semibold">Q: Can I use parentheses?</p><p>A: Yes—standard JS expression rules apply.</p></div></section>
+
+    <script>
+
+function calc(){try{const expr=document.getElementById('expr').value; const result=eval(expr); out.textContent=result;}catch(e){out.textContent='Invalid expression';}}
+
+    </script>
+    <script type='application/ld+json'>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is eval safe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Eval executes user input\u2014ensure no untrusted code; for production use a math parser library."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it support trig?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes\u2014use Math.sin(), Math.cos(), Math.tan() with radians."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use parentheses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes\u2014standard JS expression rules apply."
+      }
+    }
+  ]
+}
+    </script>
+  </main>
+  <footer class='text-center p-6 text-sm text-gray-500'>© 2025 AI Tools Hub</footer>
+</body>
+</html>

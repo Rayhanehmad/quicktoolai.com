@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Age Calculator – Exact Age in Years, Months, Days</title>
+  <meta name="description" content="Calculate precise age from birthdate including leap years.">
+  <meta name="keywords" content="age,calculator,–,exact,age,in">
+  <link rel="canonical" href="https://yourdomain.com/age-calculator.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-blue-600 text-white p-6">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-2xl font-bold">Age Calculator – Exact Age in Years, Months, Days</h1>
+      <p class="mt-2">Enter the date of birth to get years, months and days.</p>
+    </div>
+  </header>
+  <main class="max-w-4xl mx-auto p-6">
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-semibold mb-4">Tool</h2>
+      <!-- Tool UI -->
+<div id="tool-ui">
+<div class="mb-4">
+<label class="block mb-2">Date of birth<input id="dob" type="date" class="border p-2 rounded w-full"></label>
+<button id="btn" class="bg-blue-600 text-white px-4 py-2 rounded">Calculate</button>
+</div>
+<div id="out" class="mt-4 font-semibold"></div>
+</div>
+<section class="bg-white p-6 rounded-lg shadow mt-6"><h2 class="text-xl font-semibold">Frequently Asked Questions</h2><div class="mt-4"><p class="font-semibold">Q: Does it consider leap years?</p><p>A: Yes—calculations use real calendar math including leap years.</p></div><div class="mt-4"><p class="font-semibold">Q: Can it compute future age?</p><p>A: Yes—enter a future date as reference to compute age at that date.</p></div><div class="mt-4"><p class="font-semibold">Q: Is timezone relevant?</p><p>A: Age uses local date; timezone differences rarely affect calendar day calculation.</p></div></section>
+
+    <script>
+
+function calculate(){const d=new Date(document.getElementById('dob').value); if(!d || isNaN(d)){out.textContent='Enter valid date';return;} const now=new Date(); let years=now.getFullYear()-d.getFullYear(); let months=now.getMonth()-d.getMonth(); let days=now.getDate()-d.getDate(); if(days<0){months--; days+= new Date(now.getFullYear(),now.getMonth(),0).getDate();} if(months<0){years--; months+=12;} out.textContent=years+' years, '+months+' months, '+days+' days';}
+
+    </script>
+    <script type='application/ld+json'>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does it consider leap years?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes\u2014calculations use real calendar math including leap years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can it compute future age?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes\u2014enter a future date as reference to compute age at that date."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is timezone relevant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Age uses local date; timezone differences rarely affect calendar day calculation."
+      }
+    }
+  ]
+}
+    </script>
+  </main>
+  <footer class='text-center p-6 text-sm text-gray-500'>© 2025 AI Tools Hub</footer>
+</body>
+</html>

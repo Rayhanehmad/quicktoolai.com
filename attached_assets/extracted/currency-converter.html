@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Currency Converter – Convert World Currencies</title>
+  <meta name="description" content="Convert currencies using daily-updated exchange rates (rates cached daily).">
+  <meta name="keywords" content="currency,converter,–,convert,world,currencies">
+  <link rel="canonical" href="https://yourdomain.com/currency-converter.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-blue-600 text-white p-6">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-2xl font-bold">Currency Converter – Convert World Currencies</h1>
+      <p class="mt-2">Enter amount and select currency pair. Note: rates are indicative; use banks for exact quotes.</p>
+    </div>
+  </header>
+  <main class="max-w-4xl mx-auto p-6">
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-semibold mb-4">Tool</h2>
+      <!-- Tool UI -->
+<div id="tool-ui">
+<div class="mb-4">
+<label class="block mb-2">Amount<input id="amt" class="border p-2 rounded w-full"></label>
+<label class="block mb-2">From<select id="from" class="border p-2 rounded w-full"><option>USD</option><option>EUR</option><option>GBP</option><option>JPY</option></select></label>
+<label class="block mb-2">To<select id="to" class="border p-2 rounded w-full"><option>EUR</option><option>USD</option><option>GBP</option><option>PKR</option></select></label>
+<button id="btn" class="bg-blue-600 text-white px-4 py-2 rounded">Convert</button>
+</div>
+<div id="out" class="mt-4 font-semibold"></div>
+</div>
+<section class="bg-white p-6 rounded-lg shadow mt-6"><h2 class="text-xl font-semibold">Frequently Asked Questions</h2><div class="mt-4"><p class="font-semibold">Q: Are rates live?</p><p>A: This static package contains example rates. Use a rates API (ex: exchangerate.host) for live rates.</p></div><div class="mt-4"><p class="font-semibold">Q: Which currencies?</p><p>A: Common currencies included; you can add any ISO currency.</p></div><div class="mt-4"><p class="font-semibold">Q: Are fees included?</p><p>A: Displayed rates do not include conversion fees charged by banks or services.</p></div></section>
+
+    <script>
+
+// Note: This static version uses example rates. Integrate a rates API for live updates.
+const rates={'USD':1,'EUR':0.92,'GBP':0.79,'JPY':155,'PKR':285}; function convert(){const amt=parseFloat(document.getElementById('amt').value);const from=document.getElementById('from').value;const to=document.getElementById('to').value; if(isNaN(amt)){out.textContent='Enter amount';return;} const usd=amt/rates[from]; const res=usd*rates[to]; out.textContent=res.toFixed(4);}
+
+    </script>
+    <script type='application/ld+json'>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Are rates live?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This static package contains example rates. Use a rates API (ex: exchangerate.host) for live rates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which currencies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Common currencies included; you can add any ISO currency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are fees included?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Displayed rates do not include conversion fees charged by banks or services."
+      }
+    }
+  ]
+}
+    </script>
+  </main>
+  <footer class='text-center p-6 text-sm text-gray-500'>© 2025 AI Tools Hub</footer>
+</body>
+</html>

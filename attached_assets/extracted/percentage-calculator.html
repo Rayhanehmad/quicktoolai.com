@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Percentage Calculator – Percent, Increase, Decrease</title>
+  <meta name="description" content="Calculate percentages, part-of-whole, and percentage changes.">
+  <meta name="keywords" content="percentage,calculator,–,percent,,increase,,decrease">
+  <link rel="canonical" href="https://yourdomain.com/percentage-calculator.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-blue-600 text-white p-6">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-2xl font-bold">Percentage Calculator – Percent, Increase, Decrease</h1>
+      <p class="mt-2">Use for discounts, grades, and ratio calculations.</p>
+    </div>
+  </header>
+  <main class="max-w-4xl mx-auto p-6">
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-semibold mb-4">Tool</h2>
+      <!-- Tool UI -->
+<div id="tool-ui">
+<div class="mb-4">
+<label class="block mb-2">Part<input id="part" class="border p-2 rounded w-full"></label>
+<label class="block mb-2">Whole<input id="whole" class="border p-2 rounded w-full"></label>
+<button id="btn" class="bg-blue-600 text-white px-4 py-2 rounded">Calculate</button>
+</div>
+<div id="out" class="mt-4 font-semibold"></div>
+</div>
+<section class="bg-white p-6 rounded-lg shadow mt-6"><h2 class="text-xl font-semibold">Frequently Asked Questions</h2><div class="mt-4"><p class="font-semibold">Q: How to find percent?</p><p>A: (part/whole)×100 gives the percent value.</p></div><div class="mt-4"><p class="font-semibold">Q: How to compute percent change?</p><p>A: ((new-old)/old)×100 produces percent change.</p></div><div class="mt-4"><p class="font-semibold">Q: Can I use negative values?</p><p>A: Yes—negative indicates decrease.</p></div></section>
+
+    <script>
+
+function calculate(){const part=parseFloat(document.getElementById('part').value);const whole=parseFloat(document.getElementById('whole').value); if(!whole){out.textContent='Enter valid whole value';return;} out.textContent='Percentage: '+((part/whole)*100).toFixed(2)+'%';}
+
+    </script>
+    <script type='application/ld+json'>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How to find percent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "(part/whole)\u00d7100 gives the percent value."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to compute percent change?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "((new-old)/old)\u00d7100 produces percent change."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use negative values?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes\u2014negative indicates decrease."
+      }
+    }
+  ]
+}
+    </script>
+  </main>
+  <footer class='text-center p-6 text-sm text-gray-500'>© 2025 AI Tools Hub</footer>
+</body>
+</html>

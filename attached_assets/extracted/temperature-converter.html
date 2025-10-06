@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Temperature Converter – C, F, K</title>
+  <meta name="description" content="Convert between Celsius, Fahrenheit and Kelvin.">
+  <meta name="keywords" content="temperature,converter,–,c,,f,,k">
+  <link rel="canonical" href="https://yourdomain.com/temperature-converter.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-blue-600 text-white p-6">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-2xl font-bold">Temperature Converter – C, F, K</h1>
+      <p class="mt-2">Simple temperature conversions with input and target unit.</p>
+    </div>
+  </header>
+  <main class="max-w-4xl mx-auto p-6">
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-semibold mb-4">Tool</h2>
+      <!-- Tool UI -->
+<div id="tool-ui">
+<div class="mb-4">
+<label class="block mb-2">Value<input id="temp" class="border p-2 rounded w-full"></label>
+<label class="block mb-2">From<select id="tfrom" class="border p-2 rounded w-full"><option>C</option><option>F</option><option>K</option></select></label>
+<label class="block mb-2">To<select id="tto" class="border p-2 rounded w-full"><option>F</option><option>C</option><option>K</option></select></label>
+<button id="btn" class="bg-blue-600 text-white px-4 py-2 rounded">Convert</button>
+</div>
+<div id="out" class="mt-4 font-semibold"></div>
+</div>
+<section class="bg-white p-6 rounded-lg shadow mt-6"><h2 class="text-xl font-semibold">Frequently Asked Questions</h2><div class="mt-4"><p class="font-semibold">Q: How accurate?</p><p>A: Standard formulas with floating point precision; suitable for practical use.</p></div><div class="mt-4"><p class="font-semibold">Q: Absolute zero?</p><p>A: Absolute zero is -273.15°C or 0 K.</p></div><div class="mt-4"><p class="font-semibold">Q: Can it handle decimals?</p><p>A: Yes—enter decimal values for precise conversion.</p></div></section>
+
+    <script>
+
+function convTemp(){const v=parseFloat(document.getElementById('temp').value);const from=document.getElementById('tfrom').value;const to=document.getElementById('tto').value; if(isNaN(v)){out.textContent='Enter temp';return;} let c; if(from==='C') c=v; if(from==='F') c=(v-32)*5/9; if(from==='K') c=v-273.15; let res; if(to==='C') res=c; if(to==='F') res=c*9/5+32; if(to==='K') res=c+273.15; out.textContent=res.toFixed(2);}
+
+    </script>
+    <script type='application/ld+json'>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How accurate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard formulas with floating point precision; suitable for practical use."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Absolute zero?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolute zero is -273.15\u00b0C or 0 K."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can it handle decimals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes\u2014enter decimal values for precise conversion."
+      }
+    }
+  ]
+}
+    </script>
+  </main>
+  <footer class='text-center p-6 text-sm text-gray-500'>© 2025 AI Tools Hub</footer>
+</body>
+</html>

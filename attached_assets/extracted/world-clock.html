@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>World Clock – Multiple City Times</title>
+  <meta name="description" content="View current times in multiple cities worldwide.">
+  <meta name="keywords" content="world,clock,–,multiple,city,times">
+  <link rel="canonical" href="https://yourdomain.com/world-clock.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-blue-600 text-white p-6">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-2xl font-bold">World Clock – Multiple City Times</h1>
+      <p class="mt-2">Select cities to view current local times and offsets.</p>
+    </div>
+  </header>
+  <main class="max-w-4xl mx-auto p-6">
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-semibold mb-4">Tool</h2>
+      <!-- Tool UI -->
+<div id="tool-ui">
+<div class="mb-4">
+<button id="btn" class="bg-blue-600 text-white px-4 py-2 rounded">Show Clocks</button>
+</div>
+<div id="out" class="mt-4 font-semibold"></div>
+</div>
+<section class="bg-white p-6 rounded-lg shadow mt-6"><h2 class="text-xl font-semibold">Frequently Asked Questions</h2><div class="mt-4"><p class="font-semibold">Q: Can I add custom cities?</p><p>A: Yes—UI supports adding custom cities by timezone ID.</p></div><div class="mt-4"><p class="font-semibold">Q: Is DST handled?</p><p>A: Yes when using IANA timezone IDs in the browser.</p></div><div class="mt-4"><p class="font-semibold">Q: Does it sync time?</p><p>A: Times are read from browser and reflect local network time.</p></div></section>
+
+    <script>
+
+function showClocks(){const cities=[{name:'New York',tz:'America/New_York'},{name:'London',tz:'Europe/London'},{name:'Tokyo',tz:'Asia/Tokyo'}]; let html=''; cities.forEach(c=>{const dt=new Date().toLocaleString('en-US',{timeZone:c.tz, hour:'numeric', minute:'numeric', second:'numeric'}); html+=`<div><strong>${c.name}:</strong> ${dt}</div>`}); out.innerHTML=html;}
+
+    </script>
+    <script type='application/ld+json'>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I add custom cities?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes\u2014UI supports adding custom cities by timezone ID."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is DST handled?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes when using IANA timezone IDs in the browser."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it sync time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Times are read from browser and reflect local network time."
+      }
+    }
+  ]
+}
+    </script>
+  </main>
+  <footer class='text-center p-6 text-sm text-gray-500'>© 2025 AI Tools Hub</footer>
+</body>
+</html>

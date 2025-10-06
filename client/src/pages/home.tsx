@@ -92,6 +92,7 @@ export default function Home() {
       <Helmet>
         <title>Time & Tools Hub - 30 Free Online Calculators & Tools</title>
         <meta name="description" content="Access 30 free online calculators and productivity tools including percentage calculator, loan calculator, currency converter, BMI calculator, and more. Fast, accurate, and easy to use." />
+        <meta name="keywords" content="online calculator, percentage calculator, loan calculator, currency converter, BMI calculator, unit converter, free tools, productivity tools" />
         
         {/* Open Graph */}
         <meta property="og:type" content="website" />
@@ -104,6 +105,9 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Time & Tools Hub - 30 Free Online Calculators & Tools" />
         <meta name="twitter:description" content="Access 30 free online calculators and productivity tools for finance, health, math, conversions, and more." />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href={window.location.origin} />
       </Helmet>
 
       <div className="min-h-screen bg-background text-foreground">

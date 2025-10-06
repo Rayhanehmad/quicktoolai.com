@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pomodoro Timer – Focus Session Timer</title>
+  <meta name="description" content="Customizable work/break timers based on the Pomodoro technique.">
+  <meta name="keywords" content="pomodoro,timer,–,focus,session,timer">
+  <link rel="canonical" href="https://yourdomain.com/pomodoro-timer.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-blue-600 text-white p-6">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-2xl font-bold">Pomodoro Timer – Focus Session Timer</h1>
+      <p class="mt-2">Set work minutes and break minutes and run cycles with alerts.</p>
+    </div>
+  </header>
+  <main class="max-w-4xl mx-auto p-6">
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-semibold mb-4">Tool</h2>
+      <!-- Tool UI -->
+<div id="tool-ui">
+<div class="mb-4">
+<label class="block mb-2">Work minutes<input id="work" value="25" class="border p-2 rounded w-full"></label>
+<button id="btnStart" class="bg-green-600 text-white px-4 py-2 rounded">Start</button> <button id="btnStop" class="bg-red-600 text-white px-4 py-2 rounded">Stop</button>
+</div>
+<div id="out" class="mt-4 font-semibold"></div>
+</div>
+<section class="bg-white p-6 rounded-lg shadow mt-6"><h2 class="text-xl font-semibold">Frequently Asked Questions</h2><div class="mt-4"><p class="font-semibold">Q: What is Pomodoro?</p><p>A: A productivity technique using work intervals (commonly 25 minutes) followed by short breaks.</p></div><div class="mt-4"><p class="font-semibold">Q: Can I change durations?</p><p>A: Yes—set custom work and break times in minutes.</p></div><div class="mt-4"><p class="font-semibold">Q: Does it run when tab is inactive?</p><p>A: Browsers may throttle timers in inactive tabs; desktop notifications are recommended.</p></div></section>
+
+    <script>
+
+let timerInterval; function start(){let work=parseInt(document.getElementById('work').value); let outEl=out; let end=Date.now()+work*60000; outEl.textContent='Timer running...'; timerInterval=setInterval(()=>{let diff=Math.max(0,end-Date.now()); let m=Math.floor(diff/60000); let s=Math.floor((diff%60000)/1000); outEl.textContent=m+':'+(s<10?'0':'')+s; if(diff<=0){clearInterval(timerInterval); outEl.textContent='Time up!';}},500);} function stop(){clearInterval(timerInterval); out.textContent='Stopped';}
+
+    </script>
+    <script type='application/ld+json'>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Pomodoro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A productivity technique using work intervals (commonly 25 minutes) followed by short breaks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I change durations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes\u2014set custom work and break times in minutes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it run when tab is inactive?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Browsers may throttle timers in inactive tabs; desktop notifications are recommended."
+      }
+    }
+  ]
+}
+    </script>
+  </main>
+  <footer class='text-center p-6 text-sm text-gray-500'>© 2025 AI Tools Hub</footer>
+</body>
+</html>

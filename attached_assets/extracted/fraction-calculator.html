@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Fraction Calculator – Add/Subtract/Multiply/Divide</title>
+  <meta name="description" content="Perform fraction arithmetic with simplification to lowest terms.">
+  <meta name="keywords" content="fraction,calculator,–,add/subtract/multiply/divide">
+  <link rel="canonical" href="https://yourdomain.com/fraction-calculator.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-blue-600 text-white p-6">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-2xl font-bold">Fraction Calculator – Add/Subtract/Multiply/Divide</h1>
+      <p class="mt-2">Input fractions as numerator/denominator and choose an operation.</p>
+    </div>
+  </header>
+  <main class="max-w-4xl mx-auto p-6">
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-semibold mb-4">Tool</h2>
+      <!-- Tool UI -->
+<div id="tool-ui">
+<div class="mb-4">
+<label class="block mb-2">Numerator 1<input id="n1" class="border p-2 rounded w-full"></label>
+<label class="block mb-2">Denominator 1<input id="d1" class="border p-2 rounded w-full"></label>
+<label class="block mb-2">Numerator 2<input id="n2" class="border p-2 rounded w-full"></label>
+<label class="block mb-2">Denominator 2<input id="d2" class="border p-2 rounded w-full"></label>
+<label class="block mb-2">Operation<select id="op" class="border p-2 rounded w-full"><option>+</option><option>-</option><option>*</option><option>/</option></select></label>
+<button id="btn" class="bg-blue-600 text-white px-4 py-2 rounded">Calculate</button>
+</div>
+<div id="out" class="mt-4 font-semibold"></div>
+</div>
+<section class="bg-white p-6 rounded-lg shadow mt-6"><h2 class="text-xl font-semibold">Frequently Asked Questions</h2><div class="mt-4"><p class="font-semibold">Q: Can it simplify results?</p><p>A: Yes—results are simplified to lowest terms using GCD.</p></div><div class="mt-4"><p class="font-semibold">Q: Does it support mixed numbers?</p><p>A: Current UI accepts simple fractions; extend to mixed numbers if needed.</p></div><div class="mt-4"><p class="font-semibold">Q: Is division by zero handled?</p><p>A: Denominator zero is invalid and prompts an error.</p></div></section>
+
+    <script>
+
+function gcd(a,b){return b?gcd(b,a%b):a;} function simplify(n,d){const g=gcd(Math.abs(n),Math.abs(d)); return [n/g,d/g];} function calc(){const n1=parseInt(document.getElementById('n1').value), d1=parseInt(document.getElementById('d1').value), n2=parseInt(document.getElementById('n2').value), d2=parseInt(document.getElementById('d2').value), op=document.getElementById('op').value; if(!d1||!d2) {out.textContent='Denominator required';return;} let num,den; if(op==='+'){num=n1*d2 + n2*d1; den=d1*d2;} else if(op==='-'){num=n1*d2 - n2*d1; den=d1*d2;} else if(op==='*'){num=n1*n2; den=d1*d2;} else {num=n1*d2; den=d1*n2;} const s=simplify(num,den); out.textContent=s[0]+'/'+s[1];}
+
+    </script>
+    <script type='application/ld+json'>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can it simplify results?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes\u2014results are simplified to lowest terms using GCD."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it support mixed numbers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Current UI accepts simple fractions; extend to mixed numbers if needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is division by zero handled?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Denominator zero is invalid and prompts an error."
+      }
+    }
+  ]
+}
+    </script>
+  </main>
+  <footer class='text-center p-6 text-sm text-gray-500'>© 2025 AI Tools Hub</footer>
+</body>
+</html>

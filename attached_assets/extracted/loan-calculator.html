@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Loan / EMI Calculator – Monthly Payments</title>
+  <meta name="description" content="Compute EMI, total payment, and total interest for loans.">
+  <meta name="keywords" content="loan,/,emi,calculator,–,monthly">
+  <link rel="canonical" href="https://yourdomain.com/loan-calculator.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-blue-600 text-white p-6">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-2xl font-bold">Loan / EMI Calculator – Monthly Payments</h1>
+      <p class="mt-2">Enter principal, annual rate (%) and term (years) to compute monthly EMI.</p>
+    </div>
+  </header>
+  <main class="max-w-4xl mx-auto p-6">
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-semibold mb-4">Tool</h2>
+      <!-- Tool UI -->
+<div id="tool-ui">
+<div class="mb-4">
+<label class="block mb-2">Principal<input id="principal" class="border p-2 rounded w-full"></label>
+<label class="block mb-2">Annual Rate (%)<input id="rate" class="border p-2 rounded w-full"></label>
+<label class="block mb-2">Years<input id="years" class="border p-2 rounded w-full"></label>
+<button id="btn" class="bg-blue-600 text-white px-4 py-2 rounded">Calculate</button>
+</div>
+<div id="out" class="mt-4 font-semibold"></div>
+</div>
+<section class="bg-white p-6 rounded-lg shadow mt-6"><h2 class="text-xl font-semibold">Frequently Asked Questions</h2><div class="mt-4"><p class="font-semibold">Q: What is EMI?</p><p>A: Equated Monthly Installment to repay loan with interest over term.</p></div><div class="mt-4"><p class="font-semibold">Q: Does rate accept annual value?</p><p>A: Yes—enter annual rate; calculator uses monthly rate internally.</p></div><div class="mt-4"><p class="font-semibold">Q: Can I include taxes?</p><p>A: This calculator focuses on principal &amp; interest; add taxes separately.</p></div></section>
+
+    <script>
+
+function calculate(){const P=parseFloat(document.getElementById('principal').value);const r=parseFloat(document.getElementById('rate').value)/100/12;const n=parseFloat(document.getElementById('years').value)*12; if(!P||!r||!n){out.textContent='Enter valid inputs';return;} const emi=(P*r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1); out.textContent='Monthly EMI: '+emi.toFixed(2);}
+
+    </script>
+    <script type='application/ld+json'>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is EMI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Equated Monthly Installment to repay loan with interest over term."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does rate accept annual value?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes\u2014enter annual rate; calculator uses monthly rate internally."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I include taxes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This calculator focuses on principal & interest; add taxes separately."
+      }
+    }
+  ]
+}
+    </script>
+  </main>
+  <footer class='text-center p-6 text-sm text-gray-500'>© 2025 AI Tools Hub</footer>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Binary / Decimal Converter</title>
+  <meta name="description" content="Convert numbers between binary and decimal and other bases.">
+  <meta name="keywords" content="binary,/,decimal,converter">
+  <link rel="canonical" href="https://yourdomain.com/binary-decimal-converter.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-blue-600 text-white p-6">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-2xl font-bold">Binary / Decimal Converter</h1>
+      <p class="mt-2">Enter a number and convert between bases.</p>
+    </div>
+  </header>
+  <main class="max-w-4xl mx-auto p-6">
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-semibold mb-4">Tool</h2>
+      <!-- Tool UI -->
+<div id="tool-ui">
+<div class="mb-4">
+<label class="block mb-2">Decimal<input id="dec" class="border p-2 rounded w-full"></label>
+<button id="btnDec" class="bg-blue-600 text-white px-4 py-2 rounded">To Binary</button>
+<label class="block mb-2">Binary<input id="bin" class="border p-2 rounded w-full"></label>
+<button id="btnBin" class="bg-blue-600 text-white px-4 py-2 rounded">To Decimal</button>
+</div>
+<div id="out" class="mt-4 font-semibold"></div>
+</div>
+<section class="bg-white p-6 rounded-lg shadow mt-6"><h2 class="text-xl font-semibold">Frequently Asked Questions</h2><div class="mt-4"><p class="font-semibold">Q: Can it convert negative numbers?</p><p>A: JS parseInt handles minus sign; ensure proper formatting.</p></div><div class="mt-4"><p class="font-semibold">Q: Does it support hex?</p><p>A: Extendable to hex using parseInt(str,16) and toString(16).</p></div><div class="mt-4"><p class="font-semibold">Q: Large numbers?</p><p>A: Use BigInt for very large integers beyond Number.MAX_SAFE_INTEGER.</p></div></section>
+
+    <script>
+
+function toBin(){const n=parseInt(document.getElementById('dec').value); if(isNaN(n)){out.textContent='Enter integer';return;} out.textContent=n.toString(2);}function toDec(){const b=document.getElementById('bin').value; out.textContent=parseInt(b,2);}
+
+    </script>
+    <script type='application/ld+json'>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can it convert negative numbers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JS parseInt handles minus sign; ensure proper formatting."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it support hex?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Extendable to hex using parseInt(str,16) and toString(16)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Large numbers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use BigInt for very large integers beyond Number.MAX_SAFE_INTEGER."
+      }
+    }
+  ]
+}
+    </script>
+  </main>
+  <footer class='text-center p-6 text-sm text-gray-500'>© 2025 AI Tools Hub</footer>
+</body>
+</html>

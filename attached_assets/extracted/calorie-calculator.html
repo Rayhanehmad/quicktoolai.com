@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Calorie Calculator – Daily Calorie Needs</title>
+  <meta name="description" content="Estimate daily calorie needs (TDEE) from BMR and activity level.">
+  <meta name="keywords" content="calorie,calculator,–,daily,calorie,needs">
+  <link rel="canonical" href="https://yourdomain.com/calorie-calculator.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-blue-600 text-white p-6">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-2xl font-bold">Calorie Calculator – Daily Calorie Needs</h1>
+      <p class="mt-2">Calculate daily calories by selecting activity level and body stats.</p>
+    </div>
+  </header>
+  <main class="max-w-4xl mx-auto p-6">
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-semibold mb-4">Tool</h2>
+      <!-- Tool UI -->
+<div id="tool-ui">
+<div class="mb-4">
+<label class="block mb-2">BMR (kcal/day)<input id="bmr" class="border p-2 rounded w-full"></label>
+<label class="block mb-2">Activity factor<select id="activity" class="border p-2 rounded w-full"><option value="1.2">Sedentary (1.2)</option><option value="1.375">Light (1.375)</option><option value="1.55">Moderate (1.55)</option><option value="1.725">Very Active (1.725)</option></select></label>
+<button id="btn" class="bg-blue-600 text-white px-4 py-2 rounded">Estimate</button>
+</div>
+<div id="out" class="mt-4 font-semibold"></div>
+</div>
+<section class="bg-white p-6 rounded-lg shadow mt-6"><h2 class="text-xl font-semibold">Frequently Asked Questions</h2><div class="mt-4"><p class="font-semibold">Q: What is TDEE?</p><p>A: Total Daily Energy Expenditure is calories burned per day including activity.</p></div><div class="mt-4"><p class="font-semibold">Q: How to use this?</p><p>A: Compute BMR then multiply by an activity factor (1.2 sedentary to 1.9 very active).</p></div><div class="mt-4"><p class="font-semibold">Q: Is it precise?</p><p>A: It&#x27;s an estimate; use it as a starting point and adjust with real-world results.</p></div></section>
+
+    <script>
+
+function calculate(){const b=parseFloat(document.getElementById('bmr').value);const f=parseFloat(document.getElementById('activity').value); if(!b||!f){out.textContent='Enter BMR and activity factor';return;} out.textContent='Estimated daily calories (TDEE): '+Math.round(b*f)+' kcal';}
+
+    </script>
+    <script type='application/ld+json'>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is TDEE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Total Daily Energy Expenditure is calories burned per day including activity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to use this?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Compute BMR then multiply by an activity factor (1.2 sedentary to 1.9 very active)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it precise?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's an estimate; use it as a starting point and adjust with real-world results."
+      }
+    }
+  ]
+}
+    </script>
+  </main>
+  <footer class='text-center p-6 text-sm text-gray-500'>© 2025 AI Tools Hub</footer>
+</body>
+</html>

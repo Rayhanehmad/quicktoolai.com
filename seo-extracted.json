@@ -1,0 +1,402 @@
+{
+  "age-calc": {
+    "title": "Age Calculator – Exact Age in Years, Months, Days",
+    "metaDescription": "Calculate precise age from birthdate including leap years.",
+    "keywords": "age,calculator,–,exact,age,in",
+    "introduction": "Enter the date of birth to get years, months and days.",
+    "faqs": [
+      {
+        "question": "Does it consider leap years?",
+        "answer": "Yes—calculations use real calendar math including leap years."
+      },
+      {
+        "question": "Can it compute future age?",
+        "answer": "Yes—enter a future date as reference to compute age at that date."
+      },
+      {
+        "question": "Is timezone relevant?",
+        "answer": "Age uses local date; timezone differences rarely affect calendar day calculation."
+      }
+    ]
+  },
+  "area": {
+    "title": "Area Calculator – shapes: circle, rectangle, triangle",
+    "metaDescription": "Compute area for standard shapes with given dimensions.",
+    "keywords": "area,calculator,–,shapes:,circle,,rectangle,",
+    "introduction": "Select shape, enter dimensions, and calculate area.",
+    "faqs": [
+      {
+        "question": "Area of circle?",
+        "answer": "Area = π × r²."
+      },
+      {
+        "question": "Rectangle area?",
+        "answer": "Area = length × width."
+      },
+      {
+        "question": "Triangle area?",
+        "answer": "Area = 0.5 × base × height."
+      }
+    ]
+  },
+  "bmi-calc": {
+    "title": "BMI Calculator – Free Online Body Mass Index Tool",
+    "metaDescription": "Calculate BMI from weight and height. Free, fast, and accurate.",
+    "keywords": "bmi,calculator,–,free,online,body",
+    "introduction": "Instantly calculate your Body Mass Index (BMI) using weight (kg) and height (cm).",
+    "faqs": [
+      {
+        "question": "What is BMI?",
+        "answer": "BMI (Body Mass Index) estimates body fat from weight and height."
+      },
+      {
+        "question": "What is a healthy BMI range?",
+        "answer": "For adults, 18.5–24.9 is generally considered healthy."
+      },
+      {
+        "question": "Is BMI accurate for athletes?",
+        "answer": "Athletes may have high BMI due to muscle mass; BMI doesn't distinguish muscle from fat."
+      }
+    ]
+  },
+  "bmr": {
+    "title": "BMR Calculator – Basal Metabolic Rate Tool",
+    "metaDescription": "Estimate calories burned at rest using Mifflin-St Jeor formula.",
+    "keywords": "bmr,calculator,–,basal,metabolic,rate",
+    "introduction": "Calculate Basal Metabolic Rate using age, sex, weight and height.",
+    "faqs": [
+      {
+        "question": "What is BMR?",
+        "answer": "BMR is calories burned at rest to maintain vital functions."
+      },
+      {
+        "question": "Which formula is used?",
+        "answer": "We use Mifflin-St Jeor, widely accepted for estimates."
+      },
+      {
+        "question": "Can I use BMR for diet planning?",
+        "answer": "Yes—multiply BMR by an activity factor to get daily needs."
+      }
+    ]
+  },
+  "bodyfat": {
+    "title": "Body Fat Calculator – U.S. Navy Method",
+    "metaDescription": "Estimate body fat percentage using waist, neck, hip (for women) measurements.",
+    "keywords": "body,fat,calculator,–,u.s.,navy",
+    "introduction": "Use the U.S. Navy formula for estimated body fat percentage.",
+    "faqs": [
+      {
+        "question": "Is this accurate?",
+        "answer": "It's an estimate; professional methods (DEXA) are more accurate."
+      },
+      {
+        "question": "Do measurements need units?",
+        "answer": "Use all measurements in centimeters."
+      },
+      {
+        "question": "Is it suitable for athletes?",
+        "answer": "Athletes may have atypical results due to muscle distribution."
+      }
+    ]
+  },
+  "calorie": {
+    "title": "Calorie Calculator – Daily Calorie Needs",
+    "metaDescription": "Estimate daily calorie needs (TDEE) from BMR and activity level.",
+    "keywords": "calorie,calculator,–,daily,calorie,needs",
+    "introduction": "Calculate daily calories by selecting activity level and body stats.",
+    "faqs": [
+      {
+        "question": "What is TDEE?",
+        "answer": "Total Daily Energy Expenditure is calories burned per day including activity."
+      },
+      {
+        "question": "How to use this?",
+        "answer": "Compute BMR then multiply by an activity factor (1.2 sedentary to 1.9 very active)."
+      },
+      {
+        "question": "Is it precise?",
+        "answer": "It's an estimate; use it as a starting point and adjust with real-world results."
+      }
+    ]
+  },
+  "interest": {
+    "title": "Compound Interest Calculator – Investment Growth",
+    "metaDescription": "Calculate future value with compound interest and compounding frequency.",
+    "keywords": "compound,interest,calculator,–,investment,growth",
+    "introduction": "Enter principal, rate, years and compounding periods per year.",
+    "faqs": [
+      {
+        "question": "What is compounding?",
+        "answer": "Interest calculated on principal and previously earned interest."
+      },
+      {
+        "question": "How does frequency affect growth?",
+        "answer": "More frequent compounding yields slightly higher returns."
+      },
+      {
+        "question": "Is rate annual?",
+        "answer": "Yes—enter annual rate; specify compounding periods per year."
+      }
+    ]
+  },
+  "countdown": {
+    "title": "Countdown Timer – Event Countdown",
+    "metaDescription": "Countdown to a future date/time with days, hours, minutes and seconds.",
+    "keywords": "countdown,timer,–,event,countdown",
+    "introduction": "Enter a target date/time and start the live countdown.",
+    "faqs": [
+      {
+        "question": "Can I set multiple countdowns?",
+        "answer": "This page supports a single countdown; extend UI to save multiple."
+      },
+      {
+        "question": "What happens when time's up?",
+        "answer": "You can configure alerts or redirect when countdown reaches zero."
+      },
+      {
+        "question": "Is timezone considered?",
+        "answer": "The target date/time is interpreted in the user's local timezone."
+      }
+    ]
+  },
+  "currency": {
+    "title": "Currency Converter – Convert World Currencies",
+    "metaDescription": "Convert currencies using daily-updated exchange rates (rates cached daily).",
+    "keywords": "currency,converter,–,convert,world,currencies",
+    "introduction": "Enter amount and select currency pair. Note: rates are indicative; use banks for exact quotes.",
+    "faqs": [
+      {
+        "question": "Are rates live?",
+        "answer": "This static package contains example rates. Use a rates API (ex: exchangerate.host) for live rates."
+      },
+      {
+        "question": "Which currencies?",
+        "answer": "Common currencies included; you can add any ISO currency."
+      },
+      {
+        "question": "Are fees included?",
+        "answer": "Displayed rates do not include conversion fees charged by banks or services."
+      }
+    ]
+  },
+  "date": {
+    "title": "Date Calculator – Add/Subtract Days &amp; Difference",
+    "metaDescription": "Add or subtract days/months/years and compute differences between dates.",
+    "keywords": "date,calculator,–,add/subtract,days,&amp;",
+    "introduction": "Useful for deadlines, planning, and countdowns.",
+    "faqs": [
+      {
+        "question": "Does it handle leap years?",
+        "answer": "Yes—uses JS Date which follows Gregorian calendar rules."
+      },
+      {
+        "question": "Can I add months?",
+        "answer": "Adding months needs careful handling due to varying month lengths; this tool supports month addition."
+      },
+      {
+        "question": "Is time-of-day considered?",
+        "answer": "This tool works in calendar days; time-of-day may affect partial days calculation."
+      }
+    ]
+  },
+  "fraction": {
+    "title": "Fraction Calculator – Add/Subtract/Multiply/Divide",
+    "metaDescription": "Perform fraction arithmetic with simplification to lowest terms.",
+    "keywords": "fraction,calculator,–,add/subtract/multiply/divide",
+    "introduction": "Input fractions as numerator/denominator and choose an operation.",
+    "faqs": [
+      {
+        "question": "Can it simplify results?",
+        "answer": "Yes—results are simplified to lowest terms using GCD."
+      },
+      {
+        "question": "Does it support mixed numbers?",
+        "answer": "Current UI accepts simple fractions; extend to mixed numbers if needed."
+      },
+      {
+        "question": "Is division by zero handled?",
+        "answer": "Denominator zero is invalid and prompts an error."
+      }
+    ]
+  },
+  "loan": {
+    "title": "Loan / EMI Calculator – Monthly Payments",
+    "metaDescription": "Compute EMI, total payment, and total interest for loans.",
+    "keywords": "loan,/,emi,calculator,–,monthly",
+    "introduction": "Enter principal, annual rate (%) and term (years) to compute monthly EMI.",
+    "faqs": [
+      {
+        "question": "What is EMI?",
+        "answer": "Equated Monthly Installment to repay loan with interest over term."
+      },
+      {
+        "question": "Does rate accept annual value?",
+        "answer": "Yes—enter annual rate; calculator uses monthly rate internally."
+      },
+      {
+        "question": "Can I include taxes?",
+        "answer": "This calculator focuses on principal & interest; add taxes separately."
+      }
+    ]
+  },
+  "mortgage": {
+    "title": "Mortgage Calculator – Home Loan Estimator",
+    "metaDescription": "Estimate mortgage payments for home loans with principal and interest.",
+    "keywords": "mortgage,calculator,–,home,loan,estimator",
+    "introduction": "Compute monthly mortgage payments and total cost.",
+    "faqs": [
+      {
+        "question": "What additional costs exist?",
+        "answer": "Taxes, insurance, and HOA fees may add to monthly payment."
+      },
+      {
+        "question": "Can I change amortization?",
+        "answer": "Shorter term increases payment but reduces interest paid."
+      },
+      {
+        "question": "Is rate fixed?",
+        "answer": "Depends on loan—fixed stays same; adjustable can change over time."
+      }
+    ]
+  },
+  "percentage": {
+    "title": "Percentage Calculator – Percent, Increase, Decrease",
+    "metaDescription": "Calculate percentages, part-of-whole, and percentage changes.",
+    "keywords": "percentage,calculator,–,percent,,increase,,decrease",
+    "introduction": "Use for discounts, grades, and ratio calculations.",
+    "faqs": [
+      {
+        "question": "How to find percent?",
+        "answer": "(part/whole)×100 gives the percent value."
+      },
+      {
+        "question": "How to compute percent change?",
+        "answer": "((new-old)/old)×100 produces percent change."
+      },
+      {
+        "question": "Can I use negative values?",
+        "answer": "Yes—negative indicates decrease."
+      }
+    ]
+  },
+  "qr-generator": {
+    "title": "QR Code Generator – Create QR Images",
+    "metaDescription": "Generate QR codes for URLs and text (client-side).",
+    "keywords": "qr,code,generator,–,create,qr",
+    "introduction": "Enter text or URL and generate a downloadable QR image.",
+    "faqs": [
+      {
+        "question": "Is generation offline?",
+        "answer": "This implementation uses a public QR image API; to run fully offline use a client JS QR lib."
+      },
+      {
+        "question": "Can I change size?",
+        "answer": "Yes—adjust size parameter when requesting the QR image."
+      },
+      {
+        "question": "Is data stored?",
+        "answer": "No—the API generates an image; we do not store submitted data."
+      }
+    ]
+  },
+  "random": {
+    "title": "Random Number Generator – Integers &amp; Picks",
+    "metaDescription": "Generate random integers in a range or pick random choices.",
+    "keywords": "random,number,generator,–,integers,&amp;",
+    "introduction": "Specify min and max to generate a random integer.",
+    "faqs": [
+      {
+        "question": "Is it cryptographically secure?",
+        "answer": "No—use Web Crypto API for crypto-grade randomness."
+      },
+      {
+        "question": "Can I generate floats?",
+        "answer": "Yes—adapt function to use Math.random() scaled to decimal range."
+      },
+      {
+        "question": "Can I pick from a list?",
+        "answer": "Yes—add choice splitting and pick randomly from array."
+      }
+    ]
+  },
+  "scientific": {
+    "title": "Scientific Calculator – Trig, Log, Power",
+    "metaDescription": "Basic scientific functions: sin, cos, tan, log, exponent, power.",
+    "keywords": "scientific,calculator,–,trig,,log,,power",
+    "introduction": "Enter an expression or use provided buttons for functions.",
+    "faqs": [
+      {
+        "question": "Is eval safe?",
+        "answer": "Eval executes user input—ensure no untrusted code; for production use a math parser library."
+      },
+      {
+        "question": "Does it support trig?",
+        "answer": "Yes—use Math.sin(), Math.cos(), Math.tan() with radians."
+      },
+      {
+        "question": "Can I use parentheses?",
+        "answer": "Yes—standard JS expression rules apply."
+      }
+    ]
+  },
+  "unit": {
+    "title": "Unit Converter – Length, Mass, Volume &amp; More",
+    "metaDescription": "Convert common units across length, weight, volume, area, speed and temperature.",
+    "keywords": "unit,converter,–,length,,mass,,volume",
+    "introduction": "Supports a selection of common units with accurate conversion factors.",
+    "faqs": [
+      {
+        "question": "How many units supported?",
+        "answer": "This page supports the most common length units; more categories can be added."
+      },
+      {
+        "question": "Are conversions precise?",
+        "answer": "Yes—based on standard scientific conversion factors."
+      },
+      {
+        "question": "Can I convert temperature?",
+        "answer": "Temperature uses different formulas (C↔F↔K) handled separately."
+      }
+    ]
+  },
+  "volume": {
+    "title": "Volume Calculator – cube, sphere, cylinder",
+    "metaDescription": "Calculate volume of common 3D shapes quickly.",
+    "keywords": "volume,calculator,–,cube,,sphere,,cylinder",
+    "introduction": "Enter shape dimensions (radius, height, side) to compute volume.",
+    "faqs": [
+      {
+        "question": "Volume of sphere?",
+        "answer": "V = 4/3 × π × r³."
+      },
+      {
+        "question": "Volume of cylinder?",
+        "answer": "V = π × r² × h."
+      },
+      {
+        "question": "Units?",
+        "answer": "Results in same cubic units as inputs."
+      }
+    ]
+  },
+  "clock": {
+    "title": "World Clock – Multiple City Times",
+    "metaDescription": "View current times in multiple cities worldwide.",
+    "keywords": "world,clock,–,multiple,city,times",
+    "introduction": "Select cities to view current local times and offsets.",
+    "faqs": [
+      {
+        "question": "Can I add custom cities?",
+        "answer": "Yes—UI supports adding custom cities by timezone ID."
+      },
+      {
+        "question": "Is DST handled?",
+        "answer": "Yes when using IANA timezone IDs in the browser."
+      },
+      {
+        "question": "Does it sync time?",
+        "answer": "Times are read from browser and reflect local network time."
+      }
+    ]
+  }
+}

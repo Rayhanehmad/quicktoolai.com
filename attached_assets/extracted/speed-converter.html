@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Speed Converter – km/h, mph, m/s</title>
+  <meta name="description" content="Convert between common speed units for transport and physics.">
+  <meta name="keywords" content="speed,converter,–,km/h,,mph,,m/s">
+  <link rel="canonical" href="https://yourdomain.com/speed-converter.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-blue-600 text-white p-6">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-2xl font-bold">Speed Converter – km/h, mph, m/s</h1>
+      <p class="mt-2">Convert km/h↔mph↔m/s and nautical units.</p>
+    </div>
+  </header>
+  <main class="max-w-4xl mx-auto p-6">
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-semibold mb-4">Tool</h2>
+      <!-- Tool UI -->
+<div id="tool-ui">
+<div class="mb-4">
+<p class="text-sm text-gray-500">Use the inputs above to calculate.</p>
+<button id="btn" class="bg-blue-600 text-white px-4 py-2 rounded">Run</button>
+</div>
+<div id="out" class="mt-4 font-semibold"></div>
+</div>
+<section class="bg-white p-6 rounded-lg shadow mt-6"><h2 class="text-xl font-semibold">Frequently Asked Questions</h2><div class="mt-4"><p class="font-semibold">Q: How to convert kph to m/s?</p><p>A: Divide km/h by 3.6 to get m/s.</p></div><div class="mt-4"><p class="font-semibold">Q: Does it include knots?</p><p>A: Yes—nautical speed (knots) is supported.</p></div><div class="mt-4"><p class="font-semibold">Q: Use in physics?</p><p>A: Useful for motion calculations and travel planning.</p></div></section>
+
+    <script>
+
+function convSpeed(){const v=parseFloat(document.getElementById('sval').value);const from=document.getElementById('sfrom').value;const to=document.getElementById('sto').value; const f={'kph':1,'mph':1/1.609344,'ms':1/3.6,'knot':0.539957}; const base=v*f[from]; out.textContent=(base/f[to]).toFixed(6);}
+
+    </script>
+    <script type='application/ld+json'>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How to convert kph to m/s?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide km/h by 3.6 to get m/s."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it include knots?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes\u2014nautical speed (knots) is supported."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Use in physics?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Useful for motion calculations and travel planning."
+      }
+    }
+  ]
+}
+    </script>
+  </main>
+  <footer class='text-center p-6 text-sm text-gray-500'>© 2025 AI Tools Hub</footer>
+</body>
+</html>

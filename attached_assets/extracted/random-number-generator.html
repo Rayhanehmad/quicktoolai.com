@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Random Number Generator – Integers &amp; Picks</title>
+  <meta name="description" content="Generate random integers in a range or pick random choices.">
+  <meta name="keywords" content="random,number,generator,–,integers,&amp;">
+  <link rel="canonical" href="https://yourdomain.com/random-number-generator.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-blue-600 text-white p-6">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-2xl font-bold">Random Number Generator – Integers &amp; Picks</h1>
+      <p class="mt-2">Specify min and max to generate a random integer.</p>
+    </div>
+  </header>
+  <main class="max-w-4xl mx-auto p-6">
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-semibold mb-4">Tool</h2>
+      <!-- Tool UI -->
+<div id="tool-ui">
+<div class="mb-4">
+<label class="block mb-2">Min<input id="min" value="1" class="border p-2 rounded w-full"></label>
+<label class="block mb-2">Max<input id="max" value="100" class="border p-2 rounded w-full"></label>
+<button id="btn" class="bg-blue-600 text-white px-4 py-2 rounded">Generate</button>
+</div>
+<div id="out" class="mt-4 font-semibold"></div>
+</div>
+<section class="bg-white p-6 rounded-lg shadow mt-6"><h2 class="text-xl font-semibold">Frequently Asked Questions</h2><div class="mt-4"><p class="font-semibold">Q: Is it cryptographically secure?</p><p>A: No—use Web Crypto API for crypto-grade randomness.</p></div><div class="mt-4"><p class="font-semibold">Q: Can I generate floats?</p><p>A: Yes—adapt function to use Math.random() scaled to decimal range.</p></div><div class="mt-4"><p class="font-semibold">Q: Can I pick from a list?</p><p>A: Yes—add choice splitting and pick randomly from array.</p></div></section>
+
+    <script>
+
+function gen(){const a=parseInt(document.getElementById('min').value), b=parseInt(document.getElementById('max').value); if(isNaN(a)||isNaN(b)){out.textContent='Enter valid range';return;} out.textContent=Math.floor(Math.random()*(b-a+1))+a;}
+
+    </script>
+    <script type='application/ld+json'>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is it cryptographically secure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No\u2014use Web Crypto API for crypto-grade randomness."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I generate floats?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes\u2014adapt function to use Math.random() scaled to decimal range."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I pick from a list?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes\u2014add choice splitting and pick randomly from array."
+      }
+    }
+  ]
+}
+    </script>
+  </main>
+  <footer class='text-center p-6 text-sm text-gray-500'>© 2025 AI Tools Hub</footer>
+</body>
+</html>

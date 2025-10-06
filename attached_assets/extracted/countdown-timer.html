@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Countdown Timer – Event Countdown</title>
+  <meta name="description" content="Countdown to a future date/time with days, hours, minutes and seconds.">
+  <meta name="keywords" content="countdown,timer,–,event,countdown">
+  <link rel="canonical" href="https://yourdomain.com/countdown-timer.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-blue-600 text-white p-6">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-2xl font-bold">Countdown Timer – Event Countdown</h1>
+      <p class="mt-2">Enter a target date/time and start the live countdown.</p>
+    </div>
+  </header>
+  <main class="max-w-4xl mx-auto p-6">
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-semibold mb-4">Tool</h2>
+      <!-- Tool UI -->
+<div id="tool-ui">
+<div class="mb-4">
+<label class="block mb-2">Target date/time<input id="target" type="datetime-local" class="border p-2 rounded w-full"></label>
+<button id="btn" class="bg-blue-600 text-white px-4 py-2 rounded">Start</button>
+</div>
+<div id="out" class="mt-4 font-semibold"></div>
+</div>
+<section class="bg-white p-6 rounded-lg shadow mt-6"><h2 class="text-xl font-semibold">Frequently Asked Questions</h2><div class="mt-4"><p class="font-semibold">Q: Can I set multiple countdowns?</p><p>A: This page supports a single countdown; extend UI to save multiple.</p></div><div class="mt-4"><p class="font-semibold">Q: What happens when time&#x27;s up?</p><p>A: You can configure alerts or redirect when countdown reaches zero.</p></div><div class="mt-4"><p class="font-semibold">Q: Is timezone considered?</p><p>A: The target date/time is interpreted in the user&#x27;s local timezone.</p></div></section>
+
+    <script>
+
+let cdInterval; function start(){const target=new Date(document.getElementById('target').value).getTime(); cdInterval=setInterval(()=>{let now=Date.now(); let diff=target-now; if(diff<=0){clearInterval(cdInterval); out.textContent='Time reached'; return;} let d=Math.floor(diff/86400000); let h=Math.floor((diff%86400000)/3600000); let m=Math.floor((diff%3600000)/60000); let s=Math.floor((diff%60000)/1000); out.textContent=d+'d '+h+'h '+m+'m '+s+'s';},500);} 
+
+    </script>
+    <script type='application/ld+json'>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I set multiple countdowns?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This page supports a single countdown; extend UI to save multiple."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when time's up?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can configure alerts or redirect when countdown reaches zero."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is timezone considered?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The target date/time is interpreted in the user's local timezone."
+      }
+    }
+  ]
+}
+    </script>
+  </main>
+  <footer class='text-center p-6 text-sm text-gray-500'>© 2025 AI Tools Hub</footer>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BMI Calculator – Free Online Body Mass Index Tool</title>
+  <meta name="description" content="Calculate BMI from weight and height. Free, fast, and accurate.">
+  <meta name="keywords" content="bmi,calculator,–,free,online,body">
+  <link rel="canonical" href="https://yourdomain.com/bmi-calculator.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-blue-600 text-white p-6">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-2xl font-bold">BMI Calculator – Free Online Body Mass Index Tool</h1>
+      <p class="mt-2">Instantly calculate your Body Mass Index (BMI) using weight (kg) and height (cm).</p>
+    </div>
+  </header>
+  <main class="max-w-4xl mx-auto p-6">
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-semibold mb-4">Tool</h2>
+      <!-- Tool UI -->
+<div id="tool-ui">
+<div class="mb-4">
+<label class="block mb-2">Weight (kg)<input id="weight" class="border p-2 rounded w-full"></label>
+<label class="block mb-2">Height (cm)<input id="height" class="border p-2 rounded w-full"></label>
+<button id="btn" class="bg-blue-600 text-white px-4 py-2 rounded">Calculate</button>
+</div>
+<div id="out" class="mt-4 font-semibold"></div>
+</div>
+<section class="bg-white p-6 rounded-lg shadow mt-6"><h2 class="text-xl font-semibold">Frequently Asked Questions</h2><div class="mt-4"><p class="font-semibold">Q: What is BMI?</p><p>A: BMI (Body Mass Index) estimates body fat from weight and height.</p></div><div class="mt-4"><p class="font-semibold">Q: What is a healthy BMI range?</p><p>A: For adults, 18.5–24.9 is generally considered healthy.</p></div><div class="mt-4"><p class="font-semibold">Q: Is BMI accurate for athletes?</p><p>A: Athletes may have high BMI due to muscle mass; BMI doesn&#x27;t distinguish muscle from fat.</p></div></section>
+
+    <script>
+
+function calculate(){const w=parseFloat(document.getElementById('weight').value);const h=parseFloat(document.getElementById('height').value)/100; if(!w||!h){out.textContent='Please enter valid numbers';return;} const bmi=(w/(h*h)).toFixed(2); out.textContent='BMI: '+bmi; }
+
+    </script>
+    <script type='application/ld+json'>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is BMI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BMI (Body Mass Index) estimates body fat from weight and height."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a healthy BMI range?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For adults, 18.5\u201324.9 is generally considered healthy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is BMI accurate for athletes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Athletes may have high BMI due to muscle mass; BMI doesn't distinguish muscle from fat."
+      }
+    }
+  ]
+}
+    </script>
+  </main>
+  <footer class='text-center p-6 text-sm text-gray-500'>© 2025 AI Tools Hub</footer>
+</body>
+</html>

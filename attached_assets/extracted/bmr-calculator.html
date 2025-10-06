@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BMR Calculator – Basal Metabolic Rate Tool</title>
+  <meta name="description" content="Estimate calories burned at rest using Mifflin-St Jeor formula.">
+  <meta name="keywords" content="bmr,calculator,–,basal,metabolic,rate">
+  <link rel="canonical" href="https://yourdomain.com/bmr-calculator.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-blue-600 text-white p-6">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-2xl font-bold">BMR Calculator – Basal Metabolic Rate Tool</h1>
+      <p class="mt-2">Calculate Basal Metabolic Rate using age, sex, weight and height.</p>
+    </div>
+  </header>
+  <main class="max-w-4xl mx-auto p-6">
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-semibold mb-4">Tool</h2>
+      <!-- Tool UI -->
+<div id="tool-ui">
+<div class="mb-4">
+<label class="block mb-2">Weight (kg)<input id="weight" class="border p-2 rounded w-full"></label>
+<label class="block mb-2">Height (cm)<input id="height" class="border p-2 rounded w-full"></label>
+<label class="block mb-2">Age<input id="age" class="border p-2 rounded w-full"></label>
+<label class="block mb-2">Sex<select id="sex" class="border p-2 rounded w-full"><option value="male">Male</option><option value="female">Female</option></select></label>
+<button id="btn" class="bg-blue-600 text-white px-4 py-2 rounded">Calculate</button>
+</div>
+<div id="out" class="mt-4 font-semibold"></div>
+</div>
+<section class="bg-white p-6 rounded-lg shadow mt-6"><h2 class="text-xl font-semibold">Frequently Asked Questions</h2><div class="mt-4"><p class="font-semibold">Q: What is BMR?</p><p>A: BMR is calories burned at rest to maintain vital functions.</p></div><div class="mt-4"><p class="font-semibold">Q: Which formula is used?</p><p>A: We use Mifflin-St Jeor, widely accepted for estimates.</p></div><div class="mt-4"><p class="font-semibold">Q: Can I use BMR for diet planning?</p><p>A: Yes—multiply BMR by an activity factor to get daily needs.</p></div></section>
+
+    <script>
+
+function calculate(){const w=parseFloat(document.getElementById('weight').value);const h=parseFloat(document.getElementById('height').value);const a=parseFloat(document.getElementById('age').value);const sex=document.getElementById('sex').value; if(!w||!h||!a){out.textContent='Enter valid numbers';return;} let bmr=10*w+6.25*h-5*a + (sex==='male'?5:-161); out.textContent='BMR: '+Math.round(bmr)+' kcal/day';}
+
+    </script>
+    <script type='application/ld+json'>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is BMR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BMR is calories burned at rest to maintain vital functions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which formula is used?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We use Mifflin-St Jeor, widely accepted for estimates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use BMR for diet planning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes\u2014multiply BMR by an activity factor to get daily needs."
+      }
+    }
+  ]
+}
+    </script>
+  </main>
+  <footer class='text-center p-6 text-sm text-gray-500'>© 2025 AI Tools Hub</footer>
+</body>
+</html>

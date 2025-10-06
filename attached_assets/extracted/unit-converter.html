@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Unit Converter – Length, Mass, Volume &amp; More</title>
+  <meta name="description" content="Convert common units across length, weight, volume, area, speed and temperature.">
+  <meta name="keywords" content="unit,converter,–,length,,mass,,volume">
+  <link rel="canonical" href="https://yourdomain.com/unit-converter.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-blue-600 text-white p-6">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-2xl font-bold">Unit Converter – Length, Mass, Volume &amp; More</h1>
+      <p class="mt-2">Supports a selection of common units with accurate conversion factors.</p>
+    </div>
+  </header>
+  <main class="max-w-4xl mx-auto p-6">
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-semibold mb-4">Tool</h2>
+      <!-- Tool UI -->
+<div id="tool-ui">
+<div class="mb-4">
+<label class="block mb-2">Value<input id="val" class="border p-2 rounded w-full"></label>
+<label class="block mb-2">From<input id="from" value="m" class="border p-2 rounded w-full"></label>
+<label class="block mb-2">To<input id="to" value="km" class="border p-2 rounded w-full"></label>
+<button id="btn" class="bg-blue-600 text-white px-4 py-2 rounded">Convert</button>
+</div>
+<div id="out" class="mt-4 font-semibold"></div>
+</div>
+<section class="bg-white p-6 rounded-lg shadow mt-6"><h2 class="text-xl font-semibold">Frequently Asked Questions</h2><div class="mt-4"><p class="font-semibold">Q: How many units supported?</p><p>A: This page supports the most common length units; more categories can be added.</p></div><div class="mt-4"><p class="font-semibold">Q: Are conversions precise?</p><p>A: Yes—based on standard scientific conversion factors.</p></div><div class="mt-4"><p class="font-semibold">Q: Can I convert temperature?</p><p>A: Temperature uses different formulas (C↔F↔K) handled separately.</p></div></section>
+
+    <script>
+
+function convert(){const val=parseFloat(document.getElementById('val').value);const from=document.getElementById('from').value;const to=document.getElementById('to').value; if(isNaN(val)){out.textContent='Enter number';return;} const factors={'m':1,'km':1000,'cm':0.01,'mm':0.001,'in':0.0254,'ft':0.3048,'yd':0.9144,'mi':1609.34}; const base=val*factors[from]; const res=base/factors[to]; out.textContent=res; }
+
+    </script>
+    <script type='application/ld+json'>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many units supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This page supports the most common length units; more categories can be added."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are conversions precise?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes\u2014based on standard scientific conversion factors."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I convert temperature?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Temperature uses different formulas (C\u2194F\u2194K) handled separately."
+      }
+    }
+  ]
+}
+    </script>
+  </main>
+  <footer class='text-center p-6 text-sm text-gray-500'>© 2025 AI Tools Hub</footer>
+</body>
+</html>

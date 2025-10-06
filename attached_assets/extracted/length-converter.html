@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Length Converter – meters, km, miles</title>
+  <meta name="description" content="Convert between metric and imperial length units.">
+  <meta name="keywords" content="length,converter,–,meters,,km,,miles">
+  <link rel="canonical" href="https://yourdomain.com/length-converter.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-blue-600 text-white p-6">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-2xl font-bold">Length Converter – meters, km, miles</h1>
+      <p class="mt-2">Supports common length conversions like km↔mi, m↔ft, etc.</p>
+    </div>
+  </header>
+  <main class="max-w-4xl mx-auto p-6">
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-semibold mb-4">Tool</h2>
+      <!-- Tool UI -->
+<div id="tool-ui">
+<div class="mb-4">
+<p class="text-sm text-gray-500">Use the inputs above to calculate.</p>
+<button id="btn" class="bg-blue-600 text-white px-4 py-2 rounded">Run</button>
+</div>
+<div id="out" class="mt-4 font-semibold"></div>
+</div>
+<section class="bg-white p-6 rounded-lg shadow mt-6"><h2 class="text-xl font-semibold">Frequently Asked Questions</h2><div class="mt-4"><p class="font-semibold">Q: Is it precise?</p><p>A: Uses standard conversion factors with adequate precision for everyday and technical use.</p></div><div class="mt-4"><p class="font-semibold">Q: Can it convert to mm?</p><p>A: Yes—small units supported as factors.</p></div><div class="mt-4"><p class="font-semibold">Q: Does it support nautical miles?</p><p>A: Add &#x27;nm&#x27; with factor 1852 to include nautical miles.</p></div></section>
+
+    <script>
+
+function convLen(){const val=parseFloat(document.getElementById('len').value);const from=document.getElementById('lfrom').value;const to=document.getElementById('lto').value; const factors={'m':1,'km':1000,'mi':1609.34,'ft':0.3048,'in':0.0254}; const base=val*factors[from]; out.textContent=(base/factors[to]).toFixed(6);}
+
+    </script>
+    <script type='application/ld+json'>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is it precise?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Uses standard conversion factors with adequate precision for everyday and technical use."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can it convert to mm?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes\u2014small units supported as factors."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it support nautical miles?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Add 'nm' with factor 1852 to include nautical miles."
+      }
+    }
+  ]
+}
+    </script>
+  </main>
+  <footer class='text-center p-6 text-sm text-gray-500'>© 2025 AI Tools Hub</footer>
+</body>
+</html>

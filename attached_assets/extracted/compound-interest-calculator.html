@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Compound Interest Calculator – Investment Growth</title>
+  <meta name="description" content="Calculate future value with compound interest and compounding frequency.">
+  <meta name="keywords" content="compound,interest,calculator,–,investment,growth">
+  <link rel="canonical" href="https://yourdomain.com/compound-interest-calculator.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-blue-600 text-white p-6">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-2xl font-bold">Compound Interest Calculator – Investment Growth</h1>
+      <p class="mt-2">Enter principal, rate, years and compounding periods per year.</p>
+    </div>
+  </header>
+  <main class="max-w-4xl mx-auto p-6">
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-semibold mb-4">Tool</h2>
+      <!-- Tool UI -->
+<div id="tool-ui">
+<div class="mb-4">
+<label class="block mb-2">Principal<input id="principal" class="border p-2 rounded w-full"></label>
+<label class="block mb-2">Annual Rate (%)<input id="rate" class="border p-2 rounded w-full"></label>
+<label class="block mb-2">Years<input id="years" class="border p-2 rounded w-full"></label>
+<label class="block mb-2">Compounds per year<input id="n" value="1" class="border p-2 rounded w-full"></label>
+<button id="btn" class="bg-blue-600 text-white px-4 py-2 rounded">Calculate</button>
+</div>
+<div id="out" class="mt-4 font-semibold"></div>
+</div>
+<section class="bg-white p-6 rounded-lg shadow mt-6"><h2 class="text-xl font-semibold">Frequently Asked Questions</h2><div class="mt-4"><p class="font-semibold">Q: What is compounding?</p><p>A: Interest calculated on principal and previously earned interest.</p></div><div class="mt-4"><p class="font-semibold">Q: How does frequency affect growth?</p><p>A: More frequent compounding yields slightly higher returns.</p></div><div class="mt-4"><p class="font-semibold">Q: Is rate annual?</p><p>A: Yes—enter annual rate; specify compounding periods per year.</p></div></section>
+
+    <script>
+
+function calculate(){const P=parseFloat(document.getElementById('principal').value);const r=parseFloat(document.getElementById('rate').value)/100;const t=parseFloat(document.getElementById('years').value);const n=parseFloat(document.getElementById('n').value); if(!P||isNaN(r)||!t||!n){out.textContent='Enter valid inputs';return;} const A=P*Math.pow(1+r/n,n*t); out.textContent='Future value: '+A.toFixed(2);}
+
+    </script>
+    <script type='application/ld+json'>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is compounding?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Interest calculated on principal and previously earned interest."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does frequency affect growth?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "More frequent compounding yields slightly higher returns."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is rate annual?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes\u2014enter annual rate; specify compounding periods per year."
+      }
+    }
+  ]
+}
+    </script>
+  </main>
+  <footer class='text-center p-6 text-sm text-gray-500'>© 2025 AI Tools Hub</footer>
+</body>
+</html>

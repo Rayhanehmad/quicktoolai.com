@@ -20,6 +20,19 @@ export function ToolPageLayout({ toolId, title, description, category, children 
   const metaDescription = seoContent?.metaDescription || description;
   const keywords = seoContent?.keywords;
   
+  const faqSchemaData = seoContent?.faqs && seoContent.faqs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": seoContent.faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  } : null;
+  
   return (
     <>
       <Helmet>
@@ -42,6 +55,13 @@ export function ToolPageLayout({ toolId, title, description, category, children 
         
         {/* Canonical URL */}
         <link rel="canonical" href={pageUrl} />
+        
+        {/* Schema.org FAQPage Structured Data */}
+        {faqSchemaData && (
+          <script type="application/ld+json">
+            {JSON.stringify(faqSchemaData)}
+          </script>
+        )}
       </Helmet>
 
       <div className="min-h-screen bg-background text-foreground">
@@ -116,16 +136,20 @@ export function ToolPageLayout({ toolId, title, description, category, children 
                     <HelpCircle className="w-5 h-5 text-primary" />
                     <h2 className="text-xl font-bold">Frequently Asked Questions</h2>
                   </div>
-                  <div className="space-y-3">
+                  <div className="space-y-4">
                     {seoContent.faqs.map((faq, index) => (
                       <div
                         key={index}
                         className="bg-muted/30 rounded-lg p-4 border border-border hover:border-primary/50 transition-colors"
                         data-testid={`faq-${index}`}
                       >
-                        <p className="text-sm font-medium flex items-start gap-2">
+                        <p className="text-sm font-semibold flex items-start gap-2 mb-2">
                           <span className="text-primary mt-0.5">Q:</span>
-                          <span>{faq}</span>
+                          <span>{faq.question}</span>
+                        </p>
+                        <p className="text-sm text-muted-foreground flex items-start gap-2 ml-6">
+                          <span className="text-accent font-medium">A:</span>
+                          <span>{faq.answer}</span>
                         </p>
                       </div>
                     ))}

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Date Calculator – Add/Subtract Days &amp; Difference</title>
+  <meta name="description" content="Add or subtract days/months/years and compute differences between dates.">
+  <meta name="keywords" content="date,calculator,–,add/subtract,days,&amp;">
+  <link rel="canonical" href="https://yourdomain.com/date-calculator.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-blue-600 text-white p-6">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-2xl font-bold">Date Calculator – Add/Subtract Days &amp; Difference</h1>
+      <p class="mt-2">Useful for deadlines, planning, and countdowns.</p>
+    </div>
+  </header>
+  <main class="max-w-4xl mx-auto p-6">
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-semibold mb-4">Tool</h2>
+      <!-- Tool UI -->
+<div id="tool-ui">
+<div class="mb-4">
+<label class="block mb-2">Date 1<input id="d1" type="date" class="border p-2 rounded w-full"></label>
+<label class="block mb-2">Date 2<input id="d2" type="date" class="border p-2 rounded w-full"></label>
+<button id="btn" class="bg-blue-600 text-white px-4 py-2 rounded">Difference</button>
+</div>
+<div id="out" class="mt-4 font-semibold"></div>
+</div>
+<section class="bg-white p-6 rounded-lg shadow mt-6"><h2 class="text-xl font-semibold">Frequently Asked Questions</h2><div class="mt-4"><p class="font-semibold">Q: Does it handle leap years?</p><p>A: Yes—uses JS Date which follows Gregorian calendar rules.</p></div><div class="mt-4"><p class="font-semibold">Q: Can I add months?</p><p>A: Adding months needs careful handling due to varying month lengths; this tool supports month addition.</p></div><div class="mt-4"><p class="font-semibold">Q: Is time-of-day considered?</p><p>A: This tool works in calendar days; time-of-day may affect partial days calculation.</p></div></section>
+
+    <script>
+
+function diff(){const a=new Date(document.getElementById('d1').value);const b=new Date(document.getElementById('d2').value); if(isNaN(a)||isNaN(b)){out.textContent='Enter valid dates';return;} const diffMs=Math.abs(b-a); const days=Math.floor(diffMs/(1000*60*60*24)); out.textContent=days+' days difference';}
+
+    </script>
+    <script type='application/ld+json'>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does it handle leap years?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes\u2014uses JS Date which follows Gregorian calendar rules."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I add months?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Adding months needs careful handling due to varying month lengths; this tool supports month addition."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is time-of-day considered?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This tool works in calendar days; time-of-day may affect partial days calculation."
+      }
+    }
+  ]
+}
+    </script>
+  </main>
+  <footer class='text-center p-6 text-sm text-gray-500'>© 2025 AI Tools Hub</footer>
+</body>
+</html>
