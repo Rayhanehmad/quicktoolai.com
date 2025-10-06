@@ -50,8 +50,8 @@ export default function ContactPage() {
   return (
     <>
       <Helmet>
-        <title>Contact Us - Time & Tools Hub</title>
-        <meta name="description" content="Get in touch with Time & Tools Hub. We're here to help with any questions or feedback." />
+        <title>Contact Us - AI FinHealth Hub</title>
+        <meta name="description" content="Get in touch with AI FinHealth Hub. We're here to help with questions about our AI-powered financial and health calculators." />
         <link rel="canonical" href={`${window.location.origin}/contact`} />
       </Helmet>
 
@@ -212,7 +212,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Office</h3>
                     <p className="text-muted-foreground">
-                      Time & Tools Hub<br />
+                      AI FinHealth Hub<br />
                       123 Calculator Street<br />
                       Tech City, TC 12345<br />
                       United States

@@ -25,248 +25,178 @@ export function Footer() {
             <h5 className="font-semibold mb-4">Tools</h5>
             <ul className="space-y-1 text-sm text-muted-foreground">
               <li>
-                <Link href="/percentage">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-percentage">
-                    Percentage Calculator
-                  </a>
+                <Link href="/percentage" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-percentage">
+                  Percentage Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/loan">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-loan">
-                    Loan Calculator
-                  </a>
+                <Link href="/loan" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-loan">
+                  Loan Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/mortgage">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-mortgage">
-                    Mortgage Calculator
-                  </a>
+                <Link href="/mortgage" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-mortgage">
+                  Mortgage Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/interest">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-interest">
-                    Interest Calculator
-                  </a>
+                <Link href="/interest" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-interest">
+                  Interest Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/discount">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-discount">
-                    Discount Calculator
-                  </a>
+                <Link href="/discount" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-discount">
+                  Discount Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/tip">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-tip">
-                    Tip Calculator
-                  </a>
+                <Link href="/tip" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-tip">
+                  Tip Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/profit">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-profit">
-                    Profit Calculator
-                  </a>
+                <Link href="/profit" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-profit">
+                  Profit Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/currency">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-currency">
-                    Currency Converter
-                  </a>
+                <Link href="/currency" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-currency">
+                  Currency Converter
                 </Link>
               </li>
               <li>
-                <Link href="/unit">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-unit">
-                    Unit Converter
-                  </a>
+                <Link href="/unit" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-unit">
+                  Unit Converter
                 </Link>
               </li>
               <li>
-                <Link href="/bmi-calc">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-bmi">
-                    BMI Calculator
-                  </a>
+                <Link href="/bmi-calc" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-bmi">
+                  BMI Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/bmr">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-bmr">
-                    BMR Calculator
-                  </a>
+                <Link href="/bmr" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-bmr">
+                  BMR Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/bodyfat">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-bodyfat">
-                    Body Fat Calculator
-                  </a>
+                <Link href="/bodyfat" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-bodyfat">
+                  Body Fat Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/calorie">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-calorie">
-                    Calorie Calculator
-                  </a>
+                <Link href="/calorie" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-calorie">
+                  Calorie Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/pregnancy">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-pregnancy">
-                    Pregnancy Calculator
-                  </a>
+                <Link href="/pregnancy" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-pregnancy">
+                  Pregnancy Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/scientific">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-scientific">
-                    Scientific Calculator
-                  </a>
+                <Link href="/scientific" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-scientific">
+                  Scientific Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/fraction">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-fraction">
-                    Fraction Calculator
-                  </a>
+                <Link href="/fraction" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-fraction">
+                  Fraction Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/ratio">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-ratio">
-                    Ratio Calculator
-                  </a>
+                <Link href="/ratio" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-ratio">
+                  Ratio Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/average">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-average">
-                    Average Calculator
-                  </a>
+                <Link href="/average" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-average">
+                  Average Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/random">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-random">
-                    Random Number
-                  </a>
+                <Link href="/random" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-random">
+                  Random Number
                 </Link>
               </li>
               <li>
-                <Link href="/area">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-area">
-                    Area Calculator
-                  </a>
+                <Link href="/area" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-area">
+                  Area Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/volume">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-volume">
-                    Volume Calculator
-                  </a>
+                <Link href="/volume" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-volume">
+                  Volume Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/speed">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-speed">
-                    Speed Calculator
-                  </a>
+                <Link href="/speed" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-speed">
+                  Speed Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/energy">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-energy">
-                    Energy Calculator
-                  </a>
+                <Link href="/energy" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-energy">
+                  Energy Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/clock">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-clock">
-                    World Clock & Timer
-                  </a>
+                <Link href="/clock" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-clock">
+                  World Clock & Timer
                 </Link>
               </li>
               <li>
-                <Link href="/age-calc">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-age">
-                    Age Calculator
-                  </a>
+                <Link href="/age-calc" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-age">
+                  Age Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/date">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-date">
-                    Date Calculator
-                  </a>
+                <Link href="/date" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-date">
+                  Date Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/time-calc">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-time">
-                    Time Calculator
-                  </a>
+                <Link href="/time-calc" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-time">
+                  Time Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/countdown">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-countdown">
-                    Countdown Timer
-                  </a>
+                <Link href="/countdown" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-countdown">
+                  Countdown Timer
                 </Link>
               </li>
               <li>
-                <Link href="/sleep">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-sleep">
-                    Sleep Calculator
-                  </a>
+                <Link href="/sleep" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-sleep">
+                  Sleep Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/status">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-status">
-                    Website Checker
-                  </a>
+                <Link href="/status" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-status">
+                  Website Checker
                 </Link>
               </li>
               <li>
-                <Link href="/ip-lookup">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-ip">
-                    IP Lookup
-                  </a>
+                <Link href="/ip-lookup" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-ip">
+                  IP Lookup
                 </Link>
               </li>
               <li>
-                <Link href="/qr-generator">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-qr">
-                    QR Generator
-                  </a>
+                <Link href="/qr-generator" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-qr">
+                  QR Generator
                 </Link>
               </li>
               <li>
-                <Link href="/notepad">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-notepad">
-                    Online Notepad
-                  </a>
+                <Link href="/notepad" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-notepad">
+                  Online Notepad
                 </Link>
               </li>
               <li>
-                <Link href="/gpa">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-gpa">
-                    GPA Calculator
-                  </a>
+                <Link href="/gpa" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-gpa">
+                  GPA Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/love">
-                  <a className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-love">
-                    Love Calculator
-                  </a>
+                <Link href="/love" className="hover:text-foreground transition-colors cursor-pointer" data-testid="footer-link-love">
+                  Love Calculator
                 </Link>
               </li>
             </ul>
@@ -301,7 +231,7 @@ export function Footer() {
         
         <div className="pt-8 border-t border-border text-center">
           <p className="text-sm text-muted-foreground">
-            © 2024 Time & Tools Hub. All rights reserved. Built with modern web technologies.
+            © 2024 AI FinHealth Hub. All rights reserved. Built with modern web technologies.
           </p>
         </div>
       </div>

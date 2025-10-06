@@ -1,5 +1,6 @@
 import { ToolPageLayout } from "@/components/tool-page-layout";
 import { CurrencyConverter } from "@/components/tools/currency-converter";
+import { AdSensePlaceholder } from "@/components/adsense-placeholder";
 
 export default function CurrencyConverterPage() {
   return (
@@ -9,7 +10,11 @@ export default function CurrencyConverterPage() {
       description="Convert between 150+ world currencies with live exchange rates. Real-time forex conversion for USD, EUR, GBP, JPY and all major and minor currencies worldwide."
       category="Converters"
     >
-      <CurrencyConverter />
+      <>
+        <AdSensePlaceholder slot="currency-top" format="rectangle" />
+        <CurrencyConverter />
+        <AdSensePlaceholder slot="currency-bottom" format="responsive" />
+      </>
     </ToolPageLayout>
   );
 }

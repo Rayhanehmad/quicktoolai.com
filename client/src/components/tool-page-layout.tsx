@@ -16,7 +16,7 @@ export function ToolPageLayout({ toolId, title, description, category, children 
   const pageUrl = `${window.location.origin}/${toolId}`;
   const seoContent = SEO_CONTENT[toolId];
   
-  const metaTitle = seoContent?.title || `${title} - Free Online Calculator | Time & Tools Hub`;
+  const metaTitle = seoContent?.title || `${title} - AI-Powered Calculator | AI FinHealth Hub`;
   const metaDescription = seoContent?.metaDescription || description;
   const keywords = seoContent?.keywords;
   
@@ -45,7 +45,7 @@ export function ToolPageLayout({ toolId, title, description, category, children 
         <meta property="og:url" content={pageUrl} />
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
-        <meta property="og:site_name" content="Time & Tools Hub" />
+        <meta property="og:site_name" content="AI FinHealth Hub" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />

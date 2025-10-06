@@ -1,7 +1,7 @@
 {
-  "name": "Time & Tools Hub - 30 Free Online Calculators",
-  "short_name": "Time & Tools Hub",
-  "description": "Professional productivity tools and calculators with AI assistance. Free percentage, loan, BMI, scientific calculators and more.",
+  "name": "AI FinHealth Hub - Smart Financial & Health Calculators",
+  "short_name": "AI FinHealth Hub",
+  "description": "AI-powered financial planning and health tracking tools. Smart calculators for loans, mortgages, BMI, calories, and more with automated insights.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -46,21 +46,21 @@
       "name": "Percentage Calculator",
       "short_name": "Percentage",
       "description": "Calculate percentages quickly",
-      "url": "/#percentage",
+      "url": "/percentage",
       "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
     },
     {
       "name": "Loan Calculator",
       "short_name": "Loan",
       "description": "Calculate loan payments",
-      "url": "/#loan",
+      "url": "/loan",
       "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
     },
     {
       "name": "BMI Calculator",
       "short_name": "BMI",
       "description": "Calculate Body Mass Index",
-      "url": "/#bmi",
+      "url": "/bmi-calc",
       "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
     }
   ]

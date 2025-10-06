@@ -8,8 +8,8 @@ export default function PrivacyPolicyPage() {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy - Time & Tools Hub</title>
-        <meta name="description" content="Privacy Policy for Time & Tools Hub. Learn how we collect, use, and protect your data." />
+        <title>Privacy Policy - AI FinHealth Hub</title>
+        <meta name="description" content="Privacy Policy for AI FinHealth Hub. Learn how we collect, use, and protect your data with our AI-powered financial and health tools." />
         <link rel="canonical" href={`${window.location.origin}/privacy-policy`} />
       </Helmet>
 
@@ -35,7 +35,7 @@ export default function PrivacyPolicyPage() {
             <section className="glass-card p-6">
               <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Time & Tools Hub ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our online calculators and tools. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
+                AI FinHealth Hub ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our AI-powered financial planning and health tracking tools. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
               </p>
             </section>
 

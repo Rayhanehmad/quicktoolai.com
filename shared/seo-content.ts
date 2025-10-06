@@ -15,10 +15,10 @@ export interface ToolSEO {
 
 export const SEO_CONTENT: Record<string, ToolSEO> = {
   'bmi-calc': {
-    title: 'BMI Calculator – Free Online Body Mass Index Tool',
-    metaDescription: 'Calculate BMI from weight and height. Free, fast, and accurate.',
-    keywords: 'bmi,calculator,–,free,online,body',
-    introduction: 'Instantly calculate your Body Mass Index (BMI) using weight (kg) and height (cm).',
+    title: 'AI-Powered BMI Calculator – Smart Body Mass Index Tracking',
+    metaDescription: 'AI-powered BMI calculator for smart health tracking. Automated body mass index analysis with personalized health insights and weight management recommendations based on your data.',
+    keywords: 'AI calculator, BMI calculator, smart planning, automated, health tracking, AI-powered, body mass index',
+    introduction: 'AI-powered BMI calculator - instantly calculate your Body Mass Index using weight (kg) and height (cm) with smart health insights.',
     formula: 'BMI = weight (kg) ÷ (height (m) × height (m))',
     example: '70kg, 175cm → 22.9 (Normal range)',
     faqs: [
@@ -37,10 +37,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'bmr': {
-    title: 'BMR Calculator – Basal Metabolic Rate Tool',
-    metaDescription: 'Estimate calories burned at rest using Mifflin-St Jeor formula.',
-    keywords: 'bmr,calculator,–,basal,metabolic,rate',
-    introduction: 'Calculate Basal Metabolic Rate using age, sex, weight and height.',
+    title: 'Smart BMR Calculator – AI-Powered Metabolic Rate Analysis',
+    metaDescription: 'AI-powered BMR calculator for smart health planning. Automated basal metabolic rate calculations using Mifflin-St Jeor formula with personalized calorie insights and fitness recommendations.',
+    keywords: 'AI calculator, BMR calculator, smart planning, automated, health tracking, AI-powered, basal metabolic rate',
+    introduction: 'Smart AI-powered BMR calculator - calculate Basal Metabolic Rate using age, sex, weight and height with automated health insights.',
     formula: 'Mifflin-St Jeor:\n- Men: BMR = 10W + 6.25H - 5A + 5\n- Women: BMR = 10W + 6.25H - 5A - 161',
     example: 'Male, 70kg, 175cm, 25y → 1665 kcal/day',
     faqs: [
@@ -59,10 +59,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'calorie': {
-    title: 'Calorie Calculator – Daily Calorie Needs',
-    metaDescription: 'Estimate daily calorie needs (TDEE) from BMR and activity level.',
-    keywords: 'calorie,calculator,–,daily,calorie,needs',
-    introduction: 'Calculate daily calories by selecting activity level and body stats.',
+    title: 'AI-Powered Calorie Calculator – Smart Daily Nutrition Planning',
+    metaDescription: 'AI-powered calorie calculator for smart health and fitness planning. Automated TDEE calculations from BMR and activity level with personalized nutrition insights and weight management strategies.',
+    keywords: 'AI calculator, calorie calculator, smart planning, automated, health tracking, AI-powered, daily calorie needs, TDEE',
+    introduction: 'AI-powered calorie calculator - calculate daily calories with automated insights by selecting activity level and body stats.',
     formula: 'Calories = BMR × Activity Factor',
     example: 'BMR 1665, moderate activity → 2580 kcal/day',
     faqs: [
@@ -81,10 +81,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'loan': {
-    title: 'Loan / EMI Calculator – Monthly Payments',
-    metaDescription: 'Compute EMI, total payment, and total interest for loans.',
-    keywords: 'loan,/,emi,calculator,–,monthly',
-    introduction: 'Enter principal, annual rate (%) and term (years) to compute monthly EMI.',
+    title: 'AI-Powered Loan Calculator – Smart EMI & Payment Planning',
+    metaDescription: 'AI-powered loan calculator for smart financial planning. Compute EMI, total interest, and optimize payment schedules with automated calculations and insights for better loan management.',
+    keywords: 'AI calculator, loan calculator, smart planning, automated, financial health, AI-powered, EMI, monthly payments',
+    introduction: 'AI-powered loan calculator - enter principal, annual rate (%) and term (years) to compute monthly EMI with smart financial insights.',
     formula: 'EMI = [P × R × (1+R)^N] ÷ [(1+R)^N - 1]',
     example: 'Loan = $10,000, 5% annual, 5 years → $188/month',
     faqs: [
@@ -103,10 +103,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'mortgage': {
-    title: 'Mortgage Calculator – Home Loan Estimator',
-    metaDescription: 'Estimate mortgage payments for home loans with principal and interest.',
-    keywords: 'mortgage,calculator,–,home,loan,estimator',
-    introduction: 'Compute monthly mortgage payments and total cost.',
+    title: 'Smart Mortgage Calculator – AI-Powered Home Loan Planning',
+    metaDescription: 'AI-powered mortgage calculator for smart home loan planning. Automated payment estimates with principal, interest, and total cost analysis for informed financial decisions.',
+    keywords: 'AI calculator, mortgage calculator, smart planning, automated, financial health, AI-powered, home loan, estimator',
+    introduction: 'Smart AI-powered mortgage calculator - compute monthly mortgage payments and total cost with automated financial insights.',
     formula: 'Same as Loan EMI formula',
     example: 'Loan $250,000, 4% annual, 30 years → $1193/month',
     faqs: [
@@ -125,10 +125,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'interest': {
-    title: 'Compound Interest Calculator – Investment Growth',
-    metaDescription: 'Calculate future value with compound interest and compounding frequency.',
-    keywords: 'compound,interest,calculator,–,investment,growth',
-    introduction: 'Enter principal, rate, years and compounding periods per year.',
+    title: 'AI-Powered Interest Calculator – Smart Investment Growth Tracking',
+    metaDescription: 'AI-powered compound interest calculator for smart investment planning. Automated calculations with compounding frequency analysis and financial growth insights for optimal investment strategies.',
+    keywords: 'AI calculator, interest calculator, smart planning, automated, financial health, AI-powered, compound interest, investment growth',
+    introduction: 'AI-powered interest calculator - enter principal, rate, years and compounding periods for smart investment growth projections.',
     formula: 'A = P × (1 + r/n)^(n×t)',
     example: '$1000 at 5% for 10 years → $1628.89',
     faqs: [
@@ -147,10 +147,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'percentage': {
-    title: 'Percentage Calculator – Percent, Increase, Decrease',
-    metaDescription: 'Calculate percentages, part-of-whole, and percentage changes.',
-    keywords: 'percentage,calculator,–,percent,,increase,,decrease',
-    introduction: 'Use for discounts, grades, and ratio calculations.',
+    title: 'AI-Powered Percentage Calculator – Smart Percent Analysis',
+    metaDescription: 'AI-powered percentage calculator with automated calculations for discounts, grades, and financial analysis. Smart percentage change tracking with instant insights and recommendations.',
+    keywords: 'AI calculator, percentage calculator, smart planning, automated, financial health, AI-powered, percent, increase, decrease',
+    introduction: 'AI-powered percentage calculator for discounts, grades, and smart ratio calculations with automated insights.',
     formula: '% = (Part / Whole) × 100',
     example: '50 of 200 → 25%',
     faqs: [
@@ -169,10 +169,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'unit': {
-    title: 'Unit Converter – Length, Mass, Volume & More',
-    metaDescription: 'Convert common units across length, weight, volume, area, speed and temperature.',
-    keywords: 'unit,converter,–,length,,mass,,volume',
-    introduction: 'Supports a selection of common units with accurate conversion factors.',
+    title: 'Smart Unit Converter – AI-Powered Metric Conversions',
+    metaDescription: 'AI-powered unit converter for smart metric conversions. Automated calculations across length, weight, volume, area, speed and temperature with precise conversion factors and intelligent unit recommendations.',
+    keywords: 'AI calculator, unit converter, smart conversion, automated, intelligent calculations, AI-powered, metric converter, measurement tool',
+    introduction: 'Smart AI-powered unit converter - supports accurate conversions across common units with automated precision and intelligent suggestions.',
     formula: 'Conversions are based on predefined ratios.',
     example: '1 inch = 2.54 cm',
     faqs: [
@@ -191,10 +191,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'currency': {
-    title: 'Currency Converter – Convert World Currencies',
-    metaDescription: 'Convert currencies using daily-updated exchange rates (rates cached daily).',
-    keywords: 'currency,converter,–,convert,world,currencies',
-    introduction: 'Enter amount and select currency pair. Note: rates are indicative; use banks for exact quotes.',
+    title: 'Smart Currency Converter – AI-Powered Exchange Rates',
+    metaDescription: 'AI-powered currency converter with smart exchange rate calculations. Automated forex conversions for 150+ world currencies with real-time rate intelligence and precision financial insights.',
+    keywords: 'AI calculator, currency converter, smart conversion, automated, intelligent calculations, AI-powered, forex converter, exchange rates',
+    introduction: 'Smart AI-powered currency converter - convert between world currencies with automated exchange rate calculations and intelligent financial insights.',
     formula: 'Amount × Exchange Rate',
     example: '100 USD → 92 EUR (approx)',
     faqs: [
@@ -213,10 +213,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'age-calc': {
-    title: 'Age Calculator – Exact Age in Years, Months, Days',
-    metaDescription: 'Calculate precise age from birthdate including leap years.',
-    keywords: 'age,calculator,–,exact,age,in',
-    introduction: 'Enter the date of birth to get years, months and days.',
+    title: 'Smart Age Calculator – AI-Powered Precise Age Tracking',
+    metaDescription: 'AI-powered age calculator with smart precision tracking. Calculate exact age in years, months, and days with automated leap year handling and intelligent date analysis for birthdays and milestones.',
+    keywords: 'AI calculator, age calculator, smart planning, automated, productivity tools, AI-powered, age tracking, birthday calculator',
+    introduction: 'Smart AI-powered age calculator - enter date of birth to get precise years, months and days with automated calculations and intelligent insights.',
     formula: 'Age = Current Date – Birthdate',
     example: 'Born 01 Jan 2000 → 25 years (in 2025)',
     faqs: [
@@ -235,10 +235,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'date': {
-    title: 'Date Calculator – Add/Subtract Days & Difference',
-    metaDescription: 'Add or subtract days/months/years and compute differences between dates.',
-    keywords: 'date,calculator,–,add/subtract,days,&',
-    introduction: 'Useful for deadlines, planning, and countdowns.',
+    title: 'Smart Date Calculator – AI-Powered Date Planning & Scheduling',
+    metaDescription: 'AI-powered date calculator for smart scheduling and planning. Automated date arithmetic with add/subtract days, months, years and intelligent difference calculations for deadlines and project management.',
+    keywords: 'AI calculator, date calculator, smart planning, automated, productivity tools, professional, AI-powered, deadline calculator, scheduling tool',
+    introduction: 'Smart AI-powered date calculator - add or subtract time periods and calculate date differences with automated calendar intelligence for effective planning.',
     formula: 'Future Date = Start Date + Days',
     example: 'Add 90 days to Jan 1 → Mar 31',
     faqs: [
@@ -257,10 +257,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'pregnancy': {
-    title: 'Pregnancy Calculator – Due Date Estimator',
-    metaDescription: 'Estimate due date with our Pregnancy Calculator. Based on last menstrual period (LMP).',
-    keywords: 'pregnancy calculator, due date calculator, maternity',
-    introduction: 'Helps expectant mothers estimate due date based on LMP.',
+    title: 'AI-Powered Pregnancy Calculator – Smart Due Date Planning',
+    metaDescription: 'AI-powered pregnancy calculator for smart maternity planning. Automated due date estimation based on LMP with personalized pregnancy insights, trimester tracking, and health milestones.',
+    keywords: 'AI calculator, pregnancy calculator, smart planning, automated, health tracking, AI-powered, due date calculator, maternity',
+    introduction: 'AI-powered pregnancy calculator - helps expectant mothers estimate due date based on LMP with automated health insights and milestones.',
     formula: 'Due Date = LMP + 280 days',
     example: 'LMP Jan 1 → Due Date Oct 8',
     faqs: [
@@ -279,10 +279,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'sleep': {
-    title: 'Sleep Calculator – Best Bedtime & Wake Up Tool',
-    metaDescription: 'Find best sleep and wake-up times with our Sleep Calculator. Based on sleep cycles.',
-    keywords: 'sleep calculator, bedtime calculator, wake up tool',
-    introduction: 'Helps you find best bedtime to wake up refreshed.',
+    title: 'Smart Sleep Calculator – AI-Powered Sleep Cycle Optimization',
+    metaDescription: 'AI-powered sleep calculator for smart rest optimization. Automated bedtime and wake-up recommendations based on 90-minute sleep cycles with intelligent health insights for peak performance and productivity.',
+    keywords: 'AI calculator, sleep calculator, smart planning, automated, productivity tools, AI-powered, sleep cycles, bedtime optimizer, wellness tool',
+    introduction: 'Smart AI-powered sleep calculator - find optimal bedtime and wake-up times with automated sleep cycle analysis for refreshed mornings and peak productivity.',
     formula: 'Sleep cycles ≈ 90 minutes each',
     example: 'Wake at 7 AM → sleep at 11 PM or 12:30 AM',
     faqs: [
@@ -301,10 +301,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'bodyfat': {
-    title: 'Body Fat Calculator – U.S. Navy Method',
-    metaDescription: 'Estimate body fat percentage using waist, neck, hip (for women) measurements.',
-    keywords: 'body,fat,calculator,–,u.s.,navy',
-    introduction: 'Use the U.S. Navy formula for estimated body fat percentage.',
+    title: 'Smart Body Fat Calculator – AI-Powered Composition Analysis',
+    metaDescription: 'AI-powered body fat calculator using U.S. Navy method for smart fitness tracking. Automated body composition analysis with waist, neck, and hip measurements for personalized health insights.',
+    keywords: 'AI calculator, body fat calculator, smart planning, automated, health tracking, AI-powered, U.S. Navy method',
+    introduction: 'Smart AI-powered body fat calculator - use the U.S. Navy formula for automated body fat percentage estimation with health insights.',
     formula: 'Based on waist, neck, height (men) and hips (women).',
     example: 'Male, 34 waist, 16 neck, 70 height → ~20% BF',
     faqs: [
@@ -323,10 +323,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'gpa': {
-    title: 'GPA Calculator – Grade Point Average Tool',
-    metaDescription: 'Calculate GPA easily with our GPA Calculator. Supports weighted and unweighted GPAs.',
-    keywords: 'GPA calculator, grade calculator, school tool',
-    introduction: 'Helps students calculate GPA from grades and credits.',
+    title: 'Smart GPA Calculator – AI-Powered Academic Performance Tracking',
+    metaDescription: 'AI-powered GPA calculator for smart academic planning. Automated grade point average calculations with intelligent weighted and unweighted GPA analysis for students and professional academic performance tracking.',
+    keywords: 'AI calculator, GPA calculator, smart planning, automated, productivity tools, professional, AI-powered, academic tracking, grade calculator',
+    introduction: 'Smart AI-powered GPA calculator - calculate grade point averages with automated weighted and unweighted analysis for effective academic performance tracking and planning.',
     formula: 'GPA = Σ(Grade × Credits) ÷ Σ(Credits)',
     example: 'A=4, B=3 → GPA = 3.5',
     faqs: [
@@ -345,10 +345,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'discount': {
-    title: 'Discount Calculator – Free Online Sale Tool',
-    metaDescription: 'Quickly find final price after discount with our Discount Calculator.',
-    keywords: 'discount calculator, sale calculator, shopping tool',
-    introduction: 'Helps you calculate price after discount.',
+    title: 'Smart Discount Calculator – AI-Powered Sale Price Analyzer',
+    metaDescription: 'AI-powered discount calculator with automated price analysis. Instantly calculate final prices, savings percentages, and get smart shopping insights for maximum value.',
+    keywords: 'AI calculator, discount calculator, smart planning, automated, financial health, AI-powered, sale calculator, shopping tool',
+    introduction: 'Smart AI-powered discount calculator - instantly calculate final prices with automated savings analysis and shopping insights.',
     formula: 'Final Price = Price – (Price × %/100)',
     example: '$200 – 25% → $150',
     faqs: [
@@ -367,10 +367,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'tip': {
-    title: 'Tip Calculator – Free Restaurant Tool',
-    metaDescription: 'Calculate tips and split bills with our Tip Calculator.',
-    keywords: 'tip calculator, restaurant bill calculator',
-    introduction: 'Helps calculate tips and split bills among friends.',
+    title: 'AI-Powered Tip Calculator – Smart Bill Splitting Tool',
+    metaDescription: 'AI-powered tip calculator with automated bill splitting. Smart calculations for restaurant tips, group payments, and fair cost distribution with instant financial insights.',
+    keywords: 'AI calculator, tip calculator, smart planning, automated, financial health, AI-powered, restaurant bill calculator',
+    introduction: 'AI-powered tip calculator - smart calculations for tips and automated bill splitting among friends with fair distribution.',
     formula: 'Tip = Bill × %',
     example: '$50, 15% → $7.50 tip',
     faqs: [
@@ -389,10 +389,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'speed': {
-    title: 'Speed Calculator – Free Online Tool',
-    metaDescription: 'Calculate speed, distance, or time with our Speed Calculator.',
-    keywords: 'speed calculator, distance calculator, travel calculator',
-    introduction: 'Find speed, time, or distance using formula.',
+    title: 'Smart Speed Calculator – AI-Powered Distance & Time Analysis',
+    metaDescription: 'AI-powered speed calculator for smart travel planning. Automated calculations for speed, distance, and time with intelligent unit conversions and precision physics-based insights.',
+    keywords: 'AI calculator, speed calculator, smart planning, automated, intelligent calculations, AI-powered, distance calculator, velocity tool',
+    introduction: 'Smart AI-powered speed calculator - find speed, time, or distance with automated calculations and intelligent travel insights.',
     formula: 'Speed = Distance ÷ Time',
     example: '100 km ÷ 2 hrs → 50 km/h',
     faqs: [
@@ -411,10 +411,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'area': {
-    title: 'Area Calculator – shapes: circle, rectangle, triangle',
-    metaDescription: 'Compute area for standard shapes with given dimensions.',
-    keywords: 'area,calculator,–,shapes:,circle,,rectangle,',
-    introduction: 'Select shape, enter dimensions, and calculate area.',
+    title: 'Smart Area Calculator – AI-Powered Shape Analysis',
+    metaDescription: 'AI-powered area calculator for smart geometric calculations. Automated area computation for circles, rectangles, triangles and more with intelligent shape recognition and precision measurement insights.',
+    keywords: 'AI calculator, area calculator, smart planning, automated, intelligent calculations, AI-powered, geometry calculator, shape area',
+    introduction: 'Smart AI-powered area calculator - select shape, enter dimensions, and get automated area calculations with intelligent insights.',
     formula: 'Circle: πr², Rectangle: l×w',
     example: 'Circle radius 5 → 78.5 units²',
     faqs: [
@@ -433,10 +433,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'volume': {
-    title: 'Volume Calculator – cube, sphere, cylinder',
-    metaDescription: 'Calculate volume of common 3D shapes quickly.',
-    keywords: 'volume,calculator,–,cube,,sphere,,cylinder',
-    introduction: 'Enter shape dimensions (radius, height, side) to compute volume.',
+    title: 'Smart Volume Calculator – AI-Powered 3D Shape Analysis',
+    metaDescription: 'AI-powered volume calculator for smart 3D geometry. Automated volume calculations for cubes, spheres, cylinders and more with intelligent shape analysis and precision measurement insights.',
+    keywords: 'AI calculator, volume calculator, smart planning, automated, intelligent calculations, AI-powered, 3D calculator, cubic measurement',
+    introduction: 'Smart AI-powered volume calculator - enter shape dimensions and get automated volume calculations with intelligent geometric insights.',
     formula: 'Cube: a³, Sphere: 4/3πr³',
     example: 'Sphere radius 3 → 113.1 units³',
     faqs: [
@@ -455,23 +455,32 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'profit': {
-    title: 'Profit Calculator – Business Margin Tool',
-    metaDescription: 'Calculate profit margins and markup percentages for your business.',
-    keywords: 'profit calculator, margin calculator, business tool',
-    introduction: 'Calculate profit, margin, and markup for business decisions.',
+    title: 'AI-Powered Profit Calculator – Smart Business Margin Analysis',
+    metaDescription: 'AI-powered profit calculator for smart business planning. Automated margin calculations, markup analysis, and financial insights for optimized pricing and profitability strategies.',
+    keywords: 'AI calculator, profit calculator, smart planning, automated, financial health, AI-powered, margin calculator, business tool',
+    introduction: 'AI-powered profit calculator - calculate margins and markup with automated business insights for smart financial decisions.',
     formula: 'Profit = Revenue - Cost, Margin = (Profit/Revenue) × 100',
     example: 'Revenue $100, Cost $60 → $40 profit, 40% margin',
     faqs: [
-      'Difference between margin and markup?',
-      'How to calculate break-even?',
-      'What is gross vs net profit?'
+      {
+        question: 'Difference between margin and markup?',
+        answer: 'Margin is profit divided by revenue. Markup is profit divided by cost. A 50% markup equals a 33% margin.'
+      },
+      {
+        question: 'How to calculate break-even?',
+        answer: 'Break-even is when revenue equals costs (profit = 0). Calculate by dividing fixed costs by (price - variable cost per unit).'
+      },
+      {
+        question: 'What is gross vs net profit?',
+        answer: 'Gross profit is revenue minus cost of goods sold. Net profit is gross profit minus all operating expenses, taxes, and interest.'
+      }
     ]
   },
   'scientific': {
-    title: 'Scientific Calculator – Trig, Log, Power',
-    metaDescription: 'Basic scientific functions: sin, cos, tan, log, exponent, power.',
-    keywords: 'scientific,calculator,–,trig,,log,,power',
-    introduction: 'Enter an expression or use provided buttons for functions.',
+    title: 'AI Scientific Calculator – Advanced Mathematical Computing',
+    metaDescription: 'AI-powered scientific calculator with advanced mathematical functions. Automated trigonometry, logarithms, exponentials, and power calculations with intelligent computation and precision analysis.',
+    keywords: 'AI calculator, scientific calculator, smart planning, automated, intelligent calculations, AI-powered, advanced math, trig functions',
+    introduction: 'AI-powered scientific calculator - enter expressions or use function buttons for automated advanced mathematical computations with intelligent insights.',
     formula: 'Supports: sin, cos, tan, log, ln, √, ^, π, e',
     example: 'sin(30°) = 0.5, log(100) = 2',
     faqs: [
@@ -490,10 +499,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'fraction': {
-    title: 'Fraction Calculator – Add/Subtract/Multiply/Divide',
-    metaDescription: 'Perform fraction arithmetic with simplification to lowest terms.',
-    keywords: 'fraction,calculator,–,add/subtract/multiply/divide',
-    introduction: 'Input fractions as numerator/denominator and choose an operation.',
+    title: 'Smart Fraction Calculator – AI-Powered Arithmetic Operations',
+    metaDescription: 'AI-powered fraction calculator with smart arithmetic operations. Automated addition, subtraction, multiplication, and division with intelligent simplification to lowest terms and precision insights.',
+    keywords: 'AI calculator, fraction calculator, smart planning, automated, intelligent calculations, AI-powered, fraction arithmetic, simplification',
+    introduction: 'Smart AI-powered fraction calculator - input fractions and choose operations for automated calculations with intelligent simplification.',
     formula: 'a/b + c/d = (ad + bc)/bd',
     example: '1/2 + 1/3 = 5/6',
     faqs: [
@@ -512,10 +521,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'ratio': {
-    title: 'Ratio Calculator – Proportion Tool',
-    metaDescription: 'Calculate ratios and solve proportions with our free Ratio Calculator.',
-    keywords: 'ratio calculator, proportion calculator, math tool',
-    introduction: 'Find ratios, proportions, and equivalent values.',
+    title: 'Smart Ratio Calculator – AI-Powered Proportion Analysis',
+    metaDescription: 'AI-powered ratio calculator for smart proportion solving. Automated ratio calculations and equivalent value analysis with intelligent simplification and precision mathematical insights.',
+    keywords: 'AI calculator, ratio calculator, smart planning, automated, intelligent calculations, AI-powered, proportion tool, equivalent ratios',
+    introduction: 'Smart AI-powered ratio calculator - find ratios, proportions, and equivalent values with automated calculations and intelligent insights.',
     formula: 'a:b = c:d, then a/b = c/d',
     example: '2:3 = 4:6',
     faqs: [
@@ -534,10 +543,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'average': {
-    title: 'Average Calculator – Mean, Median, Mode Tool',
-    metaDescription: 'Calculate mean, median, mode, and range with our free Average Calculator.',
-    keywords: 'average calculator, mean median mode, statistics calculator',
-    introduction: 'Find statistical measures for any set of numbers.',
+    title: 'Smart Average Calculator – AI-Powered Statistical Analysis',
+    metaDescription: 'AI-powered average calculator for smart statistical analysis. Automated calculations for mean, median, mode, and range with intelligent data insights and precision statistical recommendations.',
+    keywords: 'AI calculator, average calculator, smart planning, automated, intelligent calculations, AI-powered, statistics tool, mean median mode',
+    introduction: 'Smart AI-powered average calculator - find statistical measures for any set of numbers with automated analysis and intelligent insights.',
     formula: 'Mean = Sum/Count, Median = Middle value',
     example: '2, 4, 6 → Mean=4, Median=4',
     faqs: [
@@ -556,10 +565,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'random': {
-    title: 'Random Number Generator – Integers & Picks',
-    metaDescription: 'Generate random integers in a range or pick random choices.',
-    keywords: 'random,number,generator,–,integers,&',
-    introduction: 'Specify min and max to generate a random integer.',
+    title: 'Smart Random Number Generator – AI-Powered Integer Generation',
+    metaDescription: 'AI-powered random number generator with smart integer generation. Automated random picks, range-based numbers, and intelligent selection algorithms for games, testing, and decision-making.',
+    keywords: 'AI calculator, random generator, smart planning, automated, intelligent calculations, AI-powered, random numbers, integer picker',
+    introduction: 'Smart AI-powered random number generator - specify min and max ranges for automated random integer generation with intelligent algorithms.',
     formula: 'Pseudorandom algorithm with customizable range',
     example: 'Range 1-100 → Random: 42',
     faqs: [
@@ -578,10 +587,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'energy': {
-    title: 'Energy Calculator – Power & Work Tool',
-    metaDescription: 'Calculate energy, power, and work with unit conversions.',
-    keywords: 'energy calculator, power calculator, physics tool',
-    introduction: 'Convert and calculate energy units for physics and engineering.',
+    title: 'Smart Energy Calculator – AI-Powered Physics Analysis',
+    metaDescription: 'AI-powered energy calculator for smart physics and engineering. Automated calculations for energy, power, and work with intelligent unit conversions and precision scientific insights.',
+    keywords: 'AI calculator, energy calculator, smart planning, automated, intelligent calculations, AI-powered, power calculator, physics tool',
+    introduction: 'Smart AI-powered energy calculator - convert and calculate energy units for physics and engineering with automated analysis and intelligent insights.',
     formula: 'Energy (J) = Power (W) × Time (s)',
     example: '100W × 10s = 1000J',
     faqs: [
@@ -600,10 +609,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'time-calc': {
-    title: 'Time Calculator – Add & Subtract Time Tool',
-    metaDescription: 'Add and subtract hours, minutes, and seconds with our Time Calculator.',
-    keywords: 'time calculator, time addition, duration calculator',
-    introduction: 'Calculate time durations and perform time arithmetic.',
+    title: 'Smart Time Calculator – AI-Powered Duration & Time Arithmetic',
+    metaDescription: 'AI-powered time calculator for smart duration tracking. Automated addition and subtraction of hours, minutes, seconds with intelligent time management insights for productivity and professional scheduling.',
+    keywords: 'AI calculator, time calculator, smart planning, automated, productivity tools, professional, AI-powered, duration calculator, time tracking',
+    introduction: 'Smart AI-powered time calculator - add and subtract time durations with automated calculations and intelligent time management insights for optimal productivity.',
     formula: 'Time = Hours:Minutes:Seconds',
     example: '2:30:00 + 1:45:30 = 4:15:30',
     faqs: [
@@ -622,10 +631,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'countdown': {
-    title: 'Countdown Timer – Event Countdown',
-    metaDescription: 'Countdown to a future date/time with days, hours, minutes and seconds.',
-    keywords: 'countdown,timer,–,event,countdown',
-    introduction: 'Enter a target date/time and start the live countdown.',
+    title: 'Smart Countdown Timer – AI-Powered Event Tracking & Scheduling',
+    metaDescription: 'AI-powered countdown timer for smart event planning. Automated real-time tracking to future dates with intelligent reminders showing days, hours, minutes, and seconds for productivity and professional event management.',
+    keywords: 'AI calculator, countdown timer, smart planning, automated, productivity tools, professional, AI-powered, event tracking, smart timing',
+    introduction: 'Smart AI-powered countdown timer - track time to important events with automated real-time updates and intelligent event management for enhanced productivity.',
     formula: 'Time Remaining = Target Date - Current Date',
     example: 'New Year 2026 → 365 days remaining',
     faqs: [
@@ -644,10 +653,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'clock': {
-    title: 'World Clock – Multiple City Times',
-    metaDescription: 'View current times in multiple cities worldwide.',
-    keywords: 'world,clock,–,multiple,city,times',
-    introduction: 'Select cities to view current local times and offsets.',
+    title: 'Smart World Clock – AI-Powered Time Zone Management',
+    metaDescription: 'AI-powered world clock for smart global time management. Automated time zone conversions across multiple cities with intelligent scheduling insights for productivity and professional international coordination.',
+    keywords: 'AI calculator, world clock, smart planning, automated, productivity tools, professional, AI-powered, time zones, smart timing, global coordination',
+    introduction: 'Smart AI-powered world clock - view current times across multiple cities with automated time zone intelligence for seamless global collaboration and productivity.',
     formula: 'Local Time = UTC + Timezone Offset',
     example: 'UTC 12:00 → EST 07:00',
     faqs: [
@@ -666,10 +675,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'status': {
-    title: 'Website Status Checker – Uptime Monitor',
-    metaDescription: 'Check if websites are online or offline with our Website Status Checker.',
-    keywords: 'website checker, uptime monitor, site status',
-    introduction: 'Monitor website availability and check server status.',
+    title: 'Professional Website Status Checker – Automated Uptime Monitoring',
+    metaDescription: 'AI-powered website status checker for professional uptime monitoring. Automated availability checks with intelligent HTTP response analysis and smart alerts for productivity and reliable web presence management.',
+    keywords: 'AI calculator, website checker, smart planning, automated, productivity tools, professional, AI-powered, uptime monitor, site monitoring, automated monitoring',
+    introduction: 'Professional AI-powered website status checker - monitor site availability with automated HTTP status checks and intelligent uptime analysis for reliable web presence.',
     formula: 'HTTP Response Code Check',
     example: 'example.com → Status: Online (200 OK)',
     faqs: [
@@ -688,10 +697,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'ip-lookup': {
-    title: 'IP Lookup – Find IP Address & Location',
-    metaDescription: 'Find your IP address and location with our IP Lookup tool.',
-    keywords: 'IP lookup, IP address finder, geolocation',
-    introduction: 'Discover your public IP address and approximate location.',
+    title: 'Smart IP Lookup – AI-Powered Geolocation & Network Analysis',
+    metaDescription: 'AI-powered IP lookup tool for smart network analysis. Automated IP address detection with intelligent geolocation data and network insights for productivity, security, and professional network management.',
+    keywords: 'AI calculator, IP lookup, smart planning, automated, productivity tools, professional, AI-powered, geolocation, network analysis, IP finder',
+    introduction: 'Smart AI-powered IP lookup - discover your public IP address with automated geolocation analysis and intelligent network insights for enhanced security and productivity.',
     formula: 'Geolocation via IP database',
     example: '8.8.8.8 → Location: Mountain View, CA',
     faqs: [
@@ -710,10 +719,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'qr-generator': {
-    title: 'QR Code Generator – Create QR Images',
-    metaDescription: 'Generate QR codes for URLs and text (client-side).',
-    keywords: 'qr,code,generator,–,create,qr',
-    introduction: 'Enter text or URL and generate a downloadable QR image.',
+    title: 'Smart QR Code Generator – AI-Powered Digital Code Creation',
+    metaDescription: 'AI-powered QR code generator for smart digital sharing. Automated QR code creation for URLs and text with intelligent optimization and professional code generation for productivity and marketing.',
+    keywords: 'AI calculator, QR generator, smart planning, automated, productivity tools, professional, AI-powered, QR code creator, digital sharing',
+    introduction: 'Smart AI-powered QR code generator - create professional QR codes for URLs and text with automated generation and intelligent optimization for seamless digital sharing.',
     formula: 'QR encoding algorithm',
     example: 'URL → Scannable QR code',
     faqs: [
@@ -732,10 +741,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'notepad': {
-    title: 'Online Notepad – Simple Text Editor',
-    metaDescription: 'Simple online text editor with auto-save functionality.',
-    keywords: 'online notepad, text editor, note taking',
-    introduction: 'Quick and simple text editor for notes and drafts.',
+    title: 'Smart Online Notepad – AI-Powered Note Taking & Text Editor',
+    metaDescription: 'AI-powered online notepad for smart note-taking. Automated auto-save functionality with intelligent text storage and professional note management for enhanced productivity and seamless writing workflow.',
+    keywords: 'AI calculator, online notepad, smart planning, automated, productivity tools, professional, AI-powered, text editor, note taking, auto-save',
+    introduction: 'Smart AI-powered online notepad - capture ideas and notes with automated auto-save and intelligent text management for effortless productivity and professional writing.',
     formula: 'Browser-based text storage',
     example: 'Type notes → Auto-saved locally',
     faqs: [
@@ -754,10 +763,10 @@ export const SEO_CONTENT: Record<string, ToolSEO> = {
     ]
   },
   'love': {
-    title: 'Love Calculator – Compatibility Test',
-    metaDescription: 'Fun compatibility calculator for couples based on names.',
-    keywords: 'love calculator, compatibility test, relationship calculator',
-    introduction: 'Calculate love compatibility for fun and entertainment.',
+    title: 'AI Love Calculator – Smart Compatibility Analysis & Fun Relationship Test',
+    metaDescription: 'AI-powered love calculator for fun compatibility testing. Smart name-based algorithm generates entertaining relationship scores with automated analysis. Perfect for couples seeking playful compatibility insights and entertainment.',
+    keywords: 'AI calculator, love calculator, smart planning, automated, AI-powered, compatibility test, relationship calculator, fun tool, entertainment',
+    introduction: 'AI-powered love calculator - discover fun compatibility scores with smart name analysis for entertaining relationship insights. Purely for fun and entertainment!',
     formula: 'Name-based algorithm (for entertainment)',
     example: 'John + Jane → 85% compatible',
     faqs: [

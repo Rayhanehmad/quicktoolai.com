@@ -1,5 +1,6 @@
 import { ToolPageLayout } from "@/components/tool-page-layout";
 import { AverageCalculator } from "@/components/tools/average-calculator";
+import { AdSensePlaceholder } from "@/components/adsense-placeholder";
 
 export default function AverageCalculatorPage() {
   return (
@@ -9,7 +10,11 @@ export default function AverageCalculatorPage() {
       description="Calculate mean, median, mode, and range from a set of numbers. Statistical analysis tool for finding central tendency and data spread."
       category="Math"
     >
-      <AverageCalculator />
+      <>
+        <AdSensePlaceholder slot="average-top" format="rectangle" />
+        <AverageCalculator />
+        <AdSensePlaceholder slot="average-bottom" format="responsive" />
+      </>
     </ToolPageLayout>
   );
 }
