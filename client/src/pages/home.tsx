@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
 import { Navigation } from "@/components/navigation";
@@ -72,6 +73,20 @@ const categories = [
 ];
 
 export default function Home() {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
+  const handleCategoryClick = (categoryName: string) => {
+    setSelectedCategory(categoryName);
+    const toolsSection = document.getElementById('tools-grid');
+    if (toolsSection) {
+      toolsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  const filteredTools = selectedCategory 
+    ? tools.filter(tool => tool.category === selectedCategory)
+    : tools;
+
   return (
     <>
       <Helmet>
@@ -114,12 +129,18 @@ export default function Home() {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
               {categories.map(({ name, icon: Icon, color, bgColor }) => {
                 const count = tools.filter(t => t.category === name).length;
+                const isSelected = selectedCategory === name;
                 return (
-                  <div key={name} className={`${bgColor} rounded-xl p-4 text-center group hover:scale-105 transition-transform`}>
+                  <button
+                    key={name}
+                    onClick={() => handleCategoryClick(name)}
+                    className={`${bgColor} ${isSelected ? 'ring-2 ring-primary' : ''} rounded-xl p-4 text-center group hover:scale-105 transition-transform cursor-pointer`}
+                    data-testid={`button-category-${name.toLowerCase()}`}
+                  >
                     <Icon className={`w-8 h-8 mx-auto mb-2 ${color}`} />
                     <h3 className="font-semibold text-sm">{name}</h3>
                     <p className="text-xs text-muted-foreground">{count} tools</p>
-                  </div>
+                  </button>
                 );
               })}
             </div>
@@ -127,12 +148,25 @@ export default function Home() {
         </section>
 
         {/* All Tools Grid */}
-        <section className="py-12 px-4">
+        <section id="tools-grid" className="py-12 px-4">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold mb-12 text-center">All Tools</h2>
+            <div className="flex items-center justify-between mb-8">
+              <h2 className="text-3xl font-bold">
+                {selectedCategory ? `${selectedCategory} Tools` : 'All Tools'}
+              </h2>
+              {selectedCategory && (
+                <Button
+                  variant="outline"
+                  onClick={() => setSelectedCategory(null)}
+                  data-testid="button-show-all"
+                >
+                  Show All Tools
+                </Button>
+              )}
+            </div>
             
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {tools.map(tool => (
+              {filteredTools.map(tool => (
                 <Link key={tool.id} href={tool.path} data-testid={`link-tool-${tool.id}`}>
                   <div className="glass-card neomorphic rounded-xl p-6 h-full hover:scale-105 transition-transform cursor-pointer group">
                     <div className="text-4xl mb-3">{tool.icon}</div>
