@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { Home, ChevronRight, BookOpen, Calculator as CalcIcon, HelpCircle, Lightbulb, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SEO_CONTENT } from "@/../../shared/seo-content";
+import { RelatedCalculators } from "@/components/related-calculators";
 
 interface ToolPageLayoutProps {
   toolId: string;
@@ -252,6 +253,9 @@ export function ToolPageLayout({ toolId, title, description, category, children 
               )}
             </div>
           )}
+
+          {/* Related Calculators */}
+          <RelatedCalculators currentToolId={toolId} category={category} />
 
           {/* Back to Home Button */}
           <div className="mt-12 text-center">
