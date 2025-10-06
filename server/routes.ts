@@ -5,6 +5,66 @@ import { insertWebsiteCheckSchema } from "@shared/schema";
 import { z } from "zod";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Sitemap.xml endpoint for SEO
+  app.get("/sitemap.xml", (req, res) => {
+    const baseUrl = process.env.REPL_SLUG 
+      ? `https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co`
+      : req.protocol + '://' + req.get('host');
+    
+    const tools = [
+      '/percentage', '/loan', '/mortgage', '/interest', '/discount', '/tip', '/profit',
+      '/currency', '/unit',
+      '/bmi-calc', '/bmr', '/bodyfat', '/calorie', '/pregnancy',
+      '/scientific', '/fraction', '/ratio', '/average', '/random',
+      '/area', '/volume', '/speed', '/energy',
+      '/clock', '/age-calc', '/date', '/time-calc', '/countdown', '/sleep',
+      '/status', '/ip-lookup', '/qr-generator', '/notepad',
+      '/gpa', '/love'
+    ];
+    
+    const infoPages = [
+      '/privacy-policy', '/terms-of-service', '/contact', '/support'
+    ];
+    
+    const currentDate = new Date().toISOString().split('T')[0];
+    
+    let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+    xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+    
+    // Homepage - highest priority
+    xml += '  <url>\n';
+    xml += `    <loc>${baseUrl}/</loc>\n`;
+    xml += `    <lastmod>${currentDate}</lastmod>\n`;
+    xml += '    <changefreq>weekly</changefreq>\n';
+    xml += '    <priority>1.0</priority>\n';
+    xml += '  </url>\n';
+    
+    // All tool pages - high priority
+    tools.forEach(tool => {
+      xml += '  <url>\n';
+      xml += `    <loc>${baseUrl}${tool}</loc>\n`;
+      xml += `    <lastmod>${currentDate}</lastmod>\n`;
+      xml += '    <changefreq>monthly</changefreq>\n';
+      xml += '    <priority>0.8</priority>\n';
+      xml += '  </url>\n';
+    });
+    
+    // Info pages - medium priority
+    infoPages.forEach(page => {
+      xml += '  <url>\n';
+      xml += `    <loc>${baseUrl}${page}</loc>\n`;
+      xml += `    <lastmod>${currentDate}</lastmod>\n`;
+      xml += '    <changefreq>yearly</changefreq>\n';
+      xml += '    <priority>0.5</priority>\n';
+      xml += '  </url>\n';
+    });
+    
+    xml += '</urlset>';
+    
+    res.header('Content-Type', 'application/xml');
+    res.send(xml);
+  });
+
   // Website status checker endpoint
   app.post("/api/check-website", async (req, res) => {
     try {

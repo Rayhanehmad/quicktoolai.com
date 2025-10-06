@@ -1,0 +1,13 @@
+# robots.txt for AI FinHealth Hub
+
+User-agent: *
+Allow: /
+
+# Disallow admin or API endpoints from crawling (none currently, but good practice)
+Disallow: /api/
+
+# Sitemap location (will resolve to your domain automatically)
+Sitemap: /sitemap.xml
+
+# Crawl-delay to be nice to servers
+Crawl-delay: 1
