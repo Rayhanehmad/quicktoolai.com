@@ -281,20 +281,22 @@ export function TimeCalculator() {
   const [hours, setHours] = useState('');
   const [minutes, setMinutes] = useState('');
   const [seconds, setSeconds] = useState('');
-  const [result, setResult] = useState<number | null>(null);
+  const [totalMinutes, setTotalMinutes] = useState<number | null>(null);
+  const [totalSeconds, setTotalSeconds] = useState<number | null>(null);
 
   const calculate = () => {
     const h = parseInt(hours) || 0;
     const m = parseInt(minutes) || 0;
     const s = parseInt(seconds) || 0;
-    setResult(h * 3600 + m * 60 + s);
+    setTotalMinutes(h * 60 + m + s / 60);
+    setTotalSeconds(h * 3600 + m * 60 + s);
   };
 
   return (
     <div id="time-calc" className="glass-card neomorphic rounded-2xl p-6 h-full">
       <div className="mb-6 text-center">
         <h3 className="text-xl font-bold mb-2 text-primary">Time Calculator</h3>
-        <p className="text-xs text-muted-foreground">Convert time to total seconds</p>
+        <p className="text-xs text-muted-foreground">Convert time to total minutes and seconds</p>
       </div>
       <div className="mb-6 p-4 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl border border-primary/20 space-y-4">
         <Input type="number" value={hours} onChange={(e) => setHours(e.target.value)} placeholder="Hours" className="text-center h-11" />
@@ -304,10 +306,16 @@ export function TimeCalculator() {
       <Button onClick={calculate} className="w-full gradient-bg text-white py-3 px-6 font-semibold hover:opacity-90 transition-opacity mb-6 h-12">
         <Clock className="w-4 h-4 mr-2" />Calculate
       </Button>
-      {result !== null && (
-        <div className="p-4 rounded-lg bg-primary/10 border border-primary animate-slide-up">
-          <div className="text-3xl font-bold text-primary text-center">{result} sec</div>
-          <div className="text-xs text-center text-muted-foreground mt-1">Total Seconds</div>
+      {totalMinutes !== null && totalSeconds !== null && (
+        <div className="grid grid-cols-2 gap-4 animate-slide-up">
+          <div className="p-4 rounded-lg bg-primary/10 border border-primary">
+            <div className="text-3xl font-bold text-primary text-center">{totalMinutes.toFixed(2)}</div>
+            <div className="text-xs text-center text-muted-foreground mt-1">Total Minutes</div>
+          </div>
+          <div className="p-4 rounded-lg bg-primary/10 border border-primary">
+            <div className="text-3xl font-bold text-primary text-center">{totalSeconds}</div>
+            <div className="text-xs text-center text-muted-foreground mt-1">Total Seconds</div>
+          </div>
         </div>
       )}
     </div>
