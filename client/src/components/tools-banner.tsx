@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { Link } from "wouter";
-import { ChevronRight, ChevronLeft, ChevronDown } from "lucide-react";
+import { ChevronRight, ChevronLeft, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -9,7 +9,6 @@ import {
   DropdownMenuTrigger,
   DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
-import { ScrollArea } from "@/components/ui/scroll-area";
 
 const allTools = [
   // Financial
@@ -70,6 +69,7 @@ interface ToolsBannerProps {
 
 export function ToolsBanner({ position = 'top' }: ToolsBannerProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const dropdownScrollRef = useRef<HTMLDivElement>(null);
 
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
@@ -77,9 +77,15 @@ export function ToolsBanner({ position = 'top' }: ToolsBannerProps) {
     }
   };
 
-  const scrollRight = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+  const scrollDropdownUp = () => {
+    if (dropdownScrollRef.current) {
+      dropdownScrollRef.current.scrollBy({ top: -100, behavior: 'smooth' });
+    }
+  };
+
+  const scrollDropdownDown = () => {
+    if (dropdownScrollRef.current) {
+      dropdownScrollRef.current.scrollBy({ top: 100, behavior: 'smooth' });
     }
   };
 
@@ -121,17 +127,7 @@ export function ToolsBanner({ position = 'top' }: ToolsBannerProps) {
         </div>
       </div>
       
-      <div className="absolute right-2 top-1/2 -translate-y-1/2 z-10 flex gap-1">
-        <Button
-          variant="ghost"
-          size="icon"
-          className="h-8 w-8 bg-background/80 hover:bg-background"
-          onClick={scrollRight}
-          data-testid="banner-scroll-right"
-        >
-          <ChevronRight className="h-4 w-4" />
-        </Button>
-        
+      <div className="absolute right-2 top-1/2 -translate-y-1/2 z-10">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button
@@ -143,27 +139,53 @@ export function ToolsBanner({ position = 'top' }: ToolsBannerProps) {
               <ChevronDown className="h-4 w-4" />
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" className="w-56">
-            <ScrollArea className="h-96">
-              {categories.map((category, index) => {
-                const categoryTools = allTools.filter(t => t.category === category);
-                return (
-                  <div key={category}>
-                    <div className="px-2 py-1.5 text-sm font-semibold text-muted-foreground">
-                      {category}
+          <DropdownMenuContent align="end" className="w-56 p-0">
+            <div className="flex flex-col">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="h-8 rounded-none border-b hover:bg-muted"
+                onClick={scrollDropdownUp}
+                data-testid="dropdown-scroll-up"
+              >
+                <ChevronUp className="h-4 w-4" />
+              </Button>
+              
+              <div 
+                ref={dropdownScrollRef}
+                className="h-80 overflow-y-auto"
+                data-testid="dropdown-scroll-container"
+              >
+                {categories.map((category, index) => {
+                  const categoryTools = allTools.filter(t => t.category === category);
+                  return (
+                    <div key={category}>
+                      <div className="px-2 py-1.5 text-sm font-semibold text-muted-foreground">
+                        {category}
+                      </div>
+                      {categoryTools.map(tool => (
+                        <DropdownMenuItem key={tool.id} asChild>
+                          <Link href={tool.path} className="cursor-pointer" data-testid={`banner-dropdown-${tool.id}`}>
+                            {tool.name}
+                          </Link>
+                        </DropdownMenuItem>
+                      ))}
+                      {index < categories.length - 1 && <DropdownMenuSeparator />}
                     </div>
-                    {categoryTools.map(tool => (
-                      <DropdownMenuItem key={tool.id} asChild>
-                        <Link href={tool.path} className="cursor-pointer" data-testid={`banner-dropdown-${tool.id}`}>
-                          {tool.name}
-                        </Link>
-                      </DropdownMenuItem>
-                    ))}
-                    {index < categories.length - 1 && <DropdownMenuSeparator />}
-                  </div>
-                );
-              })}
-            </ScrollArea>
+                  );
+                })}
+              </div>
+              
+              <Button
+                variant="ghost"
+                size="sm"
+                className="h-8 rounded-none border-t hover:bg-muted"
+                onClick={scrollDropdownDown}
+                data-testid="dropdown-scroll-down"
+              >
+                <ChevronDown className="h-4 w-4" />
+              </Button>
+            </div>
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
