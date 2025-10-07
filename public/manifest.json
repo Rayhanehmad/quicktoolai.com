@@ -1,7 +1,7 @@
 {
-  "name": "AI FinHealth Hub - Smart Financial & Health Calculators",
-  "short_name": "AI FinHealth Hub",
-  "description": "AI-powered financial planning and health tracking tools. Smart calculators for loans, mortgages, BMI, calories, and more with automated insights.",
+  "name": "QuickToolAI - Smart AI-Powered Calculators & Tools",
+  "short_name": "QuickToolAI",
+  "description": "AI-powered calculators and smart tools for financial planning, health tracking, and productivity. Free intelligent tools with automated insights.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
