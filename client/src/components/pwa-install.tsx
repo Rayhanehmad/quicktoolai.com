@@ -72,7 +72,7 @@ export function PWAInstall() {
         <div className="flex-1">
           <h3 className="font-bold text-sm mb-1">Install App</h3>
           <p className="text-xs text-muted-foreground mb-3">
-            Install AI FinHealth Hub for quick access and offline use
+            Install QuickToolAI for quick access and offline use
           </p>
           <div className="flex gap-2">
             <Button

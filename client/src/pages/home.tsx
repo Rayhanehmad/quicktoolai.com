@@ -91,20 +91,20 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>AI FinHealth Hub - Smart Financial & Health Calculators | Free AI Tools</title>
+        <title>QuickToolAI - Smart AI-Powered Tools | Free Online Calculators</title>
         <meta name="description" content="AI-powered financial planning and health tracking tools. Smart calculators for loans, mortgages, BMI, calorie tracking, and more. Free AI-assisted calculations for better financial and health decisions." />
         <meta name="keywords" content="AI calculator, financial planning tools, health metrics calculator, smart finance tools, AI health tracker, BMI calculator, loan calculator, mortgage planner, AI financial advisor, health analytics" />
         
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={window.location.origin} />
-        <meta property="og:title" content="AI FinHealth Hub - Smart Financial & Health Calculators" />
+        <meta property="og:title" content="QuickToolAI - Smart AI-Powered Tools" />
         <meta property="og:description" content="AI-powered tools for financial planning and health tracking. Make smarter decisions with intelligent calculators for finance, health, and wellness." />
-        <meta property="og:site_name" content="AI FinHealth Hub" />
+        <meta property="og:site_name" content="QuickToolAI" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI FinHealth Hub - Smart Financial & Health Calculators" />
+        <meta name="twitter:title" content="QuickToolAI - Smart AI-Powered Tools" />
         <meta name="twitter:description" content="AI-powered tools for financial planning and health tracking. Make smarter decisions with intelligent calculators." />
         
         {/* Canonical URL */}
@@ -115,19 +115,19 @@ export default function Home() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "AI FinHealth Hub",
+            "name": "QuickToolAI",
             "description": "AI-powered financial planning and health tracking tools. Smart calculators for loans, mortgages, BMI, calorie tracking, and more.",
-            "url": import.meta.env.VITE_CANONICAL_URL || "https://aifinhealth.com",
-            "logo": `${import.meta.env.VITE_CANONICAL_URL || "https://aifinhealth.com"}/icon-512.png`,
+            "url": import.meta.env.VITE_CANONICAL_URL || "https://www.quicktoolai.com",
+            "logo": `${import.meta.env.VITE_CANONICAL_URL || "https://www.quicktoolai.com"}/icon-512.png`,
             "sameAs": [
-              "https://twitter.com/aifinhealth",
-              "https://facebook.com/aifinhealth"
+              "https://twitter.com/quicktoolai",
+              "https://facebook.com/quicktoolai"
             ],
             "contactPoint": {
               "@type": "ContactPoint",
               "contactType": "Customer Support",
-              "email": "support@aifinhealth.com",
-              "url": `${import.meta.env.VITE_CANONICAL_URL || "https://aifinhealth.com"}/contact`
+              "email": "support@quicktoolai.com",
+              "url": `${import.meta.env.VITE_CANONICAL_URL || "https://www.quicktoolai.com"}/contact`
             },
             "offers": {
               "@type": "AggregateOffer",
@@ -142,7 +142,7 @@ export default function Home() {
                   "availability": "https://schema.org/InStock",
                   "itemOffered": {
                     "@type": "SoftwareApplication",
-                    "name": "AI FinHealth Hub Calculator Suite",
+                    "name": "QuickToolAI Calculator Suite",
                     "applicationCategory": "FinanceApplication"
                   }
                 }

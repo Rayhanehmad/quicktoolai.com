@@ -14,11 +14,11 @@ interface ToolPageLayoutProps {
 }
 
 export function ToolPageLayout({ toolId, title, description, category, children }: ToolPageLayoutProps) {
-  const baseUrl = import.meta.env.VITE_CANONICAL_URL || 'https://aifinhealth.com';
+  const baseUrl = import.meta.env.VITE_CANONICAL_URL || 'https://www.quicktoolai.com';
   const pageUrl = `${baseUrl}/${toolId}`;
   const seoContent = SEO_CONTENT[toolId];
   
-  const metaTitle = seoContent?.title || `${title} - AI-Powered Calculator | AI FinHealth Hub`;
+  const metaTitle = seoContent?.title || `${title} - AI-Powered Calculator | QuickToolAI`;
   const metaDescription = seoContent?.metaDescription || description;
   const keywords = seoContent?.keywords;
   
@@ -51,7 +51,7 @@ export function ToolPageLayout({ toolId, title, description, category, children 
     "url": pageUrl,
     "provider": {
       "@type": "Organization",
-      "name": "AI FinHealth Hub",
+      "name": "QuickToolAI",
       "url": baseUrl
     }
   };
@@ -94,7 +94,7 @@ export function ToolPageLayout({ toolId, title, description, category, children 
         <meta property="og:url" content={pageUrl} />
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
-        <meta property="og:site_name" content="AI FinHealth Hub" />
+        <meta property="og:site_name" content="QuickToolAI" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />

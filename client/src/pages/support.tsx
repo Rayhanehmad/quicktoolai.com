@@ -44,7 +44,7 @@ export default function SupportPage() {
   const guides = [
     {
       title: "Getting Started Guide",
-      description: "Learn how to navigate and use AI FinHealth Hub effectively",
+      description: "Learn how to navigate and use QuickToolAI effectively",
       icon: BookOpen,
       link: "#"
     },
@@ -65,8 +65,8 @@ export default function SupportPage() {
   return (
     <>
       <Helmet>
-        <title>Support - AI FinHealth Hub</title>
-        <meta name="description" content="Get help with AI FinHealth Hub calculators and tools. Browse FAQs, guides, and get support for our AI-powered financial and health tools." />
+        <title>Support - QuickToolAI</title>
+        <meta name="description" content="Get help with QuickToolAI calculators and tools. Browse FAQs, guides, and get support for our AI-powered financial and health tools." />
         <link rel="canonical" href={`${window.location.origin}/support`} />
       </Helmet>
 

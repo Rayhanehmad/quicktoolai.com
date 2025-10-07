@@ -8,8 +8,8 @@ export default function PrivacyPolicyPage() {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy - AI FinHealth Hub</title>
-        <meta name="description" content="Privacy Policy for AI FinHealth Hub. Learn how we collect, use, and protect your data with our AI-powered financial and health tools." />
+        <title>Privacy Policy - QuickToolAI</title>
+        <meta name="description" content="Privacy Policy for QuickToolAI. Learn how we collect, use, and protect your data with our AI-powered financial and health tools." />
         <link rel="canonical" href={`${window.location.origin}/privacy-policy`} />
       </Helmet>
 
@@ -35,7 +35,7 @@ export default function PrivacyPolicyPage() {
             <section className="glass-card p-6">
               <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
               <p className="text-muted-foreground leading-relaxed">
-                AI FinHealth Hub ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our AI-powered financial planning and health tracking tools. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
+                QuickToolAI ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our AI-powered financial planning and health tracking tools. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
               </p>
             </section>
 

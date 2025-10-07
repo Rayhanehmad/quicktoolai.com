@@ -8,8 +8,8 @@ export default function TermsOfServicePage() {
   return (
     <>
       <Helmet>
-        <title>Terms of Service - AI FinHealth Hub</title>
-        <meta name="description" content="Terms of Service for AI FinHealth Hub. Review the terms and conditions for using our AI-powered financial and health calculators." />
+        <title>Terms of Service - QuickToolAI</title>
+        <meta name="description" content="Terms of Service for QuickToolAI. Review the terms and conditions for using our AI-powered financial and health calculators." />
         <link rel="canonical" href={`${window.location.origin}/terms-of-service`} />
       </Helmet>
 
@@ -35,7 +35,7 @@ export default function TermsOfServicePage() {
             <section className="glass-card p-6">
               <h2 className="text-2xl font-semibold mb-4">Agreement to Terms</h2>
               <p className="text-muted-foreground leading-relaxed">
-                By accessing and using AI FinHealth Hub ("the Website"), you accept and agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of these terms, you may not access the Website. These Terms apply to all visitors, users, and others who access or use the AI-powered financial planning and health tracking tools.
+                By accessing and using QuickToolAI ("the Website"), you accept and agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of these terms, you may not access the Website. These Terms apply to all visitors, users, and others who access or use the AI-powered financial planning and health tracking tools.
               </p>
             </section>
 
@@ -115,7 +115,7 @@ export default function TermsOfServicePage() {
               </div>
               
               <p className="text-muted-foreground mb-3">
-                The Website and its original content, features, and functionality are owned by AI FinHealth Hub and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.
+                The Website and its original content, features, and functionality are owned by QuickToolAI and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.
               </p>
               <p className="text-muted-foreground">
                 Our trademarks and trade dress may not be used in connection with any product or service without our prior written consent.
@@ -141,7 +141,7 @@ export default function TermsOfServicePage() {
               <h2 className="text-2xl font-semibold mb-4">Third-Party Links and Services</h2>
               
               <p className="text-muted-foreground mb-3">
-                Our Website may contain links to third-party websites or services that are not owned or controlled by AI FinHealth Hub. We have no control over, and assume no responsibility for:
+                Our Website may contain links to third-party websites or services that are not owned or controlled by QuickToolAI. We have no control over, and assume no responsibility for:
               </p>
               <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
                 <li>The content, privacy policies, or practices of any third-party websites or services</li>
@@ -157,7 +157,7 @@ export default function TermsOfServicePage() {
               <h2 className="text-2xl font-semibold mb-4">Limitation of Liability</h2>
               
               <p className="text-muted-foreground mb-3">
-                In no event shall AI FinHealth Hub, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for:
+                In no event shall QuickToolAI, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for:
               </p>
               <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
                 <li>Any indirect, incidental, special, consequential, or punitive damages</li>
@@ -192,7 +192,7 @@ export default function TermsOfServicePage() {
               <h2 className="text-2xl font-semibold mb-4">Governing Law</h2>
               
               <p className="text-muted-foreground">
-                These Terms shall be governed and construed in accordance with the laws of the jurisdiction in which AI FinHealth Hub operates, without regard to its conflict of law provisions. Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights.
+                These Terms shall be governed and construed in accordance with the laws of the jurisdiction in which QuickToolAI operates, without regard to its conflict of law provisions. Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights.
               </p>
             </section>
 

@@ -46,20 +46,20 @@ export default function AboutPage() {
   return (
     <>
       <Helmet>
-        <title>About Us - AI FinHealth Hub | Our Mission & Story</title>
-        <meta name="description" content="Learn about AI FinHealth Hub's mission to provide free AI-powered financial and health calculators. Discover our commitment to privacy, accuracy, and accessible intelligent tools for everyone." />
-        <meta name="keywords" content="AI FinHealth Hub, about us, mission, financial calculators, health tools, AI-powered, free tools, privacy-first" />
+        <title>About Us - QuickToolAI | Our Mission & Story</title>
+        <meta name="description" content="Learn about QuickToolAI's mission to provide free AI-powered financial and health calculators. Discover our commitment to privacy, accuracy, and accessible intelligent tools for everyone." />
+        <meta name="keywords" content="QuickToolAI, about us, mission, financial calculators, health tools, AI-powered, free tools, privacy-first" />
         
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`${window.location.origin}/about`} />
-        <meta property="og:title" content="About Us - AI FinHealth Hub" />
+        <meta property="og:title" content="About Us - QuickToolAI" />
         <meta property="og:description" content="Empowering individuals with free AI-powered financial and health tools. Learn about our mission and commitment to intelligent decision-making." />
-        <meta property="og:site_name" content="AI FinHealth Hub" />
+        <meta property="og:site_name" content="QuickToolAI" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Us - AI FinHealth Hub" />
+        <meta name="twitter:title" content="About Us - QuickToolAI" />
         <meta name="twitter:description" content="Empowering individuals with free AI-powered financial and health tools." />
         
         {/* Canonical URL */}
@@ -82,7 +82,7 @@ export default function AboutPage() {
               Empowering Smarter Decisions with AI
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              AI FinHealth Hub is your trusted platform for intelligent financial planning and health tracking. 
+              QuickToolAI is your trusted platform for intelligent financial planning and health tracking. 
               We combine cutting-edge AI technology with proven formulas to deliver powerful, free tools that help you make better decisions.
             </p>
           </div>
@@ -95,7 +95,7 @@ export default function AboutPage() {
             </div>
             <div className="prose prose-lg max-w-none dark:prose-invert">
               <p className="text-muted-foreground leading-relaxed mb-4">
-                AI FinHealth Hub was founded on a simple belief: everyone deserves access to intelligent tools that make complex calculations easy. 
+                QuickToolAI was founded on a simple belief: everyone deserves access to intelligent tools that make complex calculations easy. 
                 In today's fast-paced world, making informed decisions about finances and health shouldn't require expensive software or professional consultants.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-4">
@@ -128,7 +128,7 @@ export default function AboutPage() {
 
           {/* Key Features */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-center">Why Choose AI FinHealth Hub</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">Why Choose QuickToolAI</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {features.map((feature, index) => {
                 const Icon = feature.icon;
@@ -234,7 +234,7 @@ export default function AboutPage() {
           <div className="text-center glass-card neomorphic rounded-2xl p-8 bg-gradient-to-r from-primary/10 to-accent/10">
             <h2 className="text-2xl font-bold mb-4">Ready to Make Smarter Decisions?</h2>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Join millions of users who trust AI FinHealth Hub for their daily calculations. 
+              Join millions of users who trust QuickToolAI for their daily calculations. 
               Explore our comprehensive suite of AI-powered tools and start making better financial and health decisions today.
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
