@@ -65,13 +65,14 @@ export function Navigation() {
   const [location] = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
+  const [isSearchFocused, setIsSearchFocused] = useState(false);
 
   const filteredTools = searchTerm 
     ? allTools.filter(tool => 
         tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         tool.category.toLowerCase().includes(searchTerm.toLowerCase())
       )
-    : [];
+    : allTools;
 
   const categories = Array.from(new Set(allTools.map(t => t.category)));
 
@@ -104,6 +105,8 @@ export function Navigation() {
                 placeholder="Search tools..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
+                onFocus={() => setIsSearchFocused(true)}
+                onBlur={() => setTimeout(() => setIsSearchFocused(false), 200)}
                 className="pl-10 w-64 h-9"
                 data-testid="input-search"
               />
@@ -265,12 +268,15 @@ export function Navigation() {
         )}
       </div>
       </nav>
-      {searchTerm && filteredTools.length > 0 && (
+      {isSearchFocused && filteredTools.length > 0 && (
         <div className="bg-background border-b rounded-b-lg shadow-lg max-h-96 overflow-y-auto z-40 mx-4">
           {filteredTools.map(tool => (
             <Link key={tool.id} href={tool.path}>
               <div
-                onClick={() => setSearchTerm('')}
+                onClick={() => {
+                  setSearchTerm('');
+                  setIsSearchFocused(false);
+                }}
                 className="w-full text-left px-4 py-2 hover:bg-muted/50 transition-colors text-sm cursor-pointer"
                 data-testid={`search-result-${tool.id}`}
               >
