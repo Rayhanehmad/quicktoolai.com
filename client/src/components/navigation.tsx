@@ -87,9 +87,9 @@ export function Navigation() {
               </div>
               <div>
                 <h1 className="text-lg md:text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  AI FinHealth Hub
+                  QuickToolAI
                 </h1>
-                <p className="text-[10px] text-muted-foreground hidden md:block">AI + Finance + Health</p>
+                <p className="text-[10px] text-muted-foreground hidden md:block">Smart AI-Powered Tools</p>
               </div>
             </div>
           </Link>

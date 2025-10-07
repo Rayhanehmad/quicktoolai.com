@@ -14,10 +14,10 @@ export function Footer() {
               <div className="w-8 h-8 gradient-bg rounded-lg flex items-center justify-center">
                 <Clock className="w-5 h-5 text-white" />
               </div>
-              <h4 className="text-lg font-bold">AI FinHealth Hub</h4>
+              <h4 className="text-lg font-bold">QuickToolAI</h4>
             </div>
             <p className="text-muted-foreground text-sm">
-              AI-powered financial planning and health tracking tools. Smart calculators for better financial decisions, health insights, and automated data analysis.
+              AI-powered calculators and smart tools for financial planning, health tracking, and productivity. Free intelligent tools for better decisions and automated analysis.
             </p>
           </div>
           
@@ -236,7 +236,7 @@ export function Footer() {
         
         <div className="pt-8 border-t border-border text-center">
           <p className="text-sm text-muted-foreground">
-            © 2024 AI FinHealth Hub. All rights reserved. Built with modern web technologies.
+            © 2024 QuickToolAI (www.quicktoolai.com). All rights reserved.
           </p>
         </div>
       </div>
