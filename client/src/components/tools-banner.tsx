@@ -1,7 +1,15 @@
 import { useRef } from "react";
 import { Link } from "wouter";
-import { ChevronRight, ChevronLeft } from "lucide-react";
+import { ChevronRight, ChevronLeft, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+  DropdownMenuSeparator,
+} from "@/components/ui/dropdown-menu";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 const allTools = [
   // Financial
@@ -75,6 +83,8 @@ export function ToolsBanner({ position = 'top' }: ToolsBannerProps) {
     }
   };
 
+  const categories = Array.from(new Set(allTools.map(t => t.category)));
+
   return (
     <div className="bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 border-y border-border relative">
       <Button
@@ -111,15 +121,52 @@ export function ToolsBanner({ position = 'top' }: ToolsBannerProps) {
         </div>
       </div>
       
-      <Button
-        variant="ghost"
-        size="icon"
-        className="absolute right-2 top-1/2 -translate-y-1/2 z-10 h-8 w-8 bg-background/80 hover:bg-background"
-        onClick={scrollRight}
-        data-testid="banner-scroll-right"
-      >
-        <ChevronRight className="h-4 w-4" />
-      </Button>
+      <div className="absolute right-2 top-1/2 -translate-y-1/2 z-10 flex gap-1">
+        <Button
+          variant="ghost"
+          size="icon"
+          className="h-8 w-8 bg-background/80 hover:bg-background"
+          onClick={scrollRight}
+          data-testid="banner-scroll-right"
+        >
+          <ChevronRight className="h-4 w-4" />
+        </Button>
+        
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="h-8 w-8 bg-background/80 hover:bg-background"
+              data-testid="banner-dropdown-tools"
+            >
+              <ChevronDown className="h-4 w-4" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end" className="w-56">
+            <ScrollArea className="h-96">
+              {categories.map((category, index) => {
+                const categoryTools = allTools.filter(t => t.category === category);
+                return (
+                  <div key={category}>
+                    <div className="px-2 py-1.5 text-sm font-semibold text-muted-foreground">
+                      {category}
+                    </div>
+                    {categoryTools.map(tool => (
+                      <DropdownMenuItem key={tool.id} asChild>
+                        <Link href={tool.path} className="cursor-pointer" data-testid={`banner-dropdown-${tool.id}`}>
+                          {tool.name}
+                        </Link>
+                      </DropdownMenuItem>
+                    ))}
+                    {index < categories.length - 1 && <DropdownMenuSeparator />}
+                  </div>
+                );
+              })}
+            </ScrollArea>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
     </div>
   );
 }
