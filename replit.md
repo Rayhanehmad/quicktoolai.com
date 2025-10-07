@@ -1,10 +1,29 @@
 # Overview
 
-This is **AI FinHealth Hub** - an AI-powered financial and health calculator platform featuring 30+ smart tools for intelligent financial planning, health tracking, and automated data analysis. The application is positioned in the profitable **AI + Finance + Health** niche with comprehensive SEO optimization, AdSense monetization integration, and professional UI design to compete with major calculator websites.
+This is **QuickToolAI** (www.quicktoolai.com) - an AI-powered calculator and tools platform featuring 35+ smart tools for intelligent financial planning, health tracking, productivity, and automated data analysis. The application is positioned in the profitable **AI + Finance + Health** niche with comprehensive SEO optimization, AdSense monetization integration, and professional UI design to compete with major calculator websites.
 
 ## Recent Changes (October 7, 2025)
 
-### Latest: Universal Currency-Neutral Design (Complete)
+### Latest: Complete Rebrand to QuickToolAI (Complete)
+- **Domain & Branding**: Rebranded from "AI FinHealth Hub" to "QuickToolAI" (www.quicktoolai.com)
+  - Updated navigation header with QuickToolAI branding and tagline
+  - Footer now displays "QuickToolAI (www.quicktoolai.com)" in copyright
+  - All pages (Home, About, Privacy, Terms, Contact, Support) updated with new brand
+  - Tool page layout updated to use QuickToolAI in meta tags and Schema.org markup
+  - PWA manifest.json updated with QuickToolAI branding
+- **SEO Infrastructure**: Optimized for AI discovery engines and AdSense
+  - robots.txt updated with AI crawler policies (GPTBot, Perplexity, Claude, Bing)
+  - Allows real-time AI search agents (ChatGPT-User, OAI-SearchBot) for visibility in AI answers
+  - Blocks training crawlers to prevent unauthorized content scraping
+  - Explicitly allows AdSense bots (AdsBot-Google, Mediapartners-Google) for monetization
+  - Sitemap.xml updated to use VITE_CANONICAL_URL (https://www.quicktoolai.com)
+  - Added /about page to sitemap for better SEO coverage
+- **Production Ready**: All branding consistent across 35 tools and all pages
+  - Set VITE_CANONICAL_URL=https://www.quicktoolai.com before deployment
+  - Base URL in sitemap dynamically uses canonical URL when set
+  - Schema.org markup uses canonical domain for SSR compatibility
+
+### Earlier: Universal Currency-Neutral Design (Complete)
 - **Icon Updates**: Replaced DollarSign icon with neutral Calculator icon on financial calculator buttons
   - Interest Calculator, Loan Calculator, and Tip Calculator now use Calculator icon from lucide-react
   - Neutral professional appearance supporting all currencies worldwide
@@ -40,7 +59,7 @@ This is **AI FinHealth Hub** - an AI-powered financial and health calculator pla
 - **Production Readiness**: All SEO features tested and validated with e2e tests
 
 ### Earlier: AI + Finance + Health Branding & AdSense Integration (Complete)
-- **Complete Rebrand**: Transformed from "Time & Tools Hub" to "AI FinHealth Hub" 
+- **Initial Rebrand**: Transformed from "Time & Tools Hub" to AI-powered positioning 
 - **AI-Powered Positioning**: All 30+ tools rebranded with AI/Smart focus
   - Financial tools emphasize "AI-powered smart planning" and automated insights
   - Health tools highlight "AI-driven health tracking" and personalized metrics
