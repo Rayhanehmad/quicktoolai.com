@@ -7,9 +7,11 @@ import { z } from "zod";
 export async function registerRoutes(app: Express): Promise<Server> {
   // Sitemap.xml endpoint for SEO
   app.get("/sitemap.xml", (req, res) => {
-    const baseUrl = process.env.REPL_SLUG 
-      ? `https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co`
-      : req.protocol + '://' + req.get('host');
+    // Use VITE_CANONICAL_URL if set (production domain), otherwise fallback to request host
+    const baseUrl = process.env.VITE_CANONICAL_URL || 
+      (process.env.REPL_SLUG 
+        ? `https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co`
+        : req.protocol + '://' + req.get('host'));
     
     const tools = [
       '/percentage', '/loan', '/mortgage', '/interest', '/discount', '/tip', '/profit',
@@ -23,7 +25,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     ];
     
     const infoPages = [
-      '/privacy-policy', '/terms-of-service', '/contact', '/support'
+      '/about', '/privacy-policy', '/terms-of-service', '/contact', '/support'
     ];
     
     const currentDate = new Date().toISOString().split('T')[0];
