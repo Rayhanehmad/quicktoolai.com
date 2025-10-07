@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Heart, DollarSign, Zap, Gauge, Box } from "lucide-react";
+import { Heart, Calculator, Zap, Gauge, Box } from "lucide-react";
 
 export function LoveCalculator() {
   const [name1, setName1] = useState('');
@@ -67,7 +67,7 @@ export function InterestCalculator() {
         <Input type="number" value={time} onChange={(e) => setTime(e.target.value)} placeholder="Time (years)" className="text-center h-11" />
       </div>
       <Button onClick={calculate} className="w-full gradient-bg text-white py-3 px-6 font-semibold hover:opacity-90 transition-opacity mb-6 h-12" disabled={!principal || !rate || !time}>
-        <DollarSign className="w-4 h-4 mr-2" />Calculate
+        <Calculator className="w-4 h-4 mr-2" />Calculate
       </Button>
       {result !== null && (
         <div className="p-4 rounded-lg bg-primary/10 border border-primary animate-slide-up">

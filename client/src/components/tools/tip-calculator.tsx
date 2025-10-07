@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { DollarSign } from "lucide-react";
+import { Calculator } from "lucide-react";
 
 export function TipCalculator() {
   const [billAmount, setBillAmount] = useState('');
@@ -92,7 +92,7 @@ export function TipCalculator() {
         disabled={!billAmount}
         data-testid="button-calculate"
       >
-        <DollarSign className="w-4 h-4 mr-2" />
+        <Calculator className="w-4 h-4 mr-2" />
         Calculate
       </Button>
 
