@@ -289,7 +289,6 @@ export function CurrencyConverter() {
           disabled={!amount || loading}
           data-testid="button-convert"
         >
-          <DollarSign className="w-4 h-4 mr-2" />
           Convert
         </Button>
         <Button
