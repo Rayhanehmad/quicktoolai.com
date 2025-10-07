@@ -1,5 +1,7 @@
+import { useRef } from "react";
 import { Link } from "wouter";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ChevronLeft } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const allTools = [
   // Financial
@@ -59,28 +61,65 @@ interface ToolsBannerProps {
 }
 
 export function ToolsBanner({ position = 'top' }: ToolsBannerProps) {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div 
-      className="bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 border-y border-border py-3 px-4 overflow-x-auto scrollbar-hide"
-      data-testid={`tools-banner-${position}`}
-    >
-      <div className="flex items-center gap-2 min-w-max">
-        {allTools.map((tool, index) => (
-          <div key={tool.id} className="flex items-center gap-2">
-            <Link href={tool.path}>
-              <span 
-                className="text-xs font-medium text-foreground hover:text-primary transition-colors px-3 py-1.5 rounded-md hover:bg-primary/10 whitespace-nowrap cursor-pointer"
-                data-testid={`banner-link-${tool.id}`}
-              >
-                {tool.name}
-              </span>
-            </Link>
-            {index < allTools.length - 1 && (
-              <ChevronRight className="w-3 h-3 text-muted-foreground/50" />
-            )}
-          </div>
-        ))}
+    <div className="bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 border-y border-border relative">
+      <Button
+        variant="ghost"
+        size="icon"
+        className="absolute left-2 top-1/2 -translate-y-1/2 z-10 h-8 w-8 bg-background/80 hover:bg-background"
+        onClick={scrollLeft}
+        data-testid="banner-scroll-left"
+      >
+        <ChevronLeft className="h-4 w-4" />
+      </Button>
+      
+      <div 
+        ref={scrollContainerRef}
+        className="py-3 px-12 overflow-x-auto scrollbar-hide"
+        data-testid={`tools-banner-${position}`}
+      >
+        <div className="flex items-center gap-2 min-w-max">
+          {allTools.map((tool, index) => (
+            <div key={tool.id} className="flex items-center gap-2">
+              <Link href={tool.path}>
+                <span 
+                  className="text-xs font-medium text-foreground hover:text-primary transition-colors px-3 py-1.5 rounded-md hover:bg-primary/10 whitespace-nowrap cursor-pointer"
+                  data-testid={`banner-link-${tool.id}`}
+                >
+                  {tool.name}
+                </span>
+              </Link>
+              {index < allTools.length - 1 && (
+                <ChevronRight className="w-3 h-3 text-muted-foreground/50" />
+              )}
+            </div>
+          ))}
+        </div>
       </div>
+      
+      <Button
+        variant="ghost"
+        size="icon"
+        className="absolute right-2 top-1/2 -translate-y-1/2 z-10 h-8 w-8 bg-background/80 hover:bg-background"
+        onClick={scrollRight}
+        data-testid="banner-scroll-right"
+      >
+        <ChevronRight className="h-4 w-4" />
+      </Button>
     </div>
   );
 }
