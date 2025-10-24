@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/components/ui/theme-provider";
-import { Clock, Sun, Moon, Menu, X, Search, Home } from "lucide-react";
+import { Sun, Moon, Menu, X, Search, Home } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { FavoritesPanel } from "@/components/favorites-panel";
 import { ToolsBanner } from "@/components/tools-banner";
@@ -13,6 +13,7 @@ import {
   DropdownMenuTrigger,
   DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
+import logoPath from "@assets/tools AI Logo_1761304369141.jpg";
 
 const allTools = [
   // Financial
@@ -83,9 +84,11 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16">
           <Link href="/" data-testid="link-home-logo">
             <div className="flex items-center space-x-2 cursor-pointer">
-              <div className="w-8 h-8 gradient-bg rounded-lg flex items-center justify-center">
-                <Clock className="w-5 h-5 text-white" />
-              </div>
+              <img 
+                src={logoPath} 
+                alt="QuickToolAI Logo" 
+                className="w-10 h-10 object-contain rounded-lg"
+              />
               <div>
                 <h1 className="text-lg md:text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                   QuickToolAI
