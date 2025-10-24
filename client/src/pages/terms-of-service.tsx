@@ -223,7 +223,7 @@ export default function TermsOfServicePage() {
               </p>
               <ul className="text-muted-foreground space-y-2">
                 <li>• By visiting our Contact page</li>
-                <li>• By email: legal@timeandtools.com</li>
+                <li>• By email: support@quicktoolai.com</li>
               </ul>
             </section>
           </div>

@@ -214,7 +214,7 @@ export default function PrivacyPolicyPage() {
               </p>
               <ul className="text-muted-foreground space-y-2">
                 <li>• By visiting our Contact page</li>
-                <li>• By email: privacy@timeandtools.com</li>
+                <li>• By email: support@quicktoolai.com</li>
               </ul>
             </section>
           </div>
