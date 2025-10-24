@@ -93,16 +93,6 @@ export function ToolsBanner({ position = 'top' }: ToolsBannerProps) {
 
   return (
     <div className="bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 border-y border-border relative">
-      <Button
-        variant="ghost"
-        size="icon"
-        className="absolute left-2 top-1/2 -translate-y-1/2 z-10 h-8 w-8 bg-background/80 hover:bg-background"
-        onClick={scrollLeft}
-        data-testid="banner-scroll-left"
-      >
-        <ChevronLeft className="h-4 w-4" />
-      </Button>
-      
       <div 
         ref={scrollContainerRef}
         className="py-3 px-12 overflow-x-auto scrollbar-hide"

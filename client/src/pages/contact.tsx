@@ -180,8 +180,8 @@ export default function ContactPage() {
                     <p className="text-muted-foreground mb-2">
                       For general inquiries and support
                     </p>
-                    <a href="mailto:support@timeandtools.com" className="text-primary hover:underline">
-                      support@timeandtools.com
+                    <a href="mailto:support@quicktoolai.com" className="text-primary hover:underline">
+                      support@quicktoolai.com
                     </a>
                   </div>
                 </div>
